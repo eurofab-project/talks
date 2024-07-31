@@ -1,0 +1,91 @@
+---
+title: "EUROFAB Progress meeting August 2nd"
+author: "Eurofab team"
+# institute: "Charles University"
+# date: "today"
+format:
+    revealjs:
+        theme: [default, ../assets/reveal.scss]
+        logo: ../assets/icon.svg
+        menu: false
+        transition: slide
+        navigation-mode: linear
+        controls-layout: edges
+        progress: true
+        include-in-header: ../assets/font.html
+        title-slide-attributes:
+            data-background-image: ../assets/logos.png
+            data-background-size: 20%
+            data-background-position: 50% 90%
+---
+
+# WP200 Progress (Design and Data Collection)
+
+1. WP201 Morphometric Classification Homogenisation Protocol Development
+2. WP203 Input data collection and preprocessing
+
+---
+
+# WP200 Morphometric Classification Homogenisation Protocol
+
+## Preliminary protocol design
+1. Use morphometric classification of Central Europe resulting from a parallel research project as ground truth data
+2. Calculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis
+
+## Preliminary protocol design
+3. Train a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label
+
+## Preliminary protocol design
+4. Test the model on an out of training sample country to validate the approach.
+    - Possibly Denmark
+    - Calculate morphometric characters
+    - Directly use the model to classify them into urban fabric types
+
+
+## Model development
+Different classification models will be tested out in a progression from simple to more complex. We aim to start with random forest, then gradient boosting trees and only then move to more advanced NNs. The goal is to keep the final model as simple, scalable and interpretable as possible.
+
+---
+
+# WP203 Input data collection and preprocessing
+
+1. Morphometric classification of Central Europe
+2. Microsoft Building footprints
+3. Overture Maps streets
+
+
+
+## Primus classification of Central Europe
+- It is based on the highest quality available building data, which allows it to be granular.
+- Uses overture streets, therefore there will be some shared data between the classifications, making the model inference easier
+
+## Microsoft Building footprints
+- Cover a large part of the globe - 1.5 billion building footprints.
+- Available for the study region, whereas other sources such as Google footprints are not.
+- Homogeneous origin - all footprints are derived using the same model.
+
+## Overturemap streets
+- OpenStreetMap data with minimal processing, therefore it has good coverage
+- Faster processing times compared to raw OSM streets
+- The ground truth morphometric classification uses it, therefore there will be some shared data between the classifications, making the model inference easier
+
+
+
+---
+
+# Data processing progress
+1. We have selected the input data
+2. We have implemented a preliminary pipeline to process the data - downloading, cleaning and merging.
+3. We have a preliminary, but scalable pipeline to calculate the morphological characters on the satelite data, which will be the input to the EUROFAB model.
+
+
+---
+
+# Next steps
+1. Generate a final dataset that will be used for the project 
+2. Prepare the data for model training - preprocessing, normalisation, train/test splits, etc.
+3. Start model development.
+4. Generate classifications and start validating the results.
+
+
+
