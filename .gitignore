@@ -162,4 +162,6 @@ cython_debug/
 #.idea/
 
 /.quarto/
-/_site/
+/_site/*.quarto_ipynb
+slides/*.quarto_ipynb
+_site/

@@ -19,6 +19,52 @@ format:
             data-background-position: 50% 90%
 ---
 
+# Progress update
+1. WP100 Collaborative Stakeholder Requirements Consolidation
+2. WP200 Iterative Algorithm and Data processing Progress (Design and Data Collection)
+
+---
+
+
+# WP100 Collaborative Stakeholder Requirements Consolidation
+
+1. Stakeholder mapping​
+2. “Producer” stakeholders: preliminary list
+3. “User” stakeholders: preliminary list
+
+
+---
+
+# Stakeholder mapping​
+
+## Applications (by category of user)
+1. City and urban planning
+2. Monitoring for global agendas (e.g. SDGs)
+3. Specific policy applications (local, regional and national level)
+
+## Technical specs (which ones to consider?)
+1. Spatial resolution & coverage
+2. Temporal resolution & coverage
+3. Thematic detail
+4. Technology (interoperability & reproducibility)
+
+---
+
+| “Producer” stakeholder        | Product                                   |
+|-------------------------------|-------------------------------------------|
+| EC-JRC                        | The  Global Human Settlement Layer (GHSL) |
+| German Aerospace Center (DLR) | World Settlement Footprint (WFS)          |
+| Bochum Urban Climate Lab      | Local Climate Zones (LCZ)                 |
+
+: “Producer” stakeholders: preliminary list
+
+---
+
+
+![“User” stakeholders: preliminary list](../figures/progress_august/user_table.png)
+
+---
+
 # WP200 Progress (Design and Data Collection)
 
 1. WP201 Morphometric Classification Homogenisation Protocol Development
