@@ -12,7 +12,6 @@ format:
         navigation-mode: linear
         controls-layout: edges
         progress: true
-        scrollable: true
         include-in-header: ../assets/font.html
         title-slide-attributes:
             data-background-image: ../assets/logos.png
@@ -62,16 +61,7 @@ format:
 ---
 
 
-| Category                    | “User” stakeholder                                                                | Application (selection)                    |
-|-----------------------------|-----------------------------------------------------------------------------------|--------------------------------------------|
-| International organisations | UN-Habitat                                                                        | Urban-rural linkages; informal settlements |
-|                             | International Monetary Fund (IMF)                                                 | Climate-related risks                      |
-|                             | World Bank                                                                        | Informal settlements                       |
-|                             | UNICEF                                                                            | Housing stock & basic services             |
-| National governments        | Ministry of the Interior and Kingdom Relations (The Netherlands)                  | Energy modelling & monitoring              |
-|                             | Federal Emergency Management Agency – FEMA, Department of Homeland Security - DHS | Emergency & Climate-related risks          |
-| Research institutions       | University of Waterloo                                                            | Urban micro-climate                        |
-: “User” stakeholders: preliminary list
+![“User” stakeholders: preliminary list](../figures/progress_august/user_table.png)
 
 ---
 
