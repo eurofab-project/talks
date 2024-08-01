@@ -1,8 +1,8 @@
 ---
-title: "EUROFAB Progress meeting August 2nd"
+title: "EuroFab Progress Meeting"
 author: "Eurofab team"
 # institute: "Charles University"
-# date: "today"
+date: "2024-08-02"
 format:
     revealjs:
         theme: [default, ../assets/reveal.scss]
@@ -55,20 +55,19 @@ Different classification models will be tested out in a progression from simple 
 
 
 
-## Primus classification of Central Europe
+## Morphometric classification of Central Europe
 - It is based on the highest quality available building data, which allows it to be granular.
-- Uses overture streets, therefore there will be some shared data between the classifications, making the model inference easier
+- Uses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier
 
 ## Microsoft Building footprints
 - Cover a large part of the globe - 1.5 billion building footprints.
 - Available for the study region, whereas other sources such as Google footprints are not.
 - Homogeneous origin - all footprints are derived using the same model.
 
-## Overturemap streets
+## Overture Maps streets
 - OpenStreetMap data with minimal processing, therefore it has good coverage
 - Faster processing times compared to raw OSM streets
 - The ground truth morphometric classification uses it, therefore there will be some shared data between the classifications, making the model inference easier
-
 
 
 ---
@@ -82,7 +81,7 @@ Different classification models will be tested out in a progression from simple 
 ---
 
 # Next steps
-1. Generate a final dataset that will be used for the project 
+1. Generate a final dataset that will be used for the project
 2. Prepare the data for model training - preprocessing, normalisation, train/test splits, etc.
 3. Start model development.
 4. Generate classifications and start validating the results.
