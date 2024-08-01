@@ -112,6 +112,55 @@
     "text": "Milestones\n\n\nProgress (MS 1), KO + 6 months\nFinal (MS 2), KO + 12 months"
   },
   {
+    "objectID": "slides/progress_august.html#preliminary-protocol-design",
+    "href": "slides/progress_august.html#preliminary-protocol-design",
+    "title": "EuroFab Progress Meeting",
+    "section": "Preliminary protocol design",
+    "text": "Preliminary protocol design\n\nUse morphometric classification of Central Europe resulting from a parallel research project as ground truth data\nCalculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis"
+  },
+  {
+    "objectID": "slides/progress_august.html#preliminary-protocol-design-1",
+    "href": "slides/progress_august.html#preliminary-protocol-design-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Preliminary protocol design",
+    "text": "Preliminary protocol design\n\nTrain a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label"
+  },
+  {
+    "objectID": "slides/progress_august.html#preliminary-protocol-design-2",
+    "href": "slides/progress_august.html#preliminary-protocol-design-2",
+    "title": "EuroFab Progress Meeting",
+    "section": "Preliminary protocol design",
+    "text": "Preliminary protocol design\n\nTest the model on an out of training sample country to validate the approach.\n\nPossibly Denmark\nCalculate morphometric characters\nDirectly use the model to classify them into urban fabric types"
+  },
+  {
+    "objectID": "slides/progress_august.html#model-development",
+    "href": "slides/progress_august.html#model-development",
+    "title": "EuroFab Progress Meeting",
+    "section": "Model development",
+    "text": "Model development\nDifferent classification models will be tested out in a progression from simple to more complex. We aim to start with random forest, then gradient boosting trees and only then move to more advanced NNs. The goal is to keep the final model as simple, scalable and interpretable as possible."
+  },
+  {
+    "objectID": "slides/progress_august.html#morphometric-classification-of-central-europe",
+    "href": "slides/progress_august.html#morphometric-classification-of-central-europe",
+    "title": "EuroFab Progress Meeting",
+    "section": "Morphometric classification of Central Europe",
+    "text": "Morphometric classification of Central Europe\n\nIt is based on the highest quality available building data, which allows it to be granular.\nUses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier"
+  },
+  {
+    "objectID": "slides/progress_august.html#microsoft-building-footprints",
+    "href": "slides/progress_august.html#microsoft-building-footprints",
+    "title": "EuroFab Progress Meeting",
+    "section": "Microsoft Building footprints",
+    "text": "Microsoft Building footprints\n\nCover a large part of the globe - 1.5 billion building footprints.\nAvailable for the study region, whereas other sources such as Google footprints are not.\nHomogeneous origin - all footprints are derived using the same model."
+  },
+  {
+    "objectID": "slides/progress_august.html#overture-maps-streets",
+    "href": "slides/progress_august.html#overture-maps-streets",
+    "title": "EuroFab Progress Meeting",
+    "section": "Overture Maps streets",
+    "text": "Overture Maps streets\n\nOpenStreetMap data with minimal processing, therefore it has good coverage\nFaster processing times compared to raw OSM streets\nThe ground truth morphometric classification uses it, therefore there will be some shared data between the classifications, making the model inference easier"
+  },
+  {
     "objectID": "slides/template.html#heading-level-2",
     "href": "slides/template.html#heading-level-2",
     "title": "Spatial Autocorrelation",
