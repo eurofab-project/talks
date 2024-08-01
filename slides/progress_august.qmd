@@ -12,11 +12,67 @@ format:
         navigation-mode: linear
         controls-layout: edges
         progress: true
+        scrollable: true
         include-in-header: ../assets/font.html
         title-slide-attributes:
             data-background-image: ../assets/logos.png
             data-background-size: 20%
             data-background-position: 50% 90%
+---
+
+# Progress update
+1. WP100 Collaborative Stakeholder Requirements Consolidation
+2. WP200 Iterative Algorithm and Data processing Progress (Design and Data Collection)
+
+---
+
+
+# WP100 Collaborative Stakeholder Requirements Consolidation
+
+1. Stakeholder mapping​
+2. “Producer” stakeholders: preliminary list
+3. “User” stakeholders: preliminary list
+
+
+---
+
+# Stakeholder mapping​
+
+## Applications (by category of user)
+1. City and urban planning
+2. Monitoring for global agendas (e.g. SDGs)
+3. Specific policy applications (local, regional and national level)
+
+## Technical specs (which ones to consider?)
+1. Spatial resolution & coverage
+2. Temporal resolution & coverage
+3. Thematic detail
+4. Technology (interoperability & reproducibility)
+
+---
+
+| “Producer” stakeholder        | Product                                   |
+|-------------------------------|-------------------------------------------|
+| EC-JRC                        | The  Global Human Settlement Layer (GHSL) |
+| German Aerospace Center (DLR) | World Settlement Footprint (WFS)          |
+| Bochum Urban Climate Lab      | Local Climate Zones (LCZ)                 |
+
+: “Producer” stakeholders: preliminary list
+
+---
+
+
+| Category                    | “User” stakeholder                                                                | Application (selection)                    |
+|-----------------------------|-----------------------------------------------------------------------------------|--------------------------------------------|
+| International organisations | UN-Habitat                                                                        | Urban-rural linkages; informal settlements |
+|                             | International Monetary Fund (IMF)                                                 | Climate-related risks                      |
+|                             | World Bank                                                                        | Informal settlements                       |
+|                             | UNICEF                                                                            | Housing stock & basic services             |
+| National governments        | Ministry of the Interior and Kingdom Relations (The Netherlands)                  | Energy modelling & monitoring              |
+|                             | Federal Emergency Management Agency – FEMA, Department of Homeland Security - DHS | Emergency & Climate-related risks          |
+| Research institutions       | University of Waterloo                                                            | Urban micro-climate                        |
+: “User” stakeholders: preliminary list
+
 ---
 
 # WP200 Progress (Design and Data Collection)
