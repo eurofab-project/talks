@@ -25,6 +25,11 @@ format:
 
 ---
 
+![ ](../figures/progress_august/gantchart.png)
+
+
+---
+
 
 # WP100 Collaborative Stakeholder Requirements Consolidation
 
