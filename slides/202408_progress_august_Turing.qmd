@@ -1,0 +1,78 @@
+---
+title: "AI model for urban fabric"
+subtitle: "EuroFab Progress Meeting"
+author: "Barbara Metzler"
+institute: "Alan Turing Institute"
+# date: "today"
+format:
+    revealjs:
+        theme: [default, ../assets/reveal.scss]
+        logo: ../assets/icon.svg
+        menu: false
+        transition: slide
+        navigation-mode: linear
+        controls-layout: edges
+        progress: true
+        include-in-header: ../assets/font.html
+        title-slide-attributes:
+            data-background-image: ../assets/logos.png
+            data-background-size: 20%
+            data-background-position: 50% 90%
+---
+
+
+---
+title: "AI model for urban fabric"
+author: "Barbara Metzler"
+date: "02/08/2024"
+---
+
+# Overview
+
+* **AI model design:** June-October 2024
+* **AI model development and training:** September-November 2024
+* **European space-time urban strategy:** December-March 2025
+
+
+## AI Model Design: June-October 2024
+* **Scale:** Pixel vs patch (size)
+* **Task:** Classification vs segmentation
+* **Model:** Network architectures and foundation models
+
+→ Exploration along dimensions for model design
+
+
+## Dimensions: Scale
+* **Scale:** Pixel vs patch (size)
+
+![](../figures/202408_progress_august_AT/scale.png){.nostretch fig-align="center" height="250"}
+
+
+## Dimensions: Task selection
+- **Task:** Classification vs segmentation
+
+![](../figures/202408_progress_august_AT/classification_vs_segmentation.png){.center}
+
+## Dimensions: AI models
+* **Modelling approach:** Network architectures and foundation models
+  - 3 models: IBM/NASA, Clay, Satlas foundation models
+
+![](../figures/202408_progress_august_AT/foundation_models.png){.nostretch fig-align="center" height="200"}
+
+
+# AI Model Design - Timeline
+* **July**: Development of baseline model:
+    - Simple modelling approach with existing image embeddings and ML (Appendix)
+
+* **Next steps**:
+   - Exploration along all 3 dimensions
+   - October 2024: Final model choice
+
+# Appendix
+Satellite embeddings (420x420m) ~ Urban signatures
+![](../figures/202408_progress_august_AT/appendix1.png){.nostretch fig-align="right" height="400"}
+
+## Appendix
+Satellite embeddings (420x420m) ~ Urban signatures
+![](../figures/202408_progress_august_AT/appendix2.png){.nostretch fig-align="right" height="400"}
+
