@@ -36,11 +36,17 @@ format:
 
 # Baseline
 
+![](../figures/progress_october_turing/baseline.png){.nostretch fig-align="center" height="400"}
 
-![](../figures/progress_october_turing/baseline_tile_level.png){.nostretch fig-align="center" height="400"}
+
+---
+
+## Baseline: Results
+
+![](../figures/progress_october_turing/baseline_tile_level.png){.nostretch fig-align="center" height="420"}
 
 
-# WP 202 AI model design
+# WP 202: AI model design
 
 ![](../figures/progress_october_turing/overview.png){.nostretch fig-align="center"}
 
@@ -65,24 +71,27 @@ format:
 
 ---
 
-### Example
+### Unbalanced dataset
 
-![](../figures/progress_october_turing/random_sample.png){.nostretch fig-align="center" height="400"}
+![](../figures/progress_october_turing/unbalanced.png){.nostretch fig-align="center" height="420"}
 
 ---
 
-### Unbalanced dataset
-![](../figures/progress_october_turing/unbalanced.png){.nostretch fig-align="center" height="400"}
+### Example
+
+![](../figures/progress_october_turing/random_sample.png){.nostretch fig-align="center" height="420"}
+
+---
 
 
 ## Model design
-![](../figures/progress_october_turing/example.png){.nostretch fig-align="center"}
+![](../figures/progress_october_turing/example.png){.nostretch fig-align="center" height="400"}
 
 ## Model design
 ![](../figures/progress_october_turing/setup.png){.nostretch fig-align="center"}
 
 
-## Backbone foundation models
+## Backbone: foundation models
 
 - Satlas
 - Clay
@@ -95,11 +104,11 @@ format:
 
 ## Comparison of backbones
 
-| Model | Model | #Labels | Images |
+| Model | Architecture | #Labels | Images |
 |---------|:-----|------:|:------:|
-| Satlas   | SwinT    | 302 million | Sentinel-2  |
-| Clay     | MAE/ViT  | 70 million  |Sentinel-2/Landsat/NAIP/LINZ |
-| IBM/NASA | MAE/ViT  | 250 PB |  Sentinel-2/Landsat   |
+| Satlas   | SwinT    | 302M | Sentinel-2  |
+| Clay     | MAE/ViT  | 70M  |Sentinel-2/Landsat/NAIP/LINZ |
+| Prithvi | MAE/ViT  | 250 PB |  Sentinel-2/Landsat   |
 
 
 ## Loss
@@ -108,7 +117,7 @@ format:
     - penalizes pixel-wise misclassifications
 
 * **Focal Loss** ("focal"):
-    - reeduces the contribution of easily classified examples and puts more weight on hard-to-classify pixels.
+    - reduces the contribution of easily classified examples and puts more weight on hard-to-classify pixels.
 
 ## Validation metric
 
@@ -137,6 +146,8 @@ format:
 ![](../figures/progress_october_turing/prithvi_model.png){.nostretch fig-align="center" height="400"}
 
 
+---
+
 
 ### Results: fine-tuning
 
@@ -144,47 +155,61 @@ format:
 |----------------|--------|--------|---------|
 | Run time (per epoch) (with GPU)  | 9 mins | 8 mins | 20 mins |
 | # parameters      | 90M | 86M  | 120M |
-| Ease of implementation/adding changes | 5/10   | 6/10   | 7/10    |
-| Hyperparameter experiments/tracking   | Own set up | Wandb.ai | Tensorboard |
-| Accuracy                            | 0.57   | 0.66   | 0.62    |
-| IoU (weighted) (0-1)               | 0.33  | 0.58  | 0.41   |
-| F1 (weighted)               | 0.41  | 0.69  | 0.58   |
+| Implementation | 5/10   | 6/10   | 7/10    |
+| Hyperparameter tracking   | Own setup | Wandb.ai | Tensorboard |
 
+---
 
-No hyperparameter tuning!
+### Results: fine-tuning 10 epochs
 
-
-### Results: fine-tuning focal loss
-
-| Model          | Satlas | Clay   | Prithvi |
+|           | Satlas | Clay   | Prithvi |
 |----------------|--------|--------|---------|
-| Accuracy        | 0.25  | 0.66   | 0.59     |
-| IoU (weighted) (0-1)  | 0.2  | 0.58  | 0.42   |
-| F1 (weighted)     | 0.21  | 0.69  | 0.59    |
+| Accuracy (weighted)     | 0.57   | **0.72**   | 0.62    |
+| IoU (weighted) (0-1)    | 0.33  | **0.58**  | 0.41   |
+| F1 (weighted)          | 0.41  | **0.69**  | 0.58   |
 
 
-## CE vs focal loss
+Without hyperparameter tuning!
 
-![](../figures/progress_october_turing/class_acc_ce_loss.png){.nostretch fig-align="left" height="200"}
-![](../figures/progress_october_turing/class_acc_focal_loss_prithvi.png){.nostretch fig-align="right" height="200"}
+---
+
+### Results: fine-tuning w/ focal loss
+
+|           | Satlas | Clay   | Prithvi |
+|----------------|--------|--------|---------|
+| Accuracy (weighted)      | 0.25  | **0.72**   | 0.59     |
+| IoU (weighted) (0-1)  | 0.2  | **0.58**  | 0.42   |
+| F1 (weighted)     | 0.21  | **0.69**  | 0.59    |
+
+---
+
+
+## Prithvi: CE vs focal loss
+
+![](../figures/progress_october_turing/class_acc_ce_loss.png){.nostretch fig-align="left" height="280"}
+![](../figures/progress_october_turing/class_acc_focal_loss_prithvi.png){.nostretch fig-align="right" height="280"}
 
 
 ## Clay predictions
 
-[insert heatmap]
+![](../figures/progress_october_turing/class_acc.png){.nostretch fig-align="left" height="430"}
 
 
 ## Summary: model comparison
 
+- Clay is the winner!
 - Training loss is important
-- Clay architecture
-- Some classes still undetected!
+- Some classes still very much underdetected!
+
 
 ## Next steps
 
 - Technical write-up
-- Hyerparameter-tuning
+- Hyperparameter-tuning
+- Data augmentation
 - Comparison to baseline
+    - downsample/ upsample
+    - maps
 
 ---
 
