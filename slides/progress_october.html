@@ -342,23 +342,45 @@ Eurofab team
 
   <p class="date">2024-08-02</p>
 </section>
-<section>
-<section id="progress-update" class="title-slide slide level1 center">
-<h1>Progress update</h1>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
 <ol type="1">
-<li>WP200 &amp; WP300 Iterative Algorithm and Data processing Progress (Design and Data Collection)</li>
-<li>WP200 AI Model Design and Development</li>
-<li>WP100 Colloborative Stakeholder Requirements and Consolidation</li>
+<li class="fragment">Progress on morphometric components</li>
+<li class="fragment">Progress on imagery components</li>
+<li class="fragment">Progress on stakeholder components</li>
+<li class="fragment">Past and future events</li>
+<li class="fragment">Administrative appendix (if needed)</li>
 </ol>
+</section>
+<section>
+<section id="where-we-are" class="title-slide slide level1 center">
+<h1>Where we are</h1>
+
 </section>
 <section class="slide level2">
 
 
 <img data-src="../figures/progress_august/gantchart.png" class="r-stretch"></section></section>
-<section>
-<section id="wp200-wp300-morphometric-classification-homogenisation-protocol" class="title-slide slide level1 center">
-<h1>WP200 &amp; WP300 Morphometric Classification Homogenisation Protocol</h1>
+<section id="key-focus" class="title-slide slide level1 center">
+<h1>Key focus</h1>
+<div class="r-fit-text fragment">
+<p>WP 200<br> Iterative Algorithm Desing<br> and Data Collection Sprints</p>
+</div>
+</section>
 
+<section id="wp-200" class="title-slide slide level1 center">
+<h1>WP 200</h1>
+<ol type="1">
+<li class="fragment">Progress on morphometric components</li>
+<li class="fragment">Progress on imagery components</li>
+</ol>
+<p><span class="fragment">Each including relevant data collection.</span></p>
+</section>
+
+<section>
+<section id="progress-on-morphometric-components" class="title-slide slide level1 center">
+<h1>Progress on morphometric components</h1>
+<p>Morphometric classification homogenisation protocol</p>
 </section>
 <section class="slide level2">
 
@@ -367,53 +389,55 @@ Eurofab team
 <section id="protocol-design" class="slide level2">
 <h2>Protocol design</h2>
 <ol type="1">
-<li>Use morphometric classification of Central Europe from a parallel research project as ground truth data</li>
-<li>Calculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis</li>
+<li class="fragment">Use morphometric classification of Central Europe from a parallel research project as ground truth data</li>
+<li class="fragment">Calculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis</li>
 </ol>
 </section>
 <section id="protocol-design-1" class="slide level2">
 <h2>Protocol design</h2>
 <ol start="3" type="1">
-<li>Train a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label</li>
+<li class="fragment">Train a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label</li>
 </ol>
 </section>
 <section id="protocol-design-2" class="slide level2">
 <h2>Protocol design</h2>
 <ol start="4" type="1">
-<li>Test the model on an out of training sample country to validate the approach.
+<li class="fragment">Test the model on an out of training sample country to validate the approach.
 <ul>
-<li>Possibly Denmark / Italy / Spain</li>
-<li>Calculate morphometric characters</li>
-<li>Directly use the model to classify them into urban fabric types</li>
+<li class="fragment">Possibly Denmark / Italy / Spain</li>
+<li class="fragment">Calculate morphometric characters</li>
+<li class="fragment">Directly use the model to classify them into urban fabric types</li>
 </ul></li>
 </ol>
-</section></section>
-<section>
-<section id="wp203-input-data-collection-and-preprocessing" class="title-slide slide level1 center">
-<h1>WP203 Input data collection and preprocessing</h1>
+</section>
+<section id="input-data-collection-and-preprocessing" class="slide level2">
+<h2>Input data collection and preprocessing</h2>
 <ol type="1">
-<li>Morphometric classification of Central Europe (UPDATE)</li>
-<li>Microsoft Building footprints</li>
-<li>Overture Maps streets</li>
-<li>Implementation</li>
+<li class="fragment">Morphometric classification of Central Europe (UPDATE)</li>
+<li class="fragment">Microsoft Building footprints</li>
+<li class="fragment">Overture Maps streets</li>
+<li class="fragment">Implementation</li>
 </ol>
 </section>
 <section id="detailed-morphometric-classification" class="slide level2">
 <h2>Detailed morphometric classification</h2>
 <ul>
-<li>It is based on cadastre building data (NEW) !
+<li class="fragment">It is based on cadastre building data (NEW) !
 <ul>
-<li>Processed from official APIs for all five countries</li>
-<li>New data has ~11 million more buildings than EUBUCCO</li>
-<li>Quality checks are still pending</li>
+<li class="fragment">Processed from official APIs for all five countries</li>
+<li class="fragment">New data has ~11 million more buildings than EUBUCCO</li>
+<li class="fragment">Quality checks are still pending in some regions</li>
 </ul></li>
 </ul>
 </section>
 <section id="detailed-morphometric-classification-1" class="slide level2">
 <h2>Detailed morphometric classification</h2>
 <ul>
-<li>Uses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier</li>
+<li class="fragment">Uses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier</li>
 </ul>
+</section>
+<section id="data-issues" class="slide level2">
+<h2>Data issues</h2>
 </section>
 <section class="slide level2">
 
@@ -428,9 +452,9 @@ Eurofab team
 <section id="microsoft-building-footprints" class="slide level2">
 <h2>Microsoft Building footprints</h2>
 <ul>
-<li>Cover a large part of the globe - 1.5 billion building footprints.</li>
-<li>Available for the study region, whereas other sources such as Google footprints are not.</li>
-<li>Homogeneous origin - all footprints are derived using the same model.</li>
+<li class="fragment">Cover a large part of the globe - 1.5 billion building footprints.</li>
+<li class="fragment">Available for the study region, whereas other sources such as Google footprints are not.</li>
+<li class="fragment">Homogeneous origin - all footprints are derived using the same model.</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -441,9 +465,9 @@ Eurofab team
 <section id="overture-maps-streets" class="slide level2">
 <h2>Overture Maps streets</h2>
 <ul>
-<li>OpenStreetMap data with minimal processing, therefore it has good coverage</li>
-<li>The ground truth morphometric classification uses it</li>
-<li>The street network is simplified, preserving its topology, but removing unnecassary clutter</li>
+<li class="fragment">OpenStreetMap data with minimal processing, therefore it has good coverage</li>
+<li class="fragment">The ground truth morphometric classification uses it</li>
+<li class="fragment">The street network is simplified, preserving its topology, but removing unnecassary transportation artifacts</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -454,75 +478,112 @@ Eurofab team
 <section id="current-implementation-status" class="slide level2">
 <h2>Current implementation status</h2>
 <ol type="1">
-<li>We have implemented a pipeline to process the Microsoft buildings and Overture streets</li>
-<li>We have a scalable pipeline (8 mil and more inputs) to calculate the morphological characters, which will be the input to the EUROFAB model.</li>
+<li class="fragment">We have implemented a pipeline to process the Microsoft buildings and Overture streets</li>
+<li class="fragment">We have a scalable pipeline (8 mil and more inputs) to calculate the morphological characters, which will be the input to the EUROFAB model.</li>
 </ol>
 </section>
 <section id="current-implementation-status-1" class="slide level2">
 <h2>Current implementation status</h2>
 <ol start="3" type="1">
-<li>The core functionality for all of this was made available within open-source packages - momepy, pysal, sgeop</li>
-<li>Started writing up technical notes, to be delivered two weeks before our next meeting in December</li>
+<li class="fragment">The core functionality for all of this was made available within open-source packages - <code>momepy</code>, <code>libpysal</code>, <code>sgeop</code></li>
+<li class="fragment">Existing draft of technical notes, to be delivered two weeks before the Milestone 1 in December</li>
 </ol>
 </section></section>
 <section>
-<section id="wp201-wp301-model-development" class="title-slide slide level1 center">
-<h1>WP201 &amp; WP301 Model development</h1>
+<section id="model-development" class="title-slide slide level1 center">
+<h1>Model development</h1>
 
+</section>
+<section id="target---urban-taxonomy" class="slide level2">
+<h2>Target - Urban taxonomy</h2>
+<ul>
+<li class="fragment">Hierarchical classification of urban fabric</li>
+<li class="fragment">Allows flexibility in the resolution of the classification to be predicted</li>
+<li class="fragment">At the moment, tested at a fixed level</li>
+</ul>
 </section>
 <section class="slide level2">
 
-<h3 id="urban-fabric-examples-from-the-detailed-classification">Urban Fabric Examples from the detailed classification</h3>
+<h3 id="urban-fabric-examples">Urban Fabric Examples</h3>
 
 <img data-src="../figures/progress_october/prague_example1.png" class="r-stretch quarto-figure-center"><p class="caption">Medieval, Victorian-era and ‘Large, open’ urban fabrics)</p></section>
 <section class="slide level2">
 
-<h3 id="urban-fabric-examples-from-the-detailed-classification-1">Urban Fabric Examples from the detailed classification</h3>
+<h3 id="urban-fabric-examples-1">Urban Fabric Examples</h3>
 
 <img data-src="../figures/progress_october/prague_example2.png" class="r-stretch quarto-figure-center"><p class="caption">Modern, Victorian-era and villas</p></section>
 <section class="slide level2">
 
-<h3 id="urban-fabric-examples-from-the-detailed-classification-2">Urban Fabric Examples from the detailed classification</h3>
+<h3 id="urban-fabric-examples-2">Urban Fabric Examples</h3>
 
 <img data-src="../figures/progress_october/prague_example3.png" class="r-stretch quarto-figure-center"><p class="caption">First mode iteration coarse hierarchy cut</p></section>
 <section class="slide level2">
 
-<h3 id="cadastre-data-processing-methodology">Cadastre data processing methodology</h3>
+<!-- removing this as we should probably treat the classification as the input here
+### Cadastre data processing methodology
+1. Generate core spatial units for the entire study area and Calculate morphometric characteristics
+2. Generate morphotopes - smallest homegenous urban region
+3. Generate the urban fabrics - clusters of morphotopes with the same morphology -->
+</section>
+<section class="slide level2">
+
+<h3 id="subpar-data-processing-methodology">Subpar data processing methodology</h3>
 <ol type="1">
-<li>Generate core spatial units for the entire study area and Calculate morphometric characteristics</li>
-<li>Generate morphotopes - smallest homegenous urban region</li>
-<li>Generate the urban fabrics - clusters of morphotopes with the same morphology</li>
+<li class="fragment">Generate core spatial units for the entire study area and calculate morphometric characteristics</li>
+<li class="fragment">Train model to predict to urban fabric types using the detailed morphology as a ground truth</li>
+<li class="fragment">Use the model to predict urban fabrics across Central Europe</li>
 </ol>
 </section>
 <section id="first-model-iteration" class="slide level2">
 <h2>First model iteration</h2>
 <ul>
-<li><p>We started with a random forest, then we will possibly move to gradient boosting trees and only then to more advanced NNs.</p></li>
-<li><p>The goal is to keep the final model as simple, scalable and interpretable as possible.</p></li>
-<li><p>We are using stratified k-fold train/test splits based on spatial contiguity (otherwise there is spatial leakage in the test set - .95 vs .68 accuracy)</p></li>
+<li class="fragment">Random forest. Next steps will involve gradient boosting trees and then more advanced NNs.</li>
+<li class="fragment">The goal is to keep the final model as simple, scalable and interpretable as possible.</li>
+<li class="fragment">Stratified k-fold train/test splits based on spatial contiguity preventing spatial leakage in the test set - accuracy of <strong>0.95</strong> with random sampling vs <strong>0.68</strong> with spatial stratification.</li>
 </ul>
-</section>
-<section class="slide level2">
-
-<h3 id="satellite-data-processing-methodology">Satellite data processing methodology</h3>
-<ol type="1">
-<li>Generate core spatial units for the entire study area and calculate morphometric characteristics</li>
-<li>Train model to predict to urban fabric types using the detailed morphology as a ground truth</li>
-<li>Use the model to predict urban fabrics across Central Europe</li>
-</ol>
 </section>
 <section id="first-iteration-results" class="slide level2">
 <h2>First iteration results</h2>
 
-<img data-src="../figures/progress_october/first_result.png" class="r-stretch"></section></section>
-<section id="next-steps" class="title-slide slide level1 center">
-<h1>Next steps</h1>
+<img data-src="../figures/progress_october/first_result.png" class="r-stretch"></section>
+<section id="next-steps" class="slide level2">
+<h2>Next steps</h2>
 <ol type="1">
-<li>Refine data processing pipeline</li>
-<li>Finish technical notes</li>
-<li>Start iterating on model development.</li>
-<li>Write validation and comparison schemes to examine model results at different scales of the detailed cadastre classification.</li>
+<li class="fragment">Refine data processing pipeline</li>
+<li class="fragment">Start iterating on model development.</li>
+<li class="fragment">Write validation and comparison schemes to examine model results at different scales of the detailed cadastre classification.</li>
 </ol>
+</section></section>
+<section id="progress-on-imagery-components" class="title-slide slide level1 center">
+<h1>Progress on imagery components</h1>
+<p>AI model design and development</p>
+<!-- Barbara's slides to be embedded here -->
+</section>
+
+<section id="progress-on-stakeholder-components" class="title-slide slide level1 center">
+<h1>Progress on stakeholder components</h1>
+
+</section>
+
+<section>
+<section id="past-and-future-events" class="title-slide slide level1 center">
+<h1>Past and future events</h1>
+
+</section>
+<section id="past" class="slide level2">
+<h2>Past</h2>
+<p>Urbis 24, Frascati</p>
+</section>
+<section id="future" class="slide level2">
+<h2>Future</h2>
+<p>World Urban Forum, Cairo, November 6th @ 15:30</p>
+<p><em>Monitoring urban fabric for data-driven planning and decision-making</em></p>
+</section></section>
+<section id="what-is-next" class="title-slide slide level1 center">
+<h1>What is next</h1>
+<ul>
+<li class="fragment">Milestone 1 (6 months)</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <p><img src="../assets/icon.svg" class="slide-logo"></p>
