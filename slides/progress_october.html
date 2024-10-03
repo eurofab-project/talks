@@ -554,12 +554,348 @@ Eurofab team
 <li class="fragment">Write validation and comparison schemes to examine model results at different scales of the detailed cadastre classification.</li>
 </ol>
 </section></section>
+<section>
 <section id="progress-on-imagery-components" class="title-slide slide level1 center">
 <h1>Progress on imagery components</h1>
 <p>AI model design and development</p>
-<!-- Barbara's slides to be embedded here -->
 </section>
+<section id="review-ai-model-design" class="slide level2">
+<h2>Review: AI model design</h2>
+<ul>
+<li class="fragment"><strong>Scale:</strong> Pixel vs patch (size)</li>
+<li class="fragment"><strong>Task:</strong> Classification vs segmentation</li>
+<li class="fragment"><strong>Model:</strong> Network architectures and foundation models</li>
+</ul>
+</section></section>
+<section>
+<section id="baseline" class="title-slide slide level1 center">
+<h1>Baseline</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/baseline.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="baseline-results" class="slide level2">
+<h2>Baseline: Results</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/baseline_tile_level.png" class="quarto-figure quarto-figure-center" height="420"></p>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="wp-202-ai-model-design" class="title-slide slide level1 center">
+<h1>WP 202: AI model design</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/overview.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section>
+<section id="data-preprocessing" class="slide level2">
+<h2>Data preprocessing</h2>
+<ul>
+<li class="fragment">224 x 224 x 3 image tiles
+<ul>
+<li class="fragment">26,942 tiles (.tif)</li>
+</ul></li>
+<li class="fragment">Labels:
+<ul>
+<li class="fragment">Spatial signatures (.tif)</li>
+</ul></li>
+<li class="fragment">Train/test split: stratified 80/20% (stratified by distribution in dataset)</li>
+</ul>
+</section>
+<section class="slide level2">
 
+<h3 id="traintest">Train/test</h3>
+<p>80/20% <img data-src="../figures/progress_october_turing/train_df.png" class="nostretch quarto-figure quarto-figure-left" height="400"> <img data-src="../figures/progress_october_turing/test_df.png" class="nostretch quarto-figure quarto-figure-right" height="400"></p>
+</section>
+<section class="slide level2">
+
+<h3 id="unbalanced-dataset">Unbalanced dataset</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/unbalanced.png" class="quarto-figure quarto-figure-center" height="420"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="example">Example</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/random_sample.png" class="quarto-figure quarto-figure-center" height="420"></p>
+</figure>
+</div>
+</section>
+<section id="model-design" class="slide level2">
+<h2>Model design</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/example.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="model-design-1" class="slide level2">
+<h2>Model design</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/setup.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section>
+<section id="backbone-foundation-models" class="slide level2">
+<h2>Backbone: foundation models</h2>
+<ul>
+<li class="fragment">Satlas</li>
+<li class="fragment">Clay</li>
+<li class="fragment">IBM/NASA (Prithvi)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/202408_progress_august_AT/foundation_models.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+</section>
+<section id="comparison-of-backbones" class="slide level2">
+<h2>Comparison of backbones</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th style="text-align: left;">Architecture</th>
+<th style="text-align: right;">#Labels</th>
+<th style="text-align: center;">Images</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Satlas</td>
+<td style="text-align: left;">SwinT</td>
+<td style="text-align: right;">302M</td>
+<td style="text-align: center;">Sentinel-2</td>
+</tr>
+<tr class="even">
+<td>Clay</td>
+<td style="text-align: left;">MAE/ViT</td>
+<td style="text-align: right;">70M</td>
+<td style="text-align: center;">Sentinel-2/Landsat/NAIP/LINZ</td>
+</tr>
+<tr class="odd">
+<td>Prithvi</td>
+<td style="text-align: left;">MAE/ViT</td>
+<td style="text-align: right;">250 PB</td>
+<td style="text-align: center;">Sentinel-2/Landsat</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="loss" class="slide level2">
+<h2>Loss</h2>
+<ul>
+<li class="fragment"><strong>CrossEntropy Loss</strong> (“ce”):
+<ul>
+<li class="fragment">penalizes pixel-wise misclassifications</li>
+</ul></li>
+<li class="fragment"><strong>Focal Loss</strong> (“focal”):
+<ul>
+<li class="fragment">reduces the contribution of easily classified examples and puts more weight on hard-to-classify pixels.</li>
+</ul></li>
+</ul>
+</section>
+<section id="validation-metric" class="slide level2">
+<h2>Validation metric</h2>
+<ul>
+<li class="fragment"><strong>IoU</strong> (Intersection over Union)
+<ul>
+<li class="fragment">Overlap between predicted and ground truth segmentations; 0 (no overlap) to 1 (perfect overlap).</li>
+</ul></li>
+<li class="fragment"><strong>F1 Score</strong> (Weighted)
+<ul>
+<li class="fragment">Balancing precision (how much of the prediction is correct) and recall (how much of the actual segmentation is captured).</li>
+</ul></li>
+</ul>
+</section>
+<section id="validation-metric-1" class="slide level2">
+<h2>Validation metric</h2>
+<ul>
+<li class="fragment"><strong>Accuracy</strong> (Weighted)
+<ul>
+<li class="fragment">Percentage of correctly classified pixels.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="model-a-satlas">Model A: Satlas</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/satlas_model.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="model-b-clay">Model B: Clay</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/clay_model.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="model-c-prithvi">Model C: Prithvi</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/prithvi_model.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="results-fine-tuning">Results: fine-tuning</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Satlas</th>
+<th>Clay</th>
+<th>Prithvi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Run time (per epoch) (with GPU)</td>
+<td>9 mins</td>
+<td>8 mins</td>
+<td>20 mins</td>
+</tr>
+<tr class="even">
+<td># parameters</td>
+<td>90M</td>
+<td>86M</td>
+<td>120M</td>
+</tr>
+<tr class="odd">
+<td>Implementation</td>
+<td>5/10</td>
+<td>6/10</td>
+<td>7/10</td>
+</tr>
+<tr class="even">
+<td>Hyperparameter tracking</td>
+<td>Own setup</td>
+<td>Wandb.ai</td>
+<td>Tensorboard</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="results-fine-tuning-10-epochs">Results: fine-tuning 10 epochs</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Satlas</th>
+<th>Clay</th>
+<th>Prithvi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Accuracy (weighted)</td>
+<td>0.57</td>
+<td><strong>0.72</strong></td>
+<td>0.62</td>
+</tr>
+<tr class="even">
+<td>IoU (weighted) (0-1)</td>
+<td>0.33</td>
+<td><strong>0.58</strong></td>
+<td>0.41</td>
+</tr>
+<tr class="odd">
+<td>F1 (weighted)</td>
+<td>0.41</td>
+<td><strong>0.69</strong></td>
+<td>0.58</td>
+</tr>
+</tbody>
+</table>
+<p>Without hyperparameter tuning!</p>
+</section>
+<section class="slide level2">
+
+<h3 id="results-fine-tuning-w-focal-loss">Results: fine-tuning w/ focal loss</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Satlas</th>
+<th>Clay</th>
+<th>Prithvi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Accuracy (weighted)</td>
+<td>0.25</td>
+<td><strong>0.72</strong></td>
+<td>0.59</td>
+</tr>
+<tr class="even">
+<td>IoU (weighted) (0-1)</td>
+<td>0.2</td>
+<td><strong>0.58</strong></td>
+<td>0.42</td>
+</tr>
+<tr class="odd">
+<td>F1 (weighted)</td>
+<td>0.21</td>
+<td><strong>0.69</strong></td>
+<td>0.59</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prithvi-ce-vs-focal-loss" class="slide level2">
+<h2>Prithvi: CE vs focal loss</h2>
+<p><img data-src="../figures/progress_october_turing/class_acc_ce_loss.png" class="nostretch quarto-figure quarto-figure-left" height="300"> <img data-src="../figures/progress_october_turing/class_acc_focal_loss_prithvi.png" class="nostretch quarto-figure quarto-figure-right" height="300"></p>
+</section>
+<section id="clay-predictions" class="slide level2">
+<h2>Clay predictions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_october_turing/class_acc.png" class="quarto-figure quarto-figure-center" height="430"></p>
+</figure>
+</div>
+</section>
+<section id="summary-model-comparison" class="slide level2">
+<h2>Summary: model comparison</h2>
+<ul>
+<li class="fragment">Clay is the winner!</li>
+<li class="fragment">Training loss is important</li>
+<li class="fragment">Some classes still very much underdetected!</li>
+</ul>
+</section>
+<section id="next-steps-1" class="slide level2">
+<h2>Next steps</h2>
+<ul>
+<li class="fragment">Technical write-up</li>
+<li class="fragment">Hyperparameter-tuning</li>
+<li class="fragment">Data augmentation</li>
+<li class="fragment">Comparison to baseline
+<ul>
+<li class="fragment">downsample/ upsample</li>
+<li class="fragment">maps</li>
+</ul></li>
+</ul>
+</section></section>
 <section id="progress-on-stakeholder-components" class="title-slide slide level1 center">
 <h1>Progress on stakeholder components</h1>
 

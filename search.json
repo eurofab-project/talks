@@ -175,6 +175,104 @@
     "text": "Next steps\n\nRefine data processing pipeline\nStart iterating on model development.\nWrite validation and comparison schemes to examine model results at different scales of the detailed cadastre classification."
   },
   {
+    "objectID": "slides/progress_october.html#review-ai-model-design",
+    "href": "slides/progress_october.html#review-ai-model-design",
+    "title": "EuroFab Progress Meeting",
+    "section": "Review: AI model design",
+    "text": "Review: AI model design\n\nScale: Pixel vs patch (size)\nTask: Classification vs segmentation\nModel: Network architectures and foundation models"
+  },
+  {
+    "objectID": "slides/progress_october.html#baseline-results",
+    "href": "slides/progress_october.html#baseline-results",
+    "title": "EuroFab Progress Meeting",
+    "section": "Baseline: Results",
+    "text": "Baseline: Results"
+  },
+  {
+    "objectID": "slides/progress_october.html#data-preprocessing",
+    "href": "slides/progress_october.html#data-preprocessing",
+    "title": "EuroFab Progress Meeting",
+    "section": "Data preprocessing",
+    "text": "Data preprocessing\n\n224 x 224 x 3 image tiles\n\n26,942 tiles (.tif)\n\nLabels:\n\nSpatial signatures (.tif)\n\nTrain/test split: stratified 80/20% (stratified by distribution in dataset)"
+  },
+  {
+    "objectID": "slides/progress_october.html#model-design",
+    "href": "slides/progress_october.html#model-design",
+    "title": "EuroFab Progress Meeting",
+    "section": "Model design",
+    "text": "Model design"
+  },
+  {
+    "objectID": "slides/progress_october.html#model-design-1",
+    "href": "slides/progress_october.html#model-design-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Model design",
+    "text": "Model design"
+  },
+  {
+    "objectID": "slides/progress_october.html#backbone-foundation-models",
+    "href": "slides/progress_october.html#backbone-foundation-models",
+    "title": "EuroFab Progress Meeting",
+    "section": "Backbone: foundation models",
+    "text": "Backbone: foundation models\n\nSatlas\nClay\nIBM/NASA (Prithvi)"
+  },
+  {
+    "objectID": "slides/progress_october.html#comparison-of-backbones",
+    "href": "slides/progress_october.html#comparison-of-backbones",
+    "title": "EuroFab Progress Meeting",
+    "section": "Comparison of backbones",
+    "text": "Comparison of backbones\n\n\n\nModel\nArchitecture\n#Labels\nImages\n\n\n\n\nSatlas\nSwinT\n302M\nSentinel-2\n\n\nClay\nMAE/ViT\n70M\nSentinel-2/Landsat/NAIP/LINZ\n\n\nPrithvi\nMAE/ViT\n250 PB\nSentinel-2/Landsat"
+  },
+  {
+    "objectID": "slides/progress_october.html#loss",
+    "href": "slides/progress_october.html#loss",
+    "title": "EuroFab Progress Meeting",
+    "section": "Loss",
+    "text": "Loss\n\nCrossEntropy Loss (“ce”):\n\npenalizes pixel-wise misclassifications\n\nFocal Loss (“focal”):\n\nreduces the contribution of easily classified examples and puts more weight on hard-to-classify pixels."
+  },
+  {
+    "objectID": "slides/progress_october.html#validation-metric",
+    "href": "slides/progress_october.html#validation-metric",
+    "title": "EuroFab Progress Meeting",
+    "section": "Validation metric",
+    "text": "Validation metric\n\nIoU (Intersection over Union)\n\nOverlap between predicted and ground truth segmentations; 0 (no overlap) to 1 (perfect overlap).\n\nF1 Score (Weighted)\n\nBalancing precision (how much of the prediction is correct) and recall (how much of the actual segmentation is captured)."
+  },
+  {
+    "objectID": "slides/progress_october.html#validation-metric-1",
+    "href": "slides/progress_october.html#validation-metric-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Validation metric",
+    "text": "Validation metric\n\nAccuracy (Weighted)\n\nPercentage of correctly classified pixels."
+  },
+  {
+    "objectID": "slides/progress_october.html#prithvi-ce-vs-focal-loss",
+    "href": "slides/progress_october.html#prithvi-ce-vs-focal-loss",
+    "title": "EuroFab Progress Meeting",
+    "section": "Prithvi: CE vs focal loss",
+    "text": "Prithvi: CE vs focal loss"
+  },
+  {
+    "objectID": "slides/progress_october.html#clay-predictions",
+    "href": "slides/progress_october.html#clay-predictions",
+    "title": "EuroFab Progress Meeting",
+    "section": "Clay predictions",
+    "text": "Clay predictions"
+  },
+  {
+    "objectID": "slides/progress_october.html#summary-model-comparison",
+    "href": "slides/progress_october.html#summary-model-comparison",
+    "title": "EuroFab Progress Meeting",
+    "section": "Summary: model comparison",
+    "text": "Summary: model comparison\n\nClay is the winner!\nTraining loss is important\nSome classes still very much underdetected!"
+  },
+  {
+    "objectID": "slides/progress_october.html#next-steps-1",
+    "href": "slides/progress_october.html#next-steps-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Next steps",
+    "text": "Next steps\n\nTechnical write-up\nHyperparameter-tuning\nData augmentation\nComparison to baseline\n\ndownsample/ upsample\nmaps"
+  },
+  {
     "objectID": "slides/progress_october.html#past",
     "href": "slides/progress_october.html#past",
     "title": "EuroFab Progress Meeting",
