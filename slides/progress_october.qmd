@@ -11,6 +11,7 @@ format:
         transition: slide
         navigation-mode: linear
         controls-layout: edges
+        incremental: true
         progress: true
         include-in-header: ../assets/font.html
         title-slide-attributes:
@@ -19,18 +20,39 @@ format:
             data-background-position: 50% 90%
 ---
 
-# Progress update
-1. WP200 & WP300 Iterative Algorithm and Data processing Progress (Design and Data Collection)
-2. WP200 AI Model Design and Development
-3. WP100 Colloborative Stakeholder Requirements and Consolidation
+## Agenda
+
+1. Progress on morphometric components
+2. Progress on imagery components
+3. Progress on stakeholder components
+4. Past and future events
+5. Administrative appendix (if needed)
+
+
+# Where we are
 
 ---
 
 ![ ](../figures/progress_august/gantchart.png)
 
+# Key focus
 
-# WP200 & WP300 Morphometric Classification Homogenisation Protocol
+::: {.r-fit-text .fragment}
+WP 200<br>
+Iterative Algorithm Desing<br>
+and Data Collection Sprints
+:::
 
+# WP 200
+
+1. Progress on morphometric components
+2. Progress on imagery components
+
+[Each including relevant data collection.]{.fragment}
+
+# Progress on morphometric components
+
+Morphometric classification homogenisation protocol
 
 ---
 
@@ -54,7 +76,7 @@ format:
     - Directly use the model to classify them into urban fabric types
 
 
-# WP203 Input data collection and preprocessing
+## Input data collection and preprocessing
 
 1. Morphometric classification of Central Europe (UPDATE)
 2. Microsoft Building footprints
@@ -66,17 +88,19 @@ format:
 - It is based on cadastre building data (NEW) !
     - Processed from official APIs for all five countries
     - New data has ~11 million more buildings than EUBUCCO
-    - Quality checks are still pending
+    - Quality checks are still pending in some regions
 
 ## Detailed morphometric classification
 - Uses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier
+
+## Data issues
 
 ---
 
 ### Problems with existing datasets - EUBUCCO, etc..
 
 ![Lots of missing and undocumented processed data](../figures/progress_october/bubenec.png)
- 
+
 ---
 
 ### Problems with cadastre data - Germany, Poland, etc..
@@ -103,7 +127,7 @@ format:
 ## Overture Maps streets
 - OpenStreetMap data with minimal processing, therefore it has good coverage
 - The ground truth morphometric classification uses it
-- The street network is simplified, preserving its topology, but removing unnecassary clutter
+- The street network is simplified, preserving its topology, but removing unnecassary transportation artifacts
 
 ---
 
@@ -118,68 +142,91 @@ format:
 2. We have a scalable pipeline (8 mil and more inputs) to calculate the morphological characters, which will be the input to the EUROFAB model.
 
 ## Current implementation status
-3. The core functionality for all of this was made available within open-source packages - momepy, pysal, sgeop
-4. Started writing up technical notes, to be delivered two weeks before our next meeting in December
+3. The core functionality for all of this was made available within open-source packages - `momepy`, `libpysal`, `sgeop`
+4. Existing draft of technical notes, to be delivered two weeks before the Milestone 1 in December
 
 
-# WP201 & WP301 Model development
+# Model development
 
 ---
 
-### Urban Fabric Examples from the detailed classification
+## Target - Urban taxonomy
+
+- Hierarchical classification of urban fabric
+- Allows flexibility in the resolution of the classification to be predicted
+- At the moment, tested at a fixed level
+
+---
+
+### Urban Fabric Examples
 
 ![Medieval, Victorian-era and 'Large, open' urban fabrics)](../figures/progress_october/prague_example1.png)
 
 ---
 
-### Urban Fabric Examples from the detailed classification
+### Urban Fabric Examples
 
 ![Modern, Victorian-era and villas](../figures/progress_october/prague_example2.png)
 
 ---
 
-### Urban Fabric Examples from the detailed classification
+### Urban Fabric Examples
 
 ![First mode iteration coarse hierarchy cut](../figures/progress_october/prague_example3.png)
 
 ---
 
-
+<!-- removing this as we should probably treat the classification as the input here
 ### Cadastre data processing methodology
 1. Generate core spatial units for the entire study area and Calculate morphometric characteristics
 2. Generate morphotopes - smallest homegenous urban region
-3. Generate the urban fabrics - clusters of morphotopes with the same morphology
+3. Generate the urban fabrics - clusters of morphotopes with the same morphology -->
 
 ---
 
-## First model iteration
-- We started with a random forest, then we will possibly move to gradient boosting trees and only then to more advanced NNs. 
+### Subpar data processing methodology
 
-- The goal is to keep the final model as simple, scalable and interpretable as possible.
-
-- We are using stratified k-fold train/test splits based on spatial contiguity (otherwise there is spatial leakage in the test set - .95 vs .68 accuracy)
-
----
-
-### Satellite data processing methodology
 1. Generate core spatial units for the entire study area and calculate morphometric characteristics
 2. Train model to predict to urban fabric types using the detailed morphology as a ground truth
 3. Use the model to predict urban fabrics across Central Europe
 
----
+
+## First model iteration
+
+- Random forest. Next steps will involve gradient boosting trees and then more advanced NNs.
+- The goal is to keep the final model as simple, scalable and interpretable as possible.
+- Stratified k-fold train/test splits based on spatial contiguity preventing spatial leakage in the test set - accuracy of **0.95** with random sampling vs **0.68** with spatial stratification.
 
 
 ## First iteration results
 
 ![](../figures/progress_october/first_result.png)
 
-
-
-# Next steps
-1. Refine data processing pipeline 
-2. Finish technical notes
+##  Next steps
+1. Refine data processing pipeline
 3. Start iterating on model development.
 4. Write validation and comparison schemes to examine model results at different scales of the detailed cadastre classification.
 
+# Progress on imagery components
 
+AI model design and development
 
+<!-- Barbara's slides to be embedded here -->
+
+# Progress on stakeholder components
+
+# Past and future events
+
+## Past
+
+Urbis 24, Frascati
+
+## Future
+
+World Urban Forum, Cairo, November 6th @ 15:30
+
+_Monitoring urban fabric for data-driven planning and decision-making_
+
+# What is next
+
+- Milestone 1 (6 months)
