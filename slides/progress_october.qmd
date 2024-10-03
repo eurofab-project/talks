@@ -20,7 +20,9 @@ format:
 ---
 
 # Progress update
-1. WP200 Iterative Algorithm and Data processing Progress (Design and Data Collection)
+1. WP200 & WP300 Iterative Algorithm and Data processing Progress (Design and Data Collection)
+2. WP200 AI Model Design and Development
+3. WP100 Colloborative Stakeholder Requirements and Consolidation
 
 ---
 
@@ -65,8 +67,8 @@ format:
 
 ## Morphometric classification of Central Europe
 - It is based on cadastre building data (NEW) !
-    - Manually downloaded and processed from official APIs for all five countries
-    - New data has 11 million more buildings than EUBUCCO, which is based on some official and some openstreetmap data
+    - Processed from official APIs for all five countries
+    - New data has ~11 million more buildings than EUBUCCO
     - Quality checks are still pending
 - Uses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier
 
@@ -81,6 +83,45 @@ format:
 ### Problems with cadastre data - Germany, Poland, etc..
 
 ![Wrong and undocumented information - CRS, type, year, rate-limited APIs](../figures/progress_october/poland.png)
+
+---
+
+## Microsoft Building footprints
+- Cover a large part of the globe - 1.5 billion building footprints.
+- Available for the study region, whereas other sources such as Google footprints are not.
+- Homogeneous origin - all footprints are derived using the same model.
+
+---
+
+### Examples
+
+![Good coverage, but quality drops some places](../figures/progress_october/microsoft_prague.png)
+
+---
+
+
+
+## Overture Maps streets
+- OpenStreetMap data with minimal processing, therefore it has good coverage
+- The ground truth morphometric classification uses it
+- The street network is simplified, preserving its topology, but removing unnecassary clutter
+
+---
+
+
+### Examples
+![Simplified Overture street network](../figures/progress_october/street_network.png)
+
+---
+
+## Current implementation status
+1. We have implemented a pipeline to process the Microsoft buildings and Overture streets
+2. We have a scalable pipeline (8 mil and more inputs) to calculate the morphological characters, which will be the input to the EUROFAB model.
+3. The core functionality for all of this was made available within open-source packages - momepy, pysal, sgeop
+4. Started writing up technical notes, to be delivered two weeks before our next meeting in December
+
+
+# WP201 & WP301 Model development
 
 ---
 
@@ -103,70 +144,29 @@ format:
 ---
 
 
-### Methodology
-1. Generate ETCs for the entire study area
-2. Calculate 63 morphometric characteristics + spatially lagged context
-3. Extract clusters using spatially constrained ward + EOM extraction to generate morphotopes
-4. Aggregate quantile chars data into the morphotopes
-5. Project down morphotopes from 183 dims to 20 dims using UMAP for the whole region
-6. Hierarchical clustering to generate the urban fabrics
+### Cadastre data processing methodology
+1. Generate core spatial units for the entire study area and Calculate morphometric characteristics
+2. Generate morphotopes - smallest homegenous urban region
+3. Generate the urban fabrics - clusters of morphotopes with the same morphology
 
 ---
 
-## Microsoft Building footprints
-- Cover a large part of the globe - 1.5 billion building footprints.
-- Available for the study region, whereas other sources such as Google footprints are not.
-- Homogeneous origin - all footprints are derived using the same model.
-
----
-
-### Examples
-
-![Good coverage, but quality drops some places](../figures/progress_october/microsoft_prague.png)
-
----
-
-
-
-## Overture Maps streets
-- OpenStreetMap data with minimal processing, therefore it has good coverage
-- Faster processing times compared to raw OSM streets
-- The ground truth morphometric classification uses it, therefore there will be some shared data between the classifications, making the model inference easier
-
----
-
-
-### Examples
-![Simplified Overture street network](../figures/progress_october/street_network.png)
-
----
-
-## Current implementation status
-1. We have implemented a pipeline to process the Microsoft buildings and Overture streets - downloading, processing, simplifiying and merging.
-2. We have a scalable pipeline to calculate the morphological characters, which will be the input to the EUROFAB model. It scales up to 8mil buildings at a time, potentially more with parameter changes.
-
-
-
----
-
-
-# WP201 & WP301 Model development
-
+## First model iteration
 - We started with a random forest, then we will possibly move to gradient boosting trees and only then to more advanced NNs. 
 
 - The goal is to keep the final model as simple, scalable and interpretable as possible.
 
+- We are using stratified k-fold train/test splits based on spatial contiguity (otherwise there is spatial leakage in the test set - .95 vs .68 accuracy)
+
 ---
 
-## Naive train/test splits
-![Very high accuracy, but there is spatial lag in the test set](../figures/progress_october/default_split.png)
+### Satellite data processing methodology
+1. Generate core spatial units for the entire study area and calculate morphometric characteristics
+2. Train model to predict to urban fabric types using the detailed morphology as a ground truth
+3. Use the model to predict urban fabrics across Central Europe
 
---
+---
 
-## Spatial train/test splits
-![Lower for this iteration, but the model is more capable of generalisation](../figures/progress_october/spatial_split.png)
-
---
 
 ## First iteration results
 
@@ -177,8 +177,9 @@ format:
 
 # Next steps
 1. Refine data processing pipeline 
-2. Start iterating model development.
-3. Write validation and comparison schemes to examine model results at different scales of the detailed cadastre classification.
+2. Finish technical notes
+3. Start iterating on model development.
+4. Write validation and comparison schemes to examine model results at different scales of the detailed cadastre classification.
 
 
 
