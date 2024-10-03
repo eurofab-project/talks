@@ -29,9 +29,6 @@ format:
 ![ ](../figures/progress_august/gantchart.png)
 
 
----
-
-
 # WP200 & WP300 Morphometric Classification Homogenisation Protocol
 
 
@@ -65,11 +62,13 @@ format:
 4. Implementation
 
 
-## Morphometric classification of Central Europe
+## Detailed morphometric classification
 - It is based on cadastre building data (NEW) !
     - Processed from official APIs for all five countries
     - New data has ~11 million more buildings than EUBUCCO
     - Quality checks are still pending
+
+## Detailed morphometric classification
 - Uses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier
 
 ---
@@ -117,6 +116,8 @@ format:
 ## Current implementation status
 1. We have implemented a pipeline to process the Microsoft buildings and Overture streets
 2. We have a scalable pipeline (8 mil and more inputs) to calculate the morphological characters, which will be the input to the EUROFAB model.
+
+## Current implementation status
 3. The core functionality for all of this was made available within open-source packages - momepy, pysal, sgeop
 4. Started writing up technical notes, to be delivered two weeks before our next meeting in December
 
@@ -170,8 +171,7 @@ format:
 
 ## First iteration results
 
-![Just defaults are able to reproduce the coarse hierarchy cut](../figures/progress_october/first_result.png)
---
+![](../figures/progress_october/first_result.png)
 
 
 
