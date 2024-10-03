@@ -84,11 +84,18 @@
     "text": "Protocol design\n\nTest the model on an out of training sample country to validate the approach.\n\nPossibly Denmark / Italy / Spain\nCalculate morphometric characters\nDirectly use the model to classify them into urban fabric types"
   },
   {
-    "objectID": "slides/progress_october.html#morphometric-classification-of-central-europe",
-    "href": "slides/progress_october.html#morphometric-classification-of-central-europe",
+    "objectID": "slides/progress_october.html#detailed-morphometric-classification",
+    "href": "slides/progress_october.html#detailed-morphometric-classification",
     "title": "EuroFab Progress Meeting",
-    "section": "Morphometric classification of Central Europe",
-    "text": "Morphometric classification of Central Europe\n\nIt is based on cadastre building data (NEW) !\n\nProcessed from official APIs for all five countries\nNew data has ~11 million more buildings than EUBUCCO\nQuality checks are still pending\n\nUses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier"
+    "section": "Detailed morphometric classification",
+    "text": "Detailed morphometric classification\n\nIt is based on cadastre building data (NEW) !\n\nProcessed from official APIs for all five countries\nNew data has ~11 million more buildings than EUBUCCO\nQuality checks are still pending"
+  },
+  {
+    "objectID": "slides/progress_october.html#detailed-morphometric-classification-1",
+    "href": "slides/progress_october.html#detailed-morphometric-classification-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Detailed morphometric classification",
+    "text": "Detailed morphometric classification\n\nUses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier"
   },
   {
     "objectID": "slides/progress_october.html#microsoft-building-footprints",
@@ -109,7 +116,14 @@
     "href": "slides/progress_october.html#current-implementation-status",
     "title": "EuroFab Progress Meeting",
     "section": "Current implementation status",
-    "text": "Current implementation status\n\nWe have implemented a pipeline to process the Microsoft buildings and Overture streets\nWe have a scalable pipeline (8 mil and more inputs) to calculate the morphological characters, which will be the input to the EUROFAB model.\nThe core functionality for all of this was made available within open-source packages - momepy, pysal, sgeop\nStarted writing up technical notes, to be delivered two weeks before our next meeting in December"
+    "text": "Current implementation status\n\nWe have implemented a pipeline to process the Microsoft buildings and Overture streets\nWe have a scalable pipeline (8 mil and more inputs) to calculate the morphological characters, which will be the input to the EUROFAB model."
+  },
+  {
+    "objectID": "slides/progress_october.html#current-implementation-status-1",
+    "href": "slides/progress_october.html#current-implementation-status-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Current implementation status",
+    "text": "Current implementation status\n\nThe core functionality for all of this was made available within open-source packages - momepy, pysal, sgeop\nStarted writing up technical notes, to be delivered two weeks before our next meeting in December"
   },
   {
     "objectID": "slides/progress_october.html#first-model-iteration",
