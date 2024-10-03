@@ -171,8 +171,7 @@ format:
 
 ## First iteration results
 
-![Just defaults are able to reproduce the coarse hierarchy cut](../figures/progress_october/first_result.png)
---
+![](../figures/progress_october/first_result.png)
 
 
 
