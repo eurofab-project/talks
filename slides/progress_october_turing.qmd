@@ -186,13 +186,13 @@ Without hyperparameter tuning!
 
 ## Prithvi: CE vs focal loss
 
-![](../figures/progress_october_turing/class_acc_ce_loss.png){.nostretch fig-align="left" height="280"}
-![](../figures/progress_october_turing/class_acc_focal_loss_prithvi.png){.nostretch fig-align="right" height="280"}
+![](../figures/progress_october_turing/class_acc_ce_loss.png){.nostretch fig-align="left" height="300"}
+![](../figures/progress_october_turing/class_acc_focal_loss_prithvi.png){.nostretch fig-align="right" height="300"}
 
 
 ## Clay predictions
 
-![](../figures/progress_october_turing/class_acc.png){.nostretch fig-align="left" height="430"}
+![](../figures/progress_october_turing/class_acc.png){.nostretch fig-align="center" height="430"}
 
 
 ## Summary: model comparison
