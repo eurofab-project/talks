@@ -1,0 +1,185 @@
+---
+title: "EuroFab Progress Meeting"
+author: "Eurofab team"
+# institute: "Charles University"
+date: "2024-08-02"
+format:
+    revealjs:
+        theme: [default, ../assets/reveal.scss]
+        logo: ../assets/icon.svg
+        menu: false
+        transition: slide
+        navigation-mode: linear
+        controls-layout: edges
+        progress: true
+        include-in-header: ../assets/font.html
+        title-slide-attributes:
+            data-background-image: ../assets/logos.png
+            data-background-size: 20%
+            data-background-position: 50% 90%
+---
+
+# Progress update
+1. WP200 & WP300 Iterative Algorithm and Data processing Progress (Design and Data Collection)
+2. WP200 AI Model Design and Development
+3. WP100 Colloborative Stakeholder Requirements and Consolidation
+
+---
+
+![ ](../figures/progress_august/gantchart.png)
+
+
+---
+
+
+# WP200 & WP300 Morphometric Classification Homogenisation Protocol
+
+
+---
+
+![ ](../figures/progress_october/worflow_chart.png)
+
+
+---
+
+
+## Protocol design
+1. Use morphometric classification of Central Europe from a parallel research project as ground truth data
+2. Calculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis
+
+## Protocol design
+3. Train a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label
+
+## Protocol design
+4. Test the model on an out of training sample country to validate the approach.
+    - Possibly Denmark / Italy / Spain
+    - Calculate morphometric characters
+    - Directly use the model to classify them into urban fabric types
+
+
+# WP203 Input data collection and preprocessing
+
+1. Morphometric classification of Central Europe (UPDATE)
+2. Microsoft Building footprints
+3. Overture Maps streets
+4. Implementation
+
+
+## Morphometric classification of Central Europe
+- It is based on cadastre building data (NEW) !
+    - Processed from official APIs for all five countries
+    - New data has ~11 million more buildings than EUBUCCO
+    - Quality checks are still pending
+- Uses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier
+
+---
+
+### Problems with existing datasets - EUBUCCO, etc..
+
+![Lots of missing and undocumented processed data](../figures/progress_october/bubenec.png)
+ 
+---
+
+### Problems with cadastre data - Germany, Poland, etc..
+
+![Wrong and undocumented information - CRS, type, year, rate-limited APIs](../figures/progress_october/poland.png)
+
+---
+
+## Microsoft Building footprints
+- Cover a large part of the globe - 1.5 billion building footprints.
+- Available for the study region, whereas other sources such as Google footprints are not.
+- Homogeneous origin - all footprints are derived using the same model.
+
+---
+
+### Examples
+
+![Good coverage, but quality drops some places](../figures/progress_october/microsoft_prague.png)
+
+---
+
+
+
+## Overture Maps streets
+- OpenStreetMap data with minimal processing, therefore it has good coverage
+- The ground truth morphometric classification uses it
+- The street network is simplified, preserving its topology, but removing unnecassary clutter
+
+---
+
+
+### Examples
+![Simplified Overture street network](../figures/progress_october/street_network.png)
+
+---
+
+## Current implementation status
+1. We have implemented a pipeline to process the Microsoft buildings and Overture streets
+2. We have a scalable pipeline (8 mil and more inputs) to calculate the morphological characters, which will be the input to the EUROFAB model.
+3. The core functionality for all of this was made available within open-source packages - momepy, pysal, sgeop
+4. Started writing up technical notes, to be delivered two weeks before our next meeting in December
+
+
+# WP201 & WP301 Model development
+
+---
+
+### Urban Fabric Examples from the detailed classification
+
+![Medieval, Victorian-era and 'Large, open' urban fabrics)](../figures/progress_october/prague_example1.png)
+
+---
+
+### Urban Fabric Examples from the detailed classification
+
+![Modern, Victorian-era and villas](../figures/progress_october/prague_example2.png)
+
+---
+
+### Urban Fabric Examples from the detailed classification
+
+![First mode iteration coarse hierarchy cut](../figures/progress_october/prague_example3.png)
+
+---
+
+
+### Cadastre data processing methodology
+1. Generate core spatial units for the entire study area and Calculate morphometric characteristics
+2. Generate morphotopes - smallest homegenous urban region
+3. Generate the urban fabrics - clusters of morphotopes with the same morphology
+
+---
+
+## First model iteration
+- We started with a random forest, then we will possibly move to gradient boosting trees and only then to more advanced NNs. 
+
+- The goal is to keep the final model as simple, scalable and interpretable as possible.
+
+- We are using stratified k-fold train/test splits based on spatial contiguity (otherwise there is spatial leakage in the test set - .95 vs .68 accuracy)
+
+---
+
+### Satellite data processing methodology
+1. Generate core spatial units for the entire study area and calculate morphometric characteristics
+2. Train model to predict to urban fabric types using the detailed morphology as a ground truth
+3. Use the model to predict urban fabrics across Central Europe
+
+---
+
+
+## First iteration results
+
+![Just defaults are able to reproduce the coarse hierarchy cut](../figures/progress_october/first_result.png)
+--
+
+
+
+# Next steps
+1. Refine data processing pipeline 
+2. Finish technical notes
+3. Start iterating on model development.
+4. Write validation and comparison schemes to examine model results at different scales of the detailed cadastre classification.
+
+
+
