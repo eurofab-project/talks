@@ -2,7 +2,7 @@
 title: "EuroFab Progress Meeting"
 author: "Eurofab team"
 # institute: "Charles University"
-date: "2024-08-02"
+date: "2024-10-04"
 format:
     revealjs:
         theme: [default, ../assets/reveal.scss]
