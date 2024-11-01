@@ -173,22 +173,28 @@ Hierarchical relationship allowing flexible classification resolution
 
 <!-- Krasen to generate figures for this place -->
 
-## {background-image="../figures/202411_WUF/morphotopes.png" .no-text}
+## {background-image="../figures/202411_WUF/krakow_1.png" .no-text}
 
 ::: aside
 Classification hierachy at level 1 in Krakow, Poland
 :::
 
-## {background-image="../figures/202411_WUF/morphotopes.png" .no-text}
+## {background-image="../figures/202411_WUF/krakow_50.png" .no-text}
 
 ::: aside
 Classification hierachy at level 2 in Krakow, Poland
 :::
 
-## {background-image="../figures/202411_WUF/morphotopes.png" .no-text}
+## {background-image="../figures/202411_WUF/krakow_100.png" .no-text}
 
 ::: aside
 Classification hierachy at level 3 in Krakow, Poland
+:::
+
+## {background-image="../figures/202411_WUF/krakow_300.png" .no-text}
+
+::: aside
+Classification hierachy at level 4 in Krakow, Poland
 :::
 
 ---
