@@ -63,6 +63,153 @@
     "text": "Overture Maps streets\n\nOpenStreetMap data with minimal processing, therefore it has good coverage\nFaster processing times compared to raw OSM streets\nThe ground truth morphometric classification uses it, therefore there will be some shared data between the classifications, making the model inference easier"
   },
   {
+    "objectID": "slides/202411_WUF.html#section",
+    "href": "slides/202411_WUF.html#section",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "New York by Anuj Gogari"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-1",
+    "href": "slides/202411_WUF.html#section-1",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Paris by George Kantarzis"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-2",
+    "href": "slides/202411_WUF.html#section-2",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Prague by Jay Dantine"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-3",
+    "href": "slides/202411_WUF.html#section-3",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Sao Paulo by Jonathan Borba"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-4",
+    "href": "slides/202411_WUF.html#section-4",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Tokyo by Masaaki Komori"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-5",
+    "href": "slides/202411_WUF.html#section-5",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "by Stephen Oliver"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#cities-are-too-complex-to-handle-without-simplification",
+    "href": "slides/202411_WUF.html#cities-are-too-complex-to-handle-without-simplification",
+    "title": "Classification of urban fabric",
+    "section": "Cities are too complex to handle without simplification",
+    "text": "Cities are too complex to handle without simplification"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#clasffication-as-a-way-of-complexity-reduction",
+    "href": "slides/202411_WUF.html#clasffication-as-a-way-of-complexity-reduction",
+    "title": "Classification of urban fabric",
+    "section": "Clasffication as a way of complexity reduction",
+    "text": "Clasffication as a way of complexity reduction\nSubdivide area into a set of distinct classes"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-6",
+    "href": "slides/202411_WUF.html#section-6",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Atlanta"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-7",
+    "href": "slides/202411_WUF.html#section-7",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Barcelona"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-8",
+    "href": "slides/202411_WUF.html#section-8",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Brasilia"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-9",
+    "href": "slides/202411_WUF.html#section-9",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Sao Paulo"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#buildings-and-streets",
+    "href": "slides/202411_WUF.html#buildings-and-streets",
+    "title": "Classification of urban fabric",
+    "section": "Buildings and streets",
+    "text": "Buildings and streets"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-10",
+    "href": "slides/202411_WUF.html#section-10",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Homogenous area detection in Krakow, Poland"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-11",
+    "href": "slides/202411_WUF.html#section-11",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Classification hierachy at level 1 in Krakow, Poland"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-12",
+    "href": "slides/202411_WUF.html#section-12",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Classification hierachy at level 2 in Krakow, Poland"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-13",
+    "href": "slides/202411_WUF.html#section-13",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Classification hierachy at level 3 in Krakow, Poland"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#do-you-find-it-useful",
+    "href": "slides/202411_WUF.html#do-you-find-it-useful",
+    "title": "Classification of urban fabric",
+    "section": "Do you find it useful?",
+    "text": "Do you find it useful?"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#do-you-have-a-use-case-in-your-domain",
+    "href": "slides/202411_WUF.html#do-you-have-a-use-case-in-your-domain",
+    "title": "Classification of urban fabric",
+    "section": "Do you have a use case in your domain?",
+    "text": "Do you have a use case in your domain?"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#would-you-like-to-be-part-of-a-pilot",
+    "href": "slides/202411_WUF.html#would-you-like-to-be-part-of-a-pilot",
+    "title": "Classification of urban fabric",
+    "section": "Would you like to be part of a pilot?",
+    "text": "Would you like to be part of a pilot?"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#do-you-want-to-follow-up",
+    "href": "slides/202411_WUF.html#do-you-want-to-follow-up",
+    "title": "Classification of urban fabric",
+    "section": "Do you want to follow up?",
+    "text": "Do you want to follow up?\n martin.fleischmann@natur.cuni.cz\n linkedin.com/in/fleischmannmartin/"
+  },
+  {
     "objectID": "slides/progress_october.html#agenda",
     "href": "slides/progress_october.html#agenda",
     "title": "EuroFab Progress Meeting",
@@ -287,6 +434,20 @@
     "text": "Future\nWorld Urban Forum, Cairo, November 6th @ 15:30\nMonitoring urban fabric for data-driven planning and decision-making"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Archive of talks of the EuroFab project."
+  },
+  {
+    "objectID": "index.html#list-of-talks",
+    "href": "index.html#list-of-talks",
+    "title": "Talks",
+    "section": "List of talks",
+    "text": "List of talks\n\n2024-06-07 EuroFab project Kick-Off meeting\n2024-08-02 August progress meeting\n2024-08-02 EuroFab progress meeting AT\n2024-10-04 October progress meeting\n2024-11-06 World Urban Forum"
+  },
+  {
     "objectID": "slides/template.html#heading-level-2",
     "href": "slides/template.html#heading-level-2",
     "title": "Spatial Autocorrelation",
@@ -341,20 +502,6 @@
     "title": "Spatial Autocorrelation",
     "section": "Slide with iframe background",
     "text": "Slide with iframe background"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Talks",
-    "section": "",
-    "text": "Archive of talks of the EuroFab project."
-  },
-  {
-    "objectID": "index.html#list-of-talks",
-    "href": "index.html#list-of-talks",
-    "title": "Talks",
-    "section": "List of talks",
-    "text": "List of talks\n\n2024-06-07 EuroFab project Kick-Off meeting\n2024-08-02 August progress meeting\n2024-08-02 EuroFab progress meeting AT\n2024-10-04 October progress meeting"
   },
   {
     "objectID": "slides/202408_progress_august_Turing.html#ai-model-design-june-october-2024",
