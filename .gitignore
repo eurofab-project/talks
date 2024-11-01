@@ -165,3 +165,5 @@ cython_debug/
 /_site/*.quarto_ipynb
 slides/*.quarto_ipynb
 _site/
+
+.DS_Store

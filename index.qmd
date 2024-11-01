@@ -10,3 +10,4 @@ Archive of talks of the EuroFab project.
 - [2024-08-02 August progress meeting](slides/progress_august.qmd)
 - [2024-08-02 EuroFab progress meeting AT](slides/202408_progress_august_Turing.qmd)
 - [2024-10-04 October progress meeting](slides/progress_october.qmd)
+- [2024-11-06 World Urban Forum](slides/202411_WUF.qmd)
