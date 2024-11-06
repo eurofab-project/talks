@@ -1,0 +1,102 @@
+---
+title: "From Data to Vision"
+subtitle: "Spatial signatures in action: Building scenarios for sustainable and equitable cities"
+author: "Dr Barbara Metzler"
+institute: "The Alan Turing Institute, London"
+# date: "today"
+format:
+    revealjs:
+        theme: [default, ../assets/reveal.scss]
+        logo: ../assets/icon.svg
+        menu: false
+        transition: slide
+        navigation-mode: linear
+        controls-layout: edges
+        progress: true
+        incremental: true
+        include-in-header: ../assets/font.html
+        title-slide-attributes:
+            data-background-image: ../assets/logos.png
+            data-background-size: 20%
+            data-background-position: 50% 90%
+---
+
+
+![](../figures/202411_WUF/urban_analytics_ATI.png){.nostretch fig-align="center" height="600"}
+
+
+# Spatial signatures
+- Characterisations of space based on form and function designed to understand urban environments
+
+# This talk is about a ...
+- How urban classifications can be used
+- Web tool demo
+- Broader framework to simulate scenarios in urban enviornments
+- Satellite images and (vision) AI
+
+# Development scenario modelling
+A framework to experiment with land use scenarios for sustainable and equitable cities
+
+![](../figures/202411_WUF/demoland_screen.png){.nostretch fig-align="center" height="400"}
+
+
+## Vision
+Demonstrate the societal impact of data-driven technology that empowers people to make better decisions about (urban) land use
+
+## Goals
+* Surface trade-off’s in (urban) land use policy through scenario generation
+* Strategy over operations
+* Reach into wide (non-technical) audiences
+
+## Partnership 
+* Geospatial Commission/ Newcastle City Council
+
+→ Co-produced scenarios & interactive tool
+
+![](../figures/202411_WUF/gc_commission.png){.nostretch fig-align="center" height="250"}
+
+## Live Demo
+
+![](../figures/202411_WUF/qr-code-demoland.png){.nostretch fig-align="center" height="250"}
+
+tinyurl.com/4c3efd25
+
+
+## Indicators
+- Link betwen signatures & outcomes
+- Data-driven, ML based
+
+## Scenario co-production
+- Discussion of needs
+- Sketch of useful scenarios
+- Translation into the framework
+
+- Scenario comparison
+- Explore changes
+
+## Challenges of scaling
+* Data-driven: We need a lot of data
+* Changes over time
+
+# Current work
+* Satellite image + (vision) AI
+* "ChatGPT interface"
+
+# EuroFab project
+* Predicting spatial signatures across time
+* Track changes over time/space and across different scales
+
+![](../figures/202411_WUF/results_eurofab.png){.nostretch fig-align="center" height="200"}
+
+
+# Partners
+![](../figures/202411_WUF/logos.png){.nostretch fig-align="center" height="200"}
+
+bmetzler@turing.ac.uk
+
+
+
+
+
+
+
