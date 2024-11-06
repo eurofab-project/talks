@@ -1,0 +1,429 @@
+---
+title: "Classification of urban fabric"
+# subtitle: "Using Moran's I to detect local clusters"
+author: "Dr Martin Fleischmann"
+institute: "Charles University, Prague, CZ"
+# date: "today"
+format:
+    revealjs:
+        theme: [default, ../assets/reveal.scss]
+        logo: ../assets/icon.svg
+        menu: false
+        transition: fade
+        navigation-mode: linear
+        controls-layout: edges
+        progress: true
+        include-in-header: ../assets/font.html
+        title-slide-attributes:
+            data-background-image: ../assets/logos.png
+            data-background-size: 20%
+            data-background-position: 50% 90%
+---
+
+## {background-image="../figures/202411_WUF/ny_anuj_gogari.jpg" .no-text}
+
+::: aside
+New York by Anuj Gogari
+:::
+
+
+## {background-image="../figures/202411_WUF/paris_george_kantarzis.jpg" .no-text}
+
+::: aside
+Paris by George Kantarzis
+:::
+
+## {background-image="../figures/202411_WUF/prague_jay_danntine.jpg" .no-text}
+
+::: aside
+Prague by Jay Dantine
+:::
+
+## {background-image="../figures/202411_WUF/sao_paulo_jonathan_borba.jpg" .no-text}
+
+::: aside
+Sao Paulo by Jonathan Borba
+:::
+
+## {background-image="../figures/202411_WUF/tokyo_masaaki_komori.jpg" .no-text}
+
+::: aside
+Tokyo by Masaaki Komori
+:::
+
+## {background-image="../figures/202411_WUF/town_stephen_oliver.jpg" .no-text}
+
+::: aside
+by Stephen Oliver
+:::
+
+## Cities are too complex to handle without simplification
+
+---
+
+![](../figures/202411_WUF/prague-district-map.jpg)
+
+
+::: aside
+Administrative division of Prague
+:::
+
+---
+
+![](../figures/202411_WUF/corine.png)
+
+::: aside
+CORINE Land Cover
+:::
+
+---
+
+![](../figures/202411_WUF/urban_atlas.png)
+
+::: aside
+Copernicus Urban Atlas Land Use
+:::
+
+---
+
+![](../figures/202411_WUF/oac.png)
+
+::: aside
+Census Output Area Classification (Wyszomierski et. al, 2023)
+:::
+
+---
+
+![](../figures/202411_WUF/slums.jpeg){.r-stretch}
+
+::: aside
+Deprivation detection (Wang et. al, 2023)
+:::
+
+
+---
+
+## Clasffication as a way of complexity reduction
+
+### Subdivide area into a set of distinct classes {.fragment}
+
+---
+
+### Subdivide along which dimension?
+
+# EuroFab
+
+European Urban Fabric Classification (upcoming)
+
+## {background-image="../figures/202411_WUF/atlanta.jpg" .no-text}
+
+::: aside
+Atlanta
+:::
+
+## {background-image="../figures/202411_WUF/barcelona.jpg" .no-text}
+
+::: aside
+Barcelona
+:::
+
+## {background-image="../figures/202411_WUF/brasilia.jpg" .no-text}
+
+::: aside
+Brasilia
+:::
+
+## {background-image="../figures/202411_WUF/sao_paulo.jpg" .no-text}
+
+::: aside
+Sao Paulo
+:::
+
+## Buildings and streets
+
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../figures/202411_WUF/blg.png)
+:::
+
+::: {.column width="50%"}
+![](../figures/202411_WUF/streets_blg.png){.fragment}
+:::
+
+::::
+
+
+## {background-image="../figures/202411_WUF/morphotopes.png" .no-text}
+
+::: aside
+Homogenous area detection in Krakow, Poland
+:::
+
+---
+
+![](../figures/202411_WUF/dendrogram.png){.r-stretch}
+
+::: aside
+Hierarchical relationship allowing flexible classification resolution
+:::
+
+<!-- Krasen to generate figures for this place -->
+
+## {background-image="../figures/202411_WUF/krakow_1.png" .no-text}
+
+::: aside
+Classification hierachy at level 1 in Krakow, Poland
+:::
+
+## {background-image="../figures/202411_WUF/krakow_50.png" .no-text}
+
+::: aside
+Classification hierachy at level 2 in Krakow, Poland
+:::
+
+## {background-image="../figures/202411_WUF/krakow_100.png" .no-text}
+
+::: aside
+Classification hierachy at level 3 in Krakow, Poland
+:::
+
+## {background-image="../figures/202411_WUF/krakow_300.png" .no-text}
+
+::: aside
+Classification hierachy at level 4 in Krakow, Poland
+:::
+
+---
+
+### Each class backed by a rich numerical description
+
+::: {.incremental}
+- Comparison
+- Predictive modelling
+- Planning and zoning
+:::
+
+# Spatial Signatures
+
+Classification of Great Britain based on form and function (existing)
+
+
+---
+
+![](../figures/202411_WUF/sig1.png)
+
+::: aside
+urbangrammarai.xyz/story
+:::
+
+
+---
+
+![](../figures/202411_WUF/sig2.png)
+
+::: aside
+urbangrammarai.xyz/story
+:::
+
+
+---
+
+![](../figures/202411_WUF/sig3.png)
+
+::: aside
+urbangrammarai.xyz/story
+:::
+
+
+---
+
+![](../figures/202411_WUF/sig5.png)
+
+::: aside
+urbangrammarai.xyz/story
+:::
+
+
+---
+
+![](../figures/202411_WUF/sig6.png)
+
+::: aside
+urbangrammarai.xyz/story
+:::
+
+
+---
+
+![](../figures/202411_WUF/sig7.png)
+
+::: aside
+urbangrammarai.xyz/story
+:::
+
+
+---
+
+![](../figures/202411_WUF/sig8.png)
+
+::: aside
+urbangrammarai.xyz/story
+:::
+
+
+---
+
+![](../figures/202411_WUF/sig9.png)
+
+::: aside
+urbangrammarai.xyz/story
+:::
+
+
+---
+
+![](../figures/202411_WUF/sig10.png)
+
+::: aside
+urbangrammarai.xyz/story
+:::
+
+
+---
+
+![](../figures/202411_WUF/sig11.png)
+
+::: aside
+urbangrammarai.xyz/story
+:::
+
+## {background-image="../figures/202411_WUF/signatures_london.png" background-size="cover" .no-text}
+
+::: aside
+Spatial signatures in London
+:::
+
+## {background-image="../figures/202411_WUF/signatures_lpool.png" background-size="cover" .no-text}
+
+::: aside
+Spatial signatures in Liverpool and Manchester
+:::
+
+## {background-image="../figures/202411_WUF/signatures_scottish_belt.png" background-size="cover" .no-text}
+
+::: aside
+Spatial signatures in the Scottish Central Belt
+:::
+
+## {background-image="../figures/202411_WUF/signatures_scottish_belt_rural.png" background-size="cover" .no-text}
+
+::: aside
+Rural signatures
+:::
+
+## {background-image="../figures/202411_WUF/cov_countryside.png" background-size=70% .no-text}
+
+::: aside
+Rural signatures (covering 94% of land but only 50% of cells)
+:::
+
+## {background-image="../figures/202411_WUF/signatures_scottish_belt_periphery.png" background-size="cover" .no-text}
+
+::: aside
+Peripheral signatures
+:::
+
+## {background-image="../figures/202411_WUF/cov_periphery.png" background-size=70% .no-text}
+
+::: aside
+Peripheral signatures (covering 5% of land but 40% of cells)
+:::
+
+## {background-image="../figures/202411_WUF/signatures_scottish_belt_urban.png" background-size="cover" .no-text}
+
+::: aside
+Urban signatures
+:::
+
+## {background-image="../figures/202411_WUF/cov_centres.png" background-size=70% .no-text}
+
+::: aside
+Urban signatures (covering 1% of area but 10% of cells)
+:::
+
+## Settlement delineation
+
+## {background-image="../figures/202411_WUF/signatures_scottish_belt_rural.png" background-size="cover" .no-text}
+
+## {background-image="../figures/202411_WUF/fua.png" background-size="cover" .no-text}
+
+::: aside
+Signature-based settlement delineation compared to FUA
+:::
+
+## Settlement hierarchy
+
+## {background-image="../figures/202411_WUF/hierarchy.png" background-size=80% .no-text}
+
+::: aside
+Hierarchy of settlements derived from the presence of signatures
+:::
+
+## {background-image="../figures/202411_WUF/dishes.png" background-size=80% .no-text}
+
+::: aside
+Hierarchy of settlements derived from the presence of signatures
+:::
+
+# What is next?
+
+---
+
+### Classification of Central Europe
+
+### Classification of Europe {.fragment}
+
+### Predicted time-series {.fragment}
+
+---
+
+## Do you want to follow up?
+
+[{{< fa regular envelope >}}](mailto:martin.fleischmann@natur.cuni.cz) martin.fleischmann@natur.cuni.cz
+
+[{{< fa brands linkedin >}}](https://www.linkedin.com/in/fleischmannmartin/) linkedin.com/in/fleischmannmartin/
+
+<!-- - complexity of cities and the need for simplification allowing understanding and management
+	- the ways how it is normally done
+		- administrative boundaries
+		- land use allocation
+		- socio-demographic splits
+		- targeted mapping (e.g. slums)
+- classification as a way of reducing it
+	- subdivision of a city into a set of classes
+	- the question of a dimension along which the classes are generated
+- our classification partitions city in terms of urban form
+	- when looking at the backbone forming cities - their built environment - we can derive classes based on the dimension of urban form
+	- what does that mean?
+		- *explain the concept of urban form*
+			- buildings, streets and their various configurations
+- presenting - upcoming classification of central europe
+	- delineation of smallest consistent pieces of land - morphotopes
+	- determination of their hierarchical classification
+	- showcase the classes and taxonomy
+		- the detail
+		- the aggregation
+		- ensure the point of flexibility comes through
+	- each class at every point is backed by rich and interpretable numerical characterisation
+- existing classification of Great Britain
+	- 16 signatures
+	- use *the story*
+- what is next
+	- classification of CE and potentially E
+	- similar interpretation detail
+	- complementarity with other urban data products
+- do you find it useful? do you have a use case in your domain? would you like to do a pilot test study? -->

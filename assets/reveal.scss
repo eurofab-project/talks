@@ -63,10 +63,13 @@ $presentation-slide-text-align: left;
 //     content: "";
 // }
 
-.reveal .slide aside {
-    color: rgb(78, 81, 87);
-}
-
 .reveal p {
     font-weight: 400;
+}
+
+.reveal .slide aside {
+    color: rgb(78, 81, 87);
+    background-color: rgba($color: #fff, $alpha: 0.75);
+    font-size: 0.4em;
+    padding: 0 2em 0 2em;
 }
