@@ -189,25 +189,102 @@
     "text": "Classification hierachy at level 4 in Krakow, Poland"
   },
   {
-    "objectID": "slides/202411_WUF.html#do-you-find-it-useful",
-    "href": "slides/202411_WUF.html#do-you-find-it-useful",
+    "objectID": "slides/202411_WUF.html#section-15",
+    "href": "slides/202411_WUF.html#section-15",
     "title": "Classification of urban fabric",
-    "section": "Do you find it useful?",
-    "text": "Do you find it useful?"
+    "section": "",
+    "text": "Spatial signatures in London"
   },
   {
-    "objectID": "slides/202411_WUF.html#do-you-have-a-use-case-in-your-domain",
-    "href": "slides/202411_WUF.html#do-you-have-a-use-case-in-your-domain",
+    "objectID": "slides/202411_WUF.html#section-16",
+    "href": "slides/202411_WUF.html#section-16",
     "title": "Classification of urban fabric",
-    "section": "Do you have a use case in your domain?",
-    "text": "Do you have a use case in your domain?"
+    "section": "",
+    "text": "Spatial signatures in Liverpool and Manchester"
   },
   {
-    "objectID": "slides/202411_WUF.html#would-you-like-to-be-part-of-a-pilot",
-    "href": "slides/202411_WUF.html#would-you-like-to-be-part-of-a-pilot",
+    "objectID": "slides/202411_WUF.html#section-17",
+    "href": "slides/202411_WUF.html#section-17",
     "title": "Classification of urban fabric",
-    "section": "Would you like to be part of a pilot?",
-    "text": "Would you like to be part of a pilot?"
+    "section": "",
+    "text": "Spatial signatures in the Scottish Central Belt"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-18",
+    "href": "slides/202411_WUF.html#section-18",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Rural signatures"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-19",
+    "href": "slides/202411_WUF.html#section-19",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Rural signatures (covering 94% of land but only 50% of cells)"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-20",
+    "href": "slides/202411_WUF.html#section-20",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Peripheral signatures"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-21",
+    "href": "slides/202411_WUF.html#section-21",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Peripheral signatures (covering 5% of land but 40% of cells)"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-22",
+    "href": "slides/202411_WUF.html#section-22",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Urban signatures"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-23",
+    "href": "slides/202411_WUF.html#section-23",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Urban signatures (covering 1% of area but 10% of cells)"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#settlement-delineation",
+    "href": "slides/202411_WUF.html#settlement-delineation",
+    "title": "Classification of urban fabric",
+    "section": "Settlement delineation",
+    "text": "Settlement delineation"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-25",
+    "href": "slides/202411_WUF.html#section-25",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Signature-based settlement delineation compared to FUA"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#settlement-hierarchy",
+    "href": "slides/202411_WUF.html#settlement-hierarchy",
+    "title": "Classification of urban fabric",
+    "section": "Settlement hierarchy",
+    "text": "Settlement hierarchy"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-26",
+    "href": "slides/202411_WUF.html#section-26",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Hierarchy of settlements derived from the presence of signatures"
+  },
+  {
+    "objectID": "slides/202411_WUF.html#section-27",
+    "href": "slides/202411_WUF.html#section-27",
+    "title": "Classification of urban fabric",
+    "section": "",
+    "text": "Hierarchy of settlements derived from the presence of signatures"
   },
   {
     "objectID": "slides/202411_WUF.html#do-you-want-to-follow-up",
