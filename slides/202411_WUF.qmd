@@ -201,6 +201,12 @@ Classification hierachy at level 4 in Krakow, Poland
 
 ### Each class backed by a rich numerical description
 
+::: {.incremental}
+- Comparison
+- Predictive modelling
+- Planning and zoning
+:::
+
 # Spatial Signatures
 
 Classification of Great Britain based on form and function (existing)
@@ -295,13 +301,82 @@ urbangrammarai.xyz/story
 urbangrammarai.xyz/story
 :::
 
-
----
-
-![](../figures/202411_WUF/sig12.png)
+## {background-image="../figures/202411_WUF/signatures_london.png" background-size="cover" .no-text}
 
 ::: aside
-urbangrammarai.xyz/great-britain
+Spatial signatures in London
+:::
+
+## {background-image="../figures/202411_WUF/signatures_lpool.png" background-size="cover" .no-text}
+
+::: aside
+Spatial signatures in Liverpool and Manchester
+:::
+
+## {background-image="../figures/202411_WUF/signatures_scottish_belt.png" background-size="cover" .no-text}
+
+::: aside
+Spatial signatures in the Scottish Central Belt
+:::
+
+## {background-image="../figures/202411_WUF/signatures_scottish_belt_rural.png" background-size="cover" .no-text}
+
+::: aside
+Rural signatures
+:::
+
+## {background-image="../figures/202411_WUF/cov_countryside.png" background-size=70% .no-text}
+
+::: aside
+Rural signatures (covering 94% of land but only 50% of cells)
+:::
+
+## {background-image="../figures/202411_WUF/signatures_scottish_belt_periphery.png" background-size="cover" .no-text}
+
+::: aside
+Peripheral signatures
+:::
+
+## {background-image="../figures/202411_WUF/cov_periphery.png" background-size=70% .no-text}
+
+::: aside
+Peripheral signatures (covering 5% of land but 40% of cells)
+:::
+
+## {background-image="../figures/202411_WUF/signatures_scottish_belt_urban.png" background-size="cover" .no-text}
+
+::: aside
+Urban signatures
+:::
+
+## {background-image="../figures/202411_WUF/cov_centres.png" background-size=70% .no-text}
+
+::: aside
+Urban signatures (covering 1% of area but 10% of cells)
+:::
+
+## Settlement delineation
+
+## {background-image="../figures/202411_WUF/signatures_scottish_belt_rural.png" background-size="cover" .no-text}
+
+## {background-image="../figures/202411_WUF/fua.png" background-size="cover" .no-text}
+
+::: aside
+Signature-based settlement delineation compared to FUA
+:::
+
+## Settlement hierarchy
+
+## {background-image="../figures/202411_WUF/hierarchy.png" background-size=80% .no-text}
+
+::: aside
+Hierarchy of settlements derived from the presence of signatures
+:::
+
+## {background-image="../figures/202411_WUF/dishes.png" background-size=80% .no-text}
+
+::: aside
+Hierarchy of settlements derived from the presence of signatures
 :::
 
 # What is next?
@@ -312,15 +387,9 @@ urbangrammarai.xyz/great-britain
 
 ### Classification of Europe {.fragment}
 
-### Pilot use cases {.fragment}
+### Predicted time-series {.fragment}
 
 ---
-
-## Do you find it useful?
-
-## Do you have a use case in your domain?
-
-## Would you like to be part of a pilot?
 
 ## Do you want to follow up?
 
