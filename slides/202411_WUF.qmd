@@ -1,8 +1,8 @@
 ---
 title: "Classification of urban fabric"
 # subtitle: "Using Moran's I to detect local clusters"
-author: "Martin Fleischmann"
-institute: "Charles University"
+author: "Dr Martin Fleischmann"
+institute: "Charles University, Prague, CZ"
 # date: "today"
 format:
     revealjs:
