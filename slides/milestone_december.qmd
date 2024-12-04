@@ -1,0 +1,149 @@
+---
+title: "EuroFab Progress Meeting"
+author: "Eurofab team"
+# institute: "Charles University"
+date: "2024-08-02"
+format:
+    revealjs:
+        theme: [default, ../assets/reveal.scss]
+        logo: ../assets/icon.svg
+        menu: false
+        transition: slide
+        navigation-mode: linear
+        controls-layout: edges
+        progress: true
+        include-in-header: ../assets/font.html
+        title-slide-attributes:
+            data-background-image: ../assets/logos.png
+            data-background-size: 20%
+            data-background-position: 50% 90%
+---
+
+# Milestone meeting
+1. Introduction & status update
+2. Milestone 1 deliverables:
+    a. Technical Note D3 - Reference Data Selection
+    b. Technical Note D2 - Algorithm Design and Theoretical Basis Description
+    c. Technical Note D1 - Consolidated Stakeholder Requirements Specification
+3. Discussion
+4. AOB
+
+
+# Introduction, status update
+
+---
+
+![Timeline](../figures/progress_august/gantchart.png)
+
+
+
+# Technical Note D3 - Reference Data Selection
+
+## Morphological data
+
+1. Morphometric classification of Central Europe (UPDATE)
+2. Microsoft Building footprints
+3. Overture Maps streets
+4. Implementation
+
+---
+
+### Morphometric classification of Central Europe
+- It is based on cadastre building data (NEW) !
+    - Processed from official APIs for all five countries
+    - New data has ~11 million more buildings than EUBUCCO
+    - Quality checks are still pending
+- Uses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier
+
+---
+
+![Example detailed classification](../figures/milestone_december/prague_400.png)
+
+---
+
+### Problems with existing datasets - EUBUCCO, etc..
+
+![Lots of missing and undocumented processed data](../figures/progress_october/bubenec.png)
+ 
+---
+
+### Problems with cadastre data - Germany, Poland, etc..
+
+![Wrong and undocumented information - CRS, type, year, rate-limited APIs](../figures/progress_october/poland.png)
+
+---
+
+### Microsoft Building footprints
+- Cover a large part of the globe - 1.5 billion building footprints.
+- Available for the study region, whereas other sources such as Google footprints are not.
+- Homogeneous origin - all footprints are derived using the same model.
+
+---
+
+### Examples
+
+![Good coverage, but quality drops some places](../figures/milestone_december/building_comparison.png)
+
+---
+
+
+
+### Overture Maps streets
+- OpenStreetMap data with minimal processing, therefore it has good coverage
+- The ground truth morphometric classification uses it
+- The street network is simplified, preserving its topology, but removing unnecassary clutter
+---
+
+
+### Examples
+![Street processing](../figures/milestone_december/street_processing.png)
+
+---
+## Satellite data
+
+
+
+# Technical Note D2 - Algorithm Design and Theoretical Basis Description
+## Morphometric Classification Homogenisation Protocol
+
+---
+
+### Protocol design
+
+![Model protocol](../figures/milestone_december/workflow.png)
+
+---
+
+### Protocol design
+1. Use morphometric classification of Central Europe from a parallel research project as ground truth data
+2. Calculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis
+
+---
+
+### Protocol design
+3. Train a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label
+
+---
+
+![Evaluation setup](../figures/milestone_december/eval_split.png)
+
+---
+
+### First iteration results
+
+![Just random forest defaults are able to reproduce a coarse hierarchy cut](../figures/progress_october/first_result.png)
+--
+
+## Satellite images model
+
+
+# Technical Note D1 - Consolidated Stakeholder Requirements Specification
+
+
+# Discussion
+
+
+# AOB
+
+
+
