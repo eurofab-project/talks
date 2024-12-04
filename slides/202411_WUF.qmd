@@ -103,7 +103,7 @@ Deprivation detection (Wang et. al, 2023)
 
 ---
 
-## Clasffication as a way of complexity reduction
+## Classification as a way of complexity reduction
 
 ### Subdivide area into a set of distinct classes {.fragment}
 

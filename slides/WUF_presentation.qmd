@@ -22,13 +22,13 @@ format:
 ---
 
 
-![](../figures/202411_WUF/urban_analytics_ATI.png){.nostretch fig-align="center" height="600"}
+![](../figures/202411_WUF/urban_analytics_ATI.png){.r-stretch fig-align="center"}
 
 
 # Spatial signatures
 - Characterisations of space based on form and function designed to understand urban environments
 
-# This talk is about a ...
+# This talk is about ...
 - How urban classifications can be used
 - Web tool demo
 - Broader framework to simulate scenarios in urban enviornments
@@ -41,7 +41,7 @@ A framework to experiment with land use scenarios for sustainable and equitable 
 
 
 ## Vision
-Demonstrate the societal impact of data-driven technology that empowers people to make better decisions about (urban) land use
+Demonstrate the **societal impact** of **data-driven** technology that empowers **people** to make better decisions about (urban) **land use**
 
 ## Goals
 * Surface trade-off’s in (urban) land use policy through scenario generation
@@ -59,20 +59,21 @@ Demonstrate the societal impact of data-driven technology that empowers people t
 
 ![](../figures/202411_WUF/qr-code-demoland.png){.nostretch fig-align="center" height="250"}
 
-tinyurl.com/4c3efd25
+*tinyurl.com/4c3efd25*
 
 
 ## Indicators
-- Link betwen signatures & outcomes
-- Data-driven, ML based
+- Data-driven
+
+![](../figures/202411_WUF/indicators_demoland.png){.nostretch fig-align="center" height="400"}
+
 
 ## Scenario co-production
 - Discussion of needs
 - Sketch of useful scenarios
 - Translation into the framework
 
-- Scenario comparison
-- Explore changes
+→ Scenario comparison/ explore changes
 
 ## Challenges of scaling
 * Data-driven: We need a lot of data
@@ -82,11 +83,14 @@ tinyurl.com/4c3efd25
 * Satellite image + (vision) AI
 * "ChatGPT interface"
 
+![](../figures/202411_WUF/satellite_tile.png){.nostretch fig-align="center" height="200"}
+
+
 # EuroFab project
 * Predicting spatial signatures across time
 * Track changes over time/space and across different scales
 
-![](../figures/202411_WUF/results_eurofab.png){.nostretch fig-align="center" height="200"}
+![](../figures/202411_WUF/results_eurofab.png){.nostretch fig-align="center" height="380"}
 
 
 # Partners
