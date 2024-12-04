@@ -26,7 +26,7 @@ format:
     b. Technical Note D2 - Algorithm Design and Theoretical Basis Description
     c. Technical Note D1 - Consolidated Stakeholder Requirements Specification
 3. Discussion
-4. AOB
+4. Other
 
 
 # Introduction, status update
@@ -37,7 +37,8 @@ format:
 
 
 
-# Technical Note D3 - Reference Data Selection
+# Technical Note D3
+Reference Data Selection
 
 ## Morphological data
 
@@ -64,7 +65,7 @@ format:
 ### Problems with existing datasets - EUBUCCO, etc..
 
 ![Lots of missing and undocumented processed data](../figures/progress_october/bubenec.png)
- 
+
 ---
 
 ### Problems with cadastre data - Germany, Poland, etc..
@@ -103,7 +104,9 @@ format:
 
 
 
-# Technical Note D2 - Algorithm Design and Theoretical Basis Description
+# Technical Note D2
+Algorithm Design and Theoretical Basis Description
+
 ## Morphometric Classification Homogenisation Protocol
 
 ---
@@ -137,8 +140,46 @@ format:
 ## Satellite images model
 
 
-# Technical Note D1 - Consolidated Stakeholder Requirements Specification
+# Technical Note D1
+Consolidated Stakeholder Requirements Specification
 
+## Stakeholder consultation events
+
+- URBIS 24 (September)
+- World Urban Forum (November)
+
+## Stakeholders involved
+
+- International
+- National
+- Local
+
+Representing both public and private sectors.
+
+---
+
+### International
+
+- European Covenant of Mayors
+
+---
+
+### National
+
+- SSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)
+
+---
+
+### Local
+
+- Prague's Institute for Planning and Development (IPR) (Czechia)
+- 4ct (Czechia)
+
+## Future engagements
+
+- December 16 (SSVA) - online
+- End of January (IPR) - in person
+- End of January (4ct) - in person
 
 # Discussion
 
