@@ -106,7 +106,7 @@ Reference Data Selection
 ---
 
 ### Overall data
-- Based on the preliminary results, there are 56,845,150 Microsoft building footprints for our study area, which are split into 474 subregions. 
+- Based on the preliminary results, there are 56,845,150 Microsoft building footprints for our study area, which are split into 474 subregions.
 - This is significantly less than the available cadastre data, which has around 88 million buildings and are separated into 828 regions.
 - The number of downloaded, unprocessed streets is similar to those in (Fleischmann and Samardzhiev Forthcoming) - 23,332,865
 
@@ -228,7 +228,7 @@ Representing both public and private sectors.
 
 - December 16 (SSVA) - online
 - End of January (IPR) - in person
-- End of January (4ct) - in person
+- January 28 (4ct) - in person
 
 # Discussion
 
