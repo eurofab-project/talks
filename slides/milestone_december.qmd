@@ -209,7 +209,7 @@ Algorithm Design and Theoretical Basis Description
 * Classification: Single label per tile
 * Segmentation: Pixel-level classification
 
-![](../figures/202412_december_turing/classification_vs_segmentation.png){.nostretch fig-align="top" height="200"}
+![](../figures/milestone_december/classification_vs_segmentation.png){.nostretch fig-align="top" height="200"}
 
 ---
 
@@ -246,7 +246,7 @@ Algorithm Design and Theoretical Basis Description
     - 56 x 56 pixel tiles
     - Train: 342,648 tiles; Test: 61,074 tiles
 
-![](../figures/202412_december_turing/tile_size_comp.png){.nostretch fig-align="right" height="200"}
+![](../figures/milestone_december/tile_size_comp.png){.nostretch fig-align="right" height="200"}
 
 
 ---
@@ -260,8 +260,8 @@ Algorithm Design and Theoretical Basis Description
 
   - Ensures consistent comparison between tasks (segmentation/classification)
 
-![](../figures/202412_december_turing/unbalanced.png){.nostretch fig-align="left" height="250"}
-![](../figures/202412_december_turing/sampling.png){.nostretch fig-align="right" height="250"}
+![](../figures/milestone_december/unbalanced.png){.nostretch fig-align="left" height="250"}
+![](../figures/milestone_december/sampling.png){.nostretch fig-align="right" height="250"}
 
 
 ---
@@ -278,14 +278,14 @@ Algorithm Design and Theoretical Basis Description
 
 1. **Pipeline**
 
-![](../figures/202412_december_turing/baseline.png){.nostretch fig-align="center" height="400"}
+![](../figures/milestone_december/baseline.png){.nostretch fig-align="center" height="400"}
 
 ---
 
 2. **Enhancements**
    - Added spatial context using H3 hex lat/lon
 
-![](../figures/202412_december_turing/hex_level5.png){.nostretch fig-align="center" height="420"}
+![](../figures/milestone_december/hex_level5.png){.nostretch fig-align="center" height="420"}
 
 ---
 
@@ -314,7 +314,7 @@ Algorithm Design and Theoretical Basis Description
 
 **Clay model**
 
-![](../figures/202412_december_turing/clay_model.png){.nostretch fig-align="center" width="900"}
+![](../figures/milestone_december/clay_model.png){.nostretch fig-align="center" width="900"}
 
 → trained with focal loss
 
@@ -357,7 +357,7 @@ Algorithm Design and Theoretical Basis Description
 - Overprediction of dominant class
 - Segmentation boundaries
 
-![](../figures/202412_december_turing/comparison_B_C.png){.nostretch fig-align="center" width="700"}
+![](../figures/milestone_december/comparison_B_C.png){.nostretch fig-align="center" width="700"}
 
 
 ---
@@ -409,7 +409,7 @@ ordinal_mapping = {
 - Mean Squared Error: 0.28 
 - R² Score: 0.62
 
-![](../figures/202412_december_turing/sankey.png){.nostretch fig-align="center" width="600"}
+![](../figures/milestone_december/sankey.png){.nostretch fig-align="center" width="600"}
 
 
 ---
@@ -469,8 +469,8 @@ ordinal_mapping = {
 
 **Random sampling**
 
-![](../figures/202412_december_turing/train_df.png){.nostretch fig-align="left" height="400"}
-![](../figures/202412_december_turing/test_df.png){.nostretch fig-align="right" height="400"}
+![](../figures/milestone_december/train_df.png){.nostretch fig-align="left" height="400"}
+![](../figures/milestone_december/test_df.png){.nostretch fig-align="right" height="400"}
 
 
 ---
@@ -480,7 +480,7 @@ ordinal_mapping = {
 - train: blue
 - test: orange
 
-![](../figures/202412_december_turing/sampling_h3_3.png){.nostretch fig-align="center" height="400"}
+![](../figures/milestone_december/sampling_h3_3.png){.nostretch fig-align="center" height="400"}
 
 
 ---
