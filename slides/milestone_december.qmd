@@ -126,7 +126,7 @@ Reference Data Selection
 * Spatial signatures framework (Arribas-Bel & Fleischmann 2022)
 * Proxy due to its conceptual alignment with urban characterization
 
-![](../figures/202412_december_turing/signatures_london.png){.nostretch fig-align="top" height="200"}
+![](../figures/milestone_december/signatures_london.png){.nostretch fig-align="top" height="200"}
 
 
 # Technical Note D2
@@ -487,16 +487,7 @@ ordinal_mapping = {
 
 #### Sampling experiments
 
-**Random sampling**
-
-- F1: 0.53
-- Macro Acccuracy: 0.46
-
-**H3 sampling**
-Overall Metrics (5 Iterations; random sample across 26 H3 (resolution 3) hexagons):
-
-- Median F1 score: 0.14 
-- Median macro accuracy: 0.13
+Currenty investigating!
 
 ---
 
