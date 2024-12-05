@@ -11,6 +11,7 @@ format:
         transition: slide
         navigation-mode: linear
         controls-layout: edges
+        incremental: true
         progress: true
         include-in-header: ../assets/font.html
         title-slide-attributes:
@@ -29,7 +30,7 @@ format:
 4. Other
 
 
-# Introduction, status update
+# Status update
 
 ---
 
@@ -244,9 +245,5 @@ Interest in classifying Lithuania into morphological types and being engaged als
 - January 28 (4ct) - in person
 
 # Discussion
-
-
-# AOB
-
 
 
