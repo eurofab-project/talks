@@ -145,8 +145,17 @@ Consolidated Stakeholder Requirements Specification
 
 ## Stakeholder consultation events
 
-- URBIS 24 (September)
-- World Urban Forum (November)
+---
+
+### URBIS 24 (September)
+
+Looking at urban challenges and innovative EO-integrated solutions, by bringing together urban policymakers, Earth Observation researchers, service providers and various end-users.
+
+---
+
+### World Urban Forum (November)
+
+Convened by UN-Habitat, the Forum is a high level, open and inclusive platform for addressing the challenges of sustainable urbanisation.
 
 ## Stakeholders involved
 
@@ -162,11 +171,15 @@ Representing both public and private sectors.
 
 - European Covenant of Mayors
 
+Interest in addressing unmet data needs for energy and climate applications: interview to COM staff + either interview to selected members of CoM or survey.
+
 ---
 
 ### National
 
 - SSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)
+
+Interest in classifying Lithuania into morphological types and being engaged also in the validation stage.
 
 ---
 
