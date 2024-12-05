@@ -62,6 +62,10 @@ Reference Data Selection
 
 ---
 
+![Example coarser detailed classification](../figures/milestone_december/prague_600.png)
+
+---
+
 ### Problems with existing datasets - EUBUCCO, etc..
 
 ![Lots of missing and undocumented processed data](../figures/progress_october/bubenec.png)
@@ -100,6 +104,13 @@ Reference Data Selection
 ![Street processing](../figures/milestone_december/street_processing.png)
 
 ---
+
+### Overall data
+- Based on the preliminary results, there are 56,845,150 Microsoft building footprints for our study area, which are split into 474 subregions.
+- This is significantly less than the available cadastre data, which has around 88 million buildings and are separated into 828 regions.
+- The number of downloaded, unprocessed streets is similar to those in (Fleischmann and Samardzhiev Forthcoming) - 23,332,865
+
+
 ## Satellite data
 
 
@@ -123,6 +134,35 @@ Algorithm Design and Theoretical Basis Description
 
 ---
 
+![Subregions](../figures/milestone_december/subregions.png)
+
+---
+
+![Enclosures](../figures/milestone_december/enclosures.png)
+
+---
+
+![Nodes](../figures/milestone_december/nodes.png)
+
+---
+
+![Tessellation cells](../figures/milestone_december/tessellations.png)
+
+
+---
+
+
+#### 63 calculated morphometric characters
+
+
+![ ](../figures/milestone_december/momepy_con.png)
+
+---
+
+![Building area in Krakow](../figures/milestone_december/sdbare.png)
+
+---
+
 ### Protocol design
 3. Train a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label
 
@@ -132,10 +172,19 @@ Algorithm Design and Theoretical Basis Description
 
 ---
 
+![Spatial Split](../figures/milestone_december/train_test_prague.png)
+
+---
+
+![Spatial Split zoom](../figures/milestone_december/train_test_prague_zoom2.png)
+
+---
+
 ### First iteration results
 
-![Just random forest defaults are able to reproduce a coarse hierarchy cut](../figures/progress_october/first_result.png)
---
+![Predictions with an accuracy of ~ .68](../figures/progress_october/first_result.png)
+
+---
 
 ## Satellite images model
 
@@ -192,7 +241,7 @@ Interest in classifying Lithuania into morphological types and being engaged als
 
 - December 16 (SSVA) - online
 - End of January (IPR) - in person
-- End of January (4ct) - in person
+- January 28 (4ct) - in person
 
 # Discussion
 
