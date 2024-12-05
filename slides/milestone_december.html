@@ -251,6 +251,25 @@ Eurofab team
 </section>
 <section id="satellite-data" class="slide level2">
 <h2>Satellite data</h2>
+<ul>
+<li class="fragment">Sentinel-2 composite (Corbane et al.), RGB, 10px/m</li>
+<li class="fragment">temporal/spatial flexibility</li>
+<li class="fragment">analysis-ready; cloud-free</li>
+<li class="fragment">suitability for downstream ML tasks</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="urban-fabric-classes">Urban fabric classes</h3>
+<ul>
+<li class="fragment">Spatial signatures framework (Arribas-Bel &amp; Fleischmann 2022)</li>
+<li class="fragment">Proxy due to its conceptual alignment with urban characterization</li>
+</ul>
+<div class="quarto-figure quarto-figure-top">
+<figure>
+<p><img data-src="../figures/202412_december_turing/signatures_london.png" class="quarto-figure quarto-figure-top" height="200"></p>
+</figure>
+</div>
 </section></section>
 <section>
 <section id="technical-note-d2" class="title-slide slide level1 center">
@@ -324,6 +343,517 @@ Eurofab team
 <img data-src="../figures/progress_october/first_result.png" class="r-stretch quarto-figure-center"><p class="caption">Predictions with an accuracy of ~ .68</p></section>
 <section id="satellite-images-model" class="slide level2">
 <h2>Satellite images model</h2>
+<h3 id="overview">Overview</h3>
+<p><strong>Classification vs Segmentation</strong></p>
+<ul>
+<li class="fragment">Classification: Single label per tile</li>
+<li class="fragment">Segmentation: Pixel-level classification</li>
+</ul>
+<div class="quarto-figure quarto-figure-top">
+<figure>
+<p><img data-src="../figures/milestone_december/classification_vs_segmentation.png" class="quarto-figure quarto-figure-top" height="200"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="experiments">Experiments</h3>
+<p><strong>Overall approach comparison</strong></p>
+<ul>
+<li class="fragment">A: Baseline (embeddings + ML model)</li>
+<li class="fragment">B: Segmentation (fine-tuned Clay model)</li>
+<li class="fragment">C: Classification (fine-tuned Clay model</li>
+</ul>
+<p>→ choose final model approach</p>
+</section>
+<section class="slide level2">
+
+<p><strong>Model adaptations (baseline approach)</strong></p>
+<ul>
+<li class="fragment">Variation of baseline (ordinal)</li>
+<li class="fragment">Smaller tile size</li>
+<li class="fragment">Sampling method experiments</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="data-preprocessing">Data Preprocessing</h3>
+<p><strong>Segmentation dataset</strong></p>
+<pre><code>- 224 x 224 pixel tiles
+- Train: 21,402 tiles; Test: 5,351 tiles</code></pre>
+<p><strong>Classification dataset</strong></p>
+<pre><code>- 56 x 56 pixel tiles
+- Train: 342,648 tiles; Test: 61,074 tiles</code></pre>
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../figures/milestone_december/tile_size_comp.png" class="quarto-figure quarto-figure-right" height="200"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="challenges">Challenges</h4>
+<p><strong>Class imbalance</strong></p>
+<ul>
+<li class="fragment">Uneven distribution across urban fabric classes</li>
+</ul>
+<p><strong>Shared train/test split</strong></p>
+<ul>
+<li class="fragment">Ensures consistent comparison between tasks (segmentation/classification)</li>
+</ul>
+<p><img data-src="../figures/milestone_december/unbalanced.png" class="nostretch quarto-figure quarto-figure-left" height="250"> <img data-src="../figures/milestone_december/sampling.png" class="nostretch quarto-figure quarto-figure-right" height="250"></p>
+</section>
+<section class="slide level2">
+
+<h3 id="model-architectures">Model Architectures</h3>
+<h4 id="approach-a-baseline-embedding">Approach A: Baseline Embedding</h4>
+<ol type="1">
+<li class="fragment"><p><strong>Pipeline</strong></p>
+<ul>
+<li class="fragment">Generate embeddings (SatlasPretrain model)</li>
+<li class="fragment">Predict classes using XGBoost</li>
+</ul></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<ol type="1">
+<li class="fragment"><strong>Pipeline</strong></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/milestone_december/baseline.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<ol start="2" type="1">
+<li class="fragment"><strong>Enhancements</strong>
+<ul>
+<li class="fragment">Added spatial context using H3 hex lat/lon</li>
+</ul></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/milestone_december/hex_level5.png" class="quarto-figure quarto-figure-center" height="420"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="approach-b-segmentation-models">Approach B: Segmentation Models</h4>
+<ul>
+<li class="fragment"><p>Fine-tuned three models</p>
+<ul>
+<li class="fragment"><strong>Satlas</strong>: SwinT; 302M labels</li>
+<li class="fragment"><strong>Clay</strong>: MAE/ViT; 70M labels</li>
+<li class="fragment"><strong>Prithvi</strong>: MAE/ViT; 250PB data</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><strong>Recap</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Satlas</th>
+<th>Clay (Best)</th>
+<th>Prithvi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Weighted Accuracy</td>
+<td>0.57</td>
+<td><strong>0.72</strong></td>
+<td>0.62</td>
+</tr>
+<tr class="even">
+<td>IoU</td>
+<td>0.33</td>
+<td><strong>0.58</strong></td>
+<td>0.41</td>
+</tr>
+<tr class="odd">
+<td>F1 Score</td>
+<td>0.41</td>
+<td><strong>0.69</strong></td>
+<td>0.58</td>
+</tr>
+<tr class="even">
+<td>Training Time (epoch)</td>
+<td>9 min</td>
+<td>8 min</td>
+<td>20 min</td>
+</tr>
+</tbody>
+</table>
+<p>→ Clay model outperformed other models</p>
+</section>
+<section class="slide level2">
+
+<p><strong>Clay model</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/milestone_december/clay_model.png" class="quarto-figure quarto-figure-center" width="900"></p>
+</figure>
+</div>
+<p>→ trained with focal loss</p>
+</section>
+<section class="slide level2">
+
+<h4 id="approach-c-classification">Approach C: Classification</h4>
+<ul>
+<li class="fragment">Fine-tuned <strong>Clay model</strong> for classification task</li>
+<li class="fragment">Dataset: 56 x 56 px tiles</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="evaluation-metrics-approach-comparison">Evaluation metrics approach comparison</h3>
+<p><strong>Pixel-level comparison</strong></p>
+<ul>
+<li class="fragment"><strong>F1 Score</strong>: Balance between precision and recall, highlighting overall model performance for all classes.</li>
+<li class="fragment"><strong>Macro Accuracy</strong>: Averages accuracy across classes, treating each class equally regardless of size.</li>
+<li class="fragment"><strong>IoU</strong>: Quantifies the overlap between predicted and true regions, indicating segmentation accuracy.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="small-table">
+<table class="caption-top">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 17%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th>Global Ac.</th>
+<th>Macro Acc.</th>
+<th>F1 Score</th>
+<th>IoU</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong>: Class. (embed.)</td>
+<td>0.76 (0.66)</td>
+<td>0.22 (0.13)</td>
+<td>0.23</td>
+<td>0.63</td>
+</tr>
+<tr class="even">
+<td><strong>A</strong>: Class. + H3 lvl 5</td>
+<td><strong>0.87</strong> (0.82)</td>
+<td><strong>0.42</strong> (0.35)</td>
+<td><strong>0.45</strong></td>
+<td><strong>0.79</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>B</strong>: Seg. (Clay)</td>
+<td>0.73</td>
+<td>0.31</td>
+<td>0.30</td>
+<td>0.58</td>
+</tr>
+<tr class="even">
+<td><strong>C</strong>: Class. (Clay)</td>
+<td>0.59 (0.68)</td>
+<td>0.09</td>
+<td>0.12</td>
+<td>0.38</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="slide level2">
+
+<p><strong>Comparison of approach B &amp; C</strong></p>
+<ul>
+<li class="fragment">Overprediction of dominant class</li>
+<li class="fragment">Segmentation boundaries</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/milestone_december/comparison_B_C.png" class="quarto-figure quarto-figure-center" width="700"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li class="fragment"><strong>Key Findings</strong>:
+<ul>
+<li class="fragment">Embedding model (baseline) outperformed fine-tuned foundation model approaches</li>
+<li class="fragment">Clay model outperformed others in segmentation</li>
+</ul></li>
+<li class="fragment"><strong>Challenges</strong>:
+<ul>
+<li class="fragment">Handling class imbalance</li>
+<li class="fragment">Segmentation: non directly visual boundaries in images</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="additional-model-adaptations-baseline-model">Additional model adaptations (baseline model)</h3>
+<ul>
+<li class="fragment">Ordinal approach</li>
+<li class="fragment">Tile size</li>
+<li class="fragment">Sampling experiments</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="ordinal-approach">Ordinal approach</h4>
+<p>Signatures are not strictly categorical (some are closer than other ones)</p>
+<pre><code>ordinal_mapping = {
+    'Wild countryside': 0,
+    'Countryside agriculture': 1,
+    'Urban buffer': 2,
+    'Open sprawl': 3,
+    'Disconnected suburbia': 4,
+    'Accessible suburbia': 5,
+    'Warehouse/Park land': 6,
+    'Gridded residential quarters': 7,
+    'Connected residential neighbourhoods': 8,
+    'Dense residential neighbourhoods': 9,
+    'Dense urban neighbourhoods': 10,
+    'Urbanity': 11,
+}</code></pre>
+</section>
+<section class="slide level2">
+
+<h4 id="ordinal-approach-1">Ordinal approach</h4>
+<ul>
+<li class="fragment">Mean Absolute Error: 0.28</li>
+<li class="fragment">Mean Squared Error: 0.28</li>
+<li class="fragment">R² Score: 0.62</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/milestone_december/sankey.png" class="quarto-figure quarto-figure-center" width="600"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="comparison-of-baseline-approaches">Comparison of baseline approaches</h4>
+<div class="small-table">
+<table class="caption-top">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 17%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th>Global Acc.</th>
+<th>Macro Acc.</th>
+<th>F1 Score</th>
+<th>IoU</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A: Class. (embed.)</td>
+<td>0.76 (0.66)</td>
+<td>0.22 (0.13)</td>
+<td>0.23</td>
+<td>0.63</td>
+</tr>
+<tr class="even">
+<td>A: Class. + H3 lvl 5</td>
+<td><strong>0.87</strong> (0.82)</td>
+<td><strong>0.42</strong> (0.35)</td>
+<td><strong>0.45</strong></td>
+<td><strong>0.79</strong></td>
+</tr>
+<tr class="odd">
+<td>A: Class. + H3 + ordinal</td>
+<td>0.80 (0.80)</td>
+<td>0.26 (0.26)</td>
+<td>0.26</td>
+<td>0.69</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="varying-tile-size">Varying tile size</h3>
+<ul>
+<li class="fragment">Motivated by more useful tile size for policy applications</li>
+<li class="fragment">Map creation (less missing data)</li>
+<li class="fragment">25 x 25 px tiles (250x250m)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="varying-tile-size-1">Varying tile size</h3>
+<div style="font-size: small;">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 28%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Tile size</strong></th>
+<th><strong>Model</strong></th>
+<th><strong>Global Acc.</strong></th>
+<th><strong>Macro Acc.</strong></th>
+<th><strong>F1</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>56x56</strong></td>
+<td>Class. (embed.)</td>
+<td>0.76</td>
+<td>0.22</td>
+<td>0.23</td>
+</tr>
+<tr class="even">
+<td>56x56</td>
+<td>Class. (embed.) + H3 lvl 5 (cat)</td>
+<td><strong>0.87 </strong></td>
+<td>0.42</td>
+<td>0.45</td>
+</tr>
+<tr class="odd">
+<td>56x56</td>
+<td>Class. (embed.) + H3 lvl 5 (lat/lon)</td>
+<td><strong>0.87</strong></td>
+<td>0.39</td>
+<td>0.42</td>
+</tr>
+<tr class="even">
+<td>56x56</td>
+<td>Class. (embed.) + H3 lvl 5 ordinal</td>
+<td>0.80</td>
+<td>0.26</td>
+<td>0.26</td>
+</tr>
+<tr class="odd">
+<td><strong>25x25</strong></td>
+<td>Class. (embed.)</td>
+<td>0.73</td>
+<td>0.31</td>
+<td>0.30</td>
+</tr>
+<tr class="even">
+<td>25x25</td>
+<td>Class. (embed.) + H3 lvl 5 (lat/lon)</td>
+<td>0.81</td>
+<td><strong>0.46</strong></td>
+<td><strong>0.53</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="sampling-experiments">Sampling experiments</h3>
+<div style="font-size: smaller;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Random Sampling</th>
+<th>H3 Split (Resolution 3)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ensures diverse samples but risks spatial leakage, overestimating performance.</td>
+<td>Reduces spatial leakage for realistic generalization but may under/over-sample signature types.</td>
+</tr>
+<tr class="even">
+<td>Benefits training diversity but may inflate results due to proximity of train/test data.</td>
+<td>Highlights spatial independence but may penalize heterogeneity within regions.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="sampling-experiments-1">Sampling experiments</h4>
+<p><strong>Random sampling</strong></p>
+<p><img data-src="../figures/milestone_december/train_df.png" class="nostretch quarto-figure quarto-figure-left" height="400"> <img data-src="../figures/milestone_december/test_df.png" class="nostretch quarto-figure quarto-figure-right" height="400"></p>
+</section>
+<section class="slide level2">
+
+<h4 id="regional-sampling-h3">Regional sampling (H3)</h4>
+<ul>
+<li class="fragment">train: blue</li>
+<li class="fragment">test: orange</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/milestone_december/sampling_h3_3.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="sampling-experiments-2">Sampling experiments</h4>
+<p><strong>Random sampling</strong></p>
+<ul>
+<li class="fragment">F1: 0.53</li>
+<li class="fragment">Macro Acccuracy: 0.46</li>
+</ul>
+<p><strong>H3 sampling</strong> Overall Metrics (5 Iterations; random sample across 26 H3 (resolution 3) hexagons):</p>
+<ul>
+<li class="fragment">Mean F1 score: 0.14</li>
+<li class="fragment">Mean macro accuracy: 0.13</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="model-choice-based-on-objective">Model choice based on objective</h4>
+<p>Goal</p>
+<ul>
+<li class="fragment">Local prediction: random sampling might align better with your objectives, as it focuses on learning detailed local variations.</li>
+<li class="fragment">Regional or global prediction: regional splitting might be more suitable because it ensures the model learns broader generalization patterns.</li>
+</ul>
+<p>→ Deployment on all data in the end; (sampling only for reporting accuracy)</p>
+</section>
+<section id="next-steps" class="slide level2">
+<h2>Next steps</h2>
+<ul>
+<li class="fragment">Train final model on all 25x25 tiles (embeddings)
+<ul>
+<li class="fragment">Embeddings model + H3 level 5 lat/lon</li>
+</ul></li>
+<li class="fragment">Product: Prediction pipeline
+<ul>
+<li class="fragment">Make predictions across time (years)</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
 </section></section>
 <section>
 <section id="technical-note-d1" class="title-slide slide level1 center">
