@@ -202,6 +202,8 @@ Algorithm Design and Theoretical Basis Description
 
 ## Satellite images model
 
+---
+
 ### Overview
 
 **Classification vs Segmentation**
@@ -219,7 +221,7 @@ Algorithm Design and Theoretical Basis Description
 
 - A: Baseline (embeddings + ML model)
 - B: Segmentation (fine-tuned Clay model)
-- C: Classification (fine-tuned Clay model
+- C: Classification (fine-tuned Clay model)
 
 → choose final model approach
 
@@ -299,7 +301,7 @@ Algorithm Design and Theoretical Basis Description
 
 ---
 
-**Recap** 
+**Recap**
 
 | Metric            | Satlas | Clay (Best) | Prithvi |
 |--------------------|--------|-------------|---------|
@@ -348,7 +350,7 @@ Algorithm Design and Theoretical Basis Description
 |**A**: Class. + H3 lvl 5| **0.87** (0.82) | **0.42** (0.35) | **0.45** | **0.79** |
 |**B**: Seg. (Clay) | 0.73 | 0.31 | 0.30 | 0.58 |
 |**C**: Class. (Clay) | 0.59 (0.68) | 0.09 | 0.12 | 0.38 |
-::: 
+:::
 
 ---
 
@@ -382,7 +384,7 @@ Algorithm Design and Theoretical Basis Description
 
 #### Ordinal approach
 
-Signatures are not strictly categorical (some are closer than other ones) 
+Signatures are not strictly categorical (some are closer than other ones)
 
 ```
 ordinal_mapping = {
@@ -405,8 +407,8 @@ ordinal_mapping = {
 
 #### Ordinal approach
 
-- Mean Absolute Error: 0.28 
-- Mean Squared Error: 0.28 
+- Mean Absolute Error: 0.28
+- Mean Squared Error: 0.28
 - R² Score: 0.62
 
 ![](../figures/milestone_december/sankey.png){.nostretch fig-align="center" width="600"}
@@ -429,7 +431,7 @@ ordinal_mapping = {
 ### Varying tile size
 
 - Motivated by more useful tile size for policy applications
-- Map creation (less missing data) 
+- Map creation (less missing data)
 - 25 x 25 px tiles (250x250m)
 
 ---
@@ -457,7 +459,7 @@ ordinal_mapping = {
 <div style="font-size: smaller;">
 
 |Random Sampling | H3 Split (Resolution 3) |
-|-----------------|------------------------| 
+|-----------------|------------------------|
 |Ensures diverse samples but risks spatial leakage, overestimating performance.   |Reduces spatial leakage for realistic generalization but may under/over-sample signature types. |
 |Benefits training diversity but may inflate results due to proximity of train/test data.   |  Highlights spatial independence but may penalize heterogeneity within regions. |
 
@@ -505,13 +507,14 @@ Goal
 ## Next steps
 
 - Train final model on all 25x25 tiles (embeddings)
-    - Embeddings model + H3 level 5 lat/lon 
-- Product: Prediction pipeline 
-    - Make predictions across time (years)  
+    - Embeddings model + H3 level 5 lat/lon
+- Product: Prediction pipeline
+    - Make predictions across time (years)
 
+## Comments
 
----     
-
+- A more explicit discussion of limitations—such as data gaps, model constraints, or generalizability to non-European contexts—would provide a balanced perspective.
+- In section 3.2.1.1 class imbalance is acknowledged but there is no clear discussion on strategies for addressing it (e.g. oversampling, synthetic data generation, etc.).
 
 # Technical Note D1
 Consolidated Stakeholder Requirements Specification
@@ -566,6 +569,11 @@ Interest in classifying Lithuania into morphological types and being engaged als
 - December 16 (SSVA) - online
 - End of January (IPR) - in person
 - January 28 (4ct) - in person
+
+## Questions
+
+- How will the project address the issue of trust identified during stakeholder discussions, particularly regarding the adoption of shared terminology and concepts for urban fabric monitoring?
+- What strategies are planned to identify and incorporate unexpressed or latent needs of prospective data users into the stakeholder requirements mapping process?
 
 # Discussion
 
