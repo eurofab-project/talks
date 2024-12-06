@@ -795,7 +795,7 @@
     "href": "slides/milestone_december.html#satellite-images-model",
     "title": "EuroFab Progress Meeting",
     "section": "Satellite images model",
-    "text": "Satellite images model\nOverview\nClassification vs Segmentation\n\nClassification: Single label per tile\nSegmentation: Pixel-level classification"
+    "text": "Satellite images model"
   },
   {
     "objectID": "slides/milestone_december.html#next-steps",
@@ -803,6 +803,13 @@
     "title": "EuroFab Progress Meeting",
     "section": "Next steps",
     "text": "Next steps\n\nTrain final model on all 25x25 tiles (embeddings)\n\nEmbeddings model + H3 level 5 lat/lon\n\nProduct: Prediction pipeline\n\nMake predictions across time (years)"
+  },
+  {
+    "objectID": "slides/milestone_december.html#comments",
+    "href": "slides/milestone_december.html#comments",
+    "title": "EuroFab Progress Meeting",
+    "section": "Comments",
+    "text": "Comments\n\nA more explicit discussion of limitations—such as data gaps, model constraints, or generalizability to non-European contexts—would provide a balanced perspective.\nIn section 3.2.1.1 class imbalance is acknowledged but there is no clear discussion on strategies for addressing it (e.g. oversampling, synthetic data generation, etc.)."
   },
   {
     "objectID": "slides/milestone_december.html#stakeholder-consultation-events",
@@ -824,5 +831,12 @@
     "title": "EuroFab Progress Meeting",
     "section": "Future engagements",
     "text": "Future engagements\n\nDecember 16 (SSVA) - online\nEnd of January (IPR) - in person\nJanuary 28 (4ct) - in person"
+  },
+  {
+    "objectID": "slides/milestone_december.html#questions",
+    "href": "slides/milestone_december.html#questions",
+    "title": "EuroFab Progress Meeting",
+    "section": "Questions",
+    "text": "Questions\n\nHow will the project address the issue of trust identified during stakeholder discussions, particularly regarding the adoption of shared terminology and concepts for urban fabric monitoring?\nWhat strategies are planned to identify and incorporate unexpressed or latent needs of prospective data users into the stakeholder requirements mapping process?"
   }
 ]
