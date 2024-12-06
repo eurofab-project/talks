@@ -2,7 +2,7 @@
 title: "EuroFab Progress Meeting"
 author: "Eurofab team"
 # institute: "Charles University"
-date: "2024-08-02"
+date: "2024-12-06"
 format:
     revealjs:
         theme: [default, ../assets/reveal.scss]
@@ -11,7 +11,7 @@ format:
         transition: slide
         navigation-mode: linear
         controls-layout: edges
-        incremental: true
+        # incremental: true
         progress: true
         include-in-header: ../assets/font.html
         title-slide-attributes:
