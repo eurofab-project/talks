@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.6.39">
 
   <meta name="author" content="Eurofab team">
-  <meta name="dcterms.date" content="2024-08-02">
+  <meta name="dcterms.date" content="2024-12-06">
   <title>Talks – EuroFab Progress Meeting</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -141,20 +141,20 @@ Eurofab team
 </div>
 </div>
 
-  <p class="date">2024-08-02</p>
+  <p class="date">2024-12-06</p>
 </section>
 <section id="milestone-meeting" class="title-slide slide level1 center">
 <h1>Milestone meeting</h1>
 <ol type="1">
-<li class="fragment">Introduction &amp; status update</li>
-<li class="fragment">Milestone 1 deliverables:
+<li>Introduction &amp; status update</li>
+<li>Milestone 1 deliverables:
 <ol type="a">
-<li class="fragment">Technical Note D3 - Reference Data Selection</li>
-<li class="fragment">Technical Note D2 - Algorithm Design and Theoretical Basis Description</li>
-<li class="fragment">Technical Note D1 - Consolidated Stakeholder Requirements Specification</li>
+<li>Technical Note D3 - Reference Data Selection</li>
+<li>Technical Note D2 - Algorithm Design and Theoretical Basis Description</li>
+<li>Technical Note D1 - Consolidated Stakeholder Requirements Specification</li>
 </ol></li>
-<li class="fragment">Discussion</li>
-<li class="fragment">Other</li>
+<li>Discussion</li>
+<li>Other</li>
 </ol>
 </section>
 
@@ -175,23 +175,23 @@ Eurofab team
 <section id="morphological-data" class="slide level2">
 <h2>Morphological data</h2>
 <ol type="1">
-<li class="fragment">Morphometric classification of Central Europe (UPDATE)</li>
-<li class="fragment">Microsoft Building footprints</li>
-<li class="fragment">Overture Maps streets</li>
-<li class="fragment">Implementation</li>
+<li>Morphometric classification of Central Europe (UPDATE)</li>
+<li>Microsoft Building footprints</li>
+<li>Overture Maps streets</li>
+<li>Implementation</li>
 </ol>
 </section>
 <section class="slide level2">
 
 <h3 id="morphometric-classification-of-central-europe">Morphometric classification of Central Europe</h3>
 <ul>
-<li class="fragment">It is based on cadastre building data (NEW) !
+<li>It is based on cadastre building data (NEW) !
 <ul>
-<li class="fragment">Processed from official APIs for all five countries</li>
-<li class="fragment">New data has ~11 million more buildings than EUBUCCO</li>
-<li class="fragment">Quality checks are still pending</li>
+<li>Processed from official APIs for all five countries</li>
+<li>New data has ~11 million more buildings than EUBUCCO</li>
+<li>Quality checks are still pending</li>
 </ul></li>
-<li class="fragment">Uses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier</li>
+<li>Uses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -216,9 +216,9 @@ Eurofab team
 
 <h3 id="microsoft-building-footprints">Microsoft Building footprints</h3>
 <ul>
-<li class="fragment">Cover a large part of the globe - 1.5 billion building footprints.</li>
-<li class="fragment">Available for the study region, whereas other sources such as Google footprints are not.</li>
-<li class="fragment">Homogeneous origin - all footprints are derived using the same model.</li>
+<li>Cover a large part of the globe - 1.5 billion building footprints.</li>
+<li>Available for the study region, whereas other sources such as Google footprints are not.</li>
+<li>Homogeneous origin - all footprints are derived using the same model.</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -230,9 +230,9 @@ Eurofab team
 
 <h3 id="overture-maps-streets">Overture Maps streets</h3>
 <ul>
-<li class="fragment">OpenStreetMap data with minimal processing, therefore it has good coverage</li>
-<li class="fragment">The ground truth morphometric classification uses it</li>
-<li class="fragment">The street network is simplified, preserving its topology, but removing unnecassary clutter</li>
+<li>OpenStreetMap data with minimal processing, therefore it has good coverage</li>
+<li>The ground truth morphometric classification uses it</li>
+<li>The street network is simplified, preserving its topology, but removing unnecassary clutter</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -244,26 +244,26 @@ Eurofab team
 
 <h3 id="overall-data">Overall data</h3>
 <ul>
-<li class="fragment">Based on the preliminary results, there are 56,845,150 Microsoft building footprints for our study area, which are split into 474 subregions.</li>
-<li class="fragment">This is significantly less than the available cadastre data, which has around 88 million buildings and are separated into 828 regions.</li>
-<li class="fragment">The number of downloaded, unprocessed streets is similar to those in (Fleischmann and Samardzhiev Forthcoming) - 23,332,865</li>
+<li>Based on the preliminary results, there are 56,845,150 Microsoft building footprints for our study area, which are split into 474 subregions.</li>
+<li>This is significantly less than the available cadastre data, which has around 88 million buildings and are separated into 828 regions.</li>
+<li>The number of downloaded, unprocessed streets is similar to those in (Fleischmann and Samardzhiev Forthcoming) - 23,332,865</li>
 </ul>
 </section>
 <section id="satellite-data" class="slide level2">
 <h2>Satellite data</h2>
 <ul>
-<li class="fragment">Sentinel-2 composite (Corbane et al.), RGB, 10px/m</li>
-<li class="fragment">temporal/spatial flexibility</li>
-<li class="fragment">analysis-ready; cloud-free</li>
-<li class="fragment">suitability for downstream ML tasks</li>
+<li>Sentinel-2 composite (Corbane et al.), RGB, 10px/m</li>
+<li>temporal/spatial flexibility</li>
+<li>analysis-ready; cloud-free</li>
+<li>suitability for downstream ML tasks</li>
 </ul>
 </section>
 <section class="slide level2">
 
 <h3 id="urban-fabric-classes">Urban fabric classes</h3>
 <ul>
-<li class="fragment">Spatial signatures framework (Arribas-Bel &amp; Fleischmann 2022)</li>
-<li class="fragment">Proxy due to its conceptual alignment with urban characterization</li>
+<li>Spatial signatures framework (Arribas-Bel &amp; Fleischmann 2022)</li>
+<li>Proxy due to its conceptual alignment with urban characterization</li>
 </ul>
 <div class="quarto-figure quarto-figure-top">
 <figure>
@@ -288,8 +288,8 @@ Eurofab team
 
 <h3 id="protocol-design-1">Protocol design</h3>
 <ol type="1">
-<li class="fragment">Use morphometric classification of Central Europe from a parallel research project as ground truth data</li>
-<li class="fragment">Calculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis</li>
+<li>Use morphometric classification of Central Europe from a parallel research project as ground truth data</li>
+<li>Calculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis</li>
 </ol>
 </section>
 <section class="slide level2">
@@ -321,7 +321,7 @@ Eurofab team
 
 <h3 id="protocol-design-2">Protocol design</h3>
 <ol start="3" type="1">
-<li class="fragment">Train a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label</li>
+<li>Train a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label</li>
 </ol>
 </section>
 <section class="slide level2">
@@ -349,8 +349,8 @@ Eurofab team
 <h3 id="overview">Overview</h3>
 <p><strong>Classification vs Segmentation</strong></p>
 <ul>
-<li class="fragment">Classification: Single label per tile</li>
-<li class="fragment">Segmentation: Pixel-level classification</li>
+<li>Classification: Single label per tile</li>
+<li>Segmentation: Pixel-level classification</li>
 </ul>
 <div class="quarto-figure quarto-figure-top">
 <figure>
@@ -363,9 +363,9 @@ Eurofab team
 <h3 id="experiments">Experiments</h3>
 <p><strong>Overall approach comparison</strong></p>
 <ul>
-<li class="fragment">A: Baseline (embeddings + ML model)</li>
-<li class="fragment">B: Segmentation (fine-tuned Clay model)</li>
-<li class="fragment">C: Classification (fine-tuned Clay model)</li>
+<li>A: Baseline (embeddings + ML model)</li>
+<li>B: Segmentation (fine-tuned Clay model)</li>
+<li>C: Classification (fine-tuned Clay model)</li>
 </ul>
 <p>→ choose final model approach</p>
 </section>
@@ -373,9 +373,9 @@ Eurofab team
 
 <p><strong>Model adaptations (baseline approach)</strong></p>
 <ul>
-<li class="fragment">Variation of baseline (ordinal)</li>
-<li class="fragment">Smaller tile size</li>
-<li class="fragment">Sampling method experiments</li>
+<li>Variation of baseline (ordinal)</li>
+<li>Smaller tile size</li>
+<li>Sampling method experiments</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -398,11 +398,11 @@ Eurofab team
 <h4 id="challenges">Challenges</h4>
 <p><strong>Class imbalance</strong></p>
 <ul>
-<li class="fragment">Uneven distribution across urban fabric classes</li>
+<li>Uneven distribution across urban fabric classes</li>
 </ul>
 <p><strong>Shared train/test split</strong></p>
 <ul>
-<li class="fragment">Ensures consistent comparison between tasks (segmentation/classification)</li>
+<li>Ensures consistent comparison between tasks (segmentation/classification)</li>
 </ul>
 <p><img data-src="../figures/milestone_december/unbalanced.png" class="nostretch quarto-figure quarto-figure-left" height="250"> <img data-src="../figures/milestone_december/sampling.png" class="nostretch quarto-figure quarto-figure-right" height="250"></p>
 </section>
@@ -411,17 +411,17 @@ Eurofab team
 <h3 id="model-architectures">Model Architectures</h3>
 <h4 id="approach-a-baseline-embedding">Approach A: Baseline Embedding</h4>
 <ol type="1">
-<li class="fragment"><p><strong>Pipeline</strong></p>
+<li><p><strong>Pipeline</strong></p>
 <ul>
-<li class="fragment">Generate embeddings (SatlasPretrain model)</li>
-<li class="fragment">Predict classes using XGBoost</li>
+<li>Generate embeddings (SatlasPretrain model)</li>
+<li>Predict classes using XGBoost</li>
 </ul></li>
 </ol>
 </section>
 <section class="slide level2">
 
 <ol type="1">
-<li class="fragment"><strong>Pipeline</strong></li>
+<li><strong>Pipeline</strong></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -432,9 +432,9 @@ Eurofab team
 <section class="slide level2">
 
 <ol start="2" type="1">
-<li class="fragment"><strong>Enhancements</strong>
+<li><strong>Enhancements</strong>
 <ul>
-<li class="fragment">Added spatial context using H3 hex lat/lon</li>
+<li>Added spatial context using H3 hex lat/lon</li>
 </ul></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
@@ -447,11 +447,11 @@ Eurofab team
 
 <h4 id="approach-b-segmentation-models">Approach B: Segmentation Models</h4>
 <ul>
-<li class="fragment"><p>Fine-tuned three models</p>
+<li><p>Fine-tuned three models</p>
 <ul>
-<li class="fragment"><strong>Satlas</strong>: SwinT; 302M labels</li>
-<li class="fragment"><strong>Clay</strong>: MAE/ViT; 70M labels</li>
-<li class="fragment"><strong>Prithvi</strong>: MAE/ViT; 250PB data</li>
+<li><strong>Satlas</strong>: SwinT; 302M labels</li>
+<li><strong>Clay</strong>: MAE/ViT; 70M labels</li>
+<li><strong>Prithvi</strong>: MAE/ViT; 250PB data</li>
 </ul></li>
 </ul>
 </section>
@@ -510,8 +510,8 @@ Eurofab team
 
 <h4 id="approach-c-classification">Approach C: Classification</h4>
 <ul>
-<li class="fragment">Fine-tuned <strong>Clay model</strong> for classification task</li>
-<li class="fragment">Dataset: 56 x 56 px tiles</li>
+<li>Fine-tuned <strong>Clay model</strong> for classification task</li>
+<li>Dataset: 56 x 56 px tiles</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -519,9 +519,9 @@ Eurofab team
 <h3 id="evaluation-metrics-approach-comparison">Evaluation metrics approach comparison</h3>
 <p><strong>Pixel-level comparison</strong></p>
 <ul>
-<li class="fragment"><strong>F1 Score</strong>: Balance between precision and recall, highlighting overall model performance for all classes.</li>
-<li class="fragment"><strong>Macro Accuracy</strong>: Averages accuracy across classes, treating each class equally regardless of size.</li>
-<li class="fragment"><strong>IoU</strong>: Quantifies the overlap between predicted and true regions, indicating segmentation accuracy.</li>
+<li><strong>F1 Score</strong>: Balance between precision and recall, highlighting overall model performance for all classes.</li>
+<li><strong>Macro Accuracy</strong>: Averages accuracy across classes, treating each class equally regardless of size.</li>
+<li><strong>IoU</strong>: Quantifies the overlap between predicted and true regions, indicating segmentation accuracy.</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -581,8 +581,8 @@ Eurofab team
 
 <p><strong>Comparison of approach B &amp; C</strong></p>
 <ul>
-<li class="fragment">Overprediction of dominant class</li>
-<li class="fragment">Segmentation boundaries</li>
+<li>Overprediction of dominant class</li>
+<li>Segmentation boundaries</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -593,15 +593,15 @@ Eurofab team
 <section class="slide level2">
 
 <ul>
-<li class="fragment"><strong>Key Findings</strong>:
+<li><strong>Key Findings</strong>:
 <ul>
-<li class="fragment">Embedding model (baseline) outperformed fine-tuned foundation model approaches</li>
-<li class="fragment">Clay model outperformed others in segmentation</li>
+<li>Embedding model (baseline) outperformed fine-tuned foundation model approaches</li>
+<li>Clay model outperformed others in segmentation</li>
 </ul></li>
-<li class="fragment"><strong>Challenges</strong>:
+<li><strong>Challenges</strong>:
 <ul>
-<li class="fragment">Handling class imbalance</li>
-<li class="fragment">Segmentation: non directly visual boundaries in images</li>
+<li>Handling class imbalance</li>
+<li>Segmentation: non directly visual boundaries in images</li>
 </ul></li>
 </ul>
 </section>
@@ -609,9 +609,9 @@ Eurofab team
 
 <h3 id="additional-model-adaptations-baseline-model">Additional model adaptations (baseline model)</h3>
 <ul>
-<li class="fragment">Ordinal approach</li>
-<li class="fragment">Tile size</li>
-<li class="fragment">Sampling experiments</li>
+<li>Ordinal approach</li>
+<li>Tile size</li>
+<li>Sampling experiments</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -637,9 +637,9 @@ Eurofab team
 
 <h4 id="ordinal-approach-1">Ordinal approach</h4>
 <ul>
-<li class="fragment">Mean Absolute Error: 0.28</li>
-<li class="fragment">Mean Squared Error: 0.28</li>
-<li class="fragment">R² Score: 0.62</li>
+<li>Mean Absolute Error: 0.28</li>
+<li>Mean Squared Error: 0.28</li>
+<li>R² Score: 0.62</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -698,9 +698,9 @@ Eurofab team
 
 <h3 id="varying-tile-size">Varying tile size</h3>
 <ul>
-<li class="fragment">Motivated by more useful tile size for policy applications</li>
-<li class="fragment">Map creation (less missing data)</li>
-<li class="fragment">25 x 25 px tiles (250x250m)</li>
+<li>Motivated by more useful tile size for policy applications</li>
+<li>Map creation (less missing data)</li>
+<li>25 x 25 px tiles (250x250m)</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -809,8 +809,8 @@ Eurofab team
 
 <h4 id="regional-sampling-h3">Regional sampling (H3)</h4>
 <ul>
-<li class="fragment">train: blue</li>
-<li class="fragment">test: orange</li>
+<li>train: blue</li>
+<li>test: orange</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -828,29 +828,29 @@ Eurofab team
 <h4 id="model-choice-based-on-objective">Model choice based on objective</h4>
 <p>Goal</p>
 <ul>
-<li class="fragment">Local prediction: random sampling might align better with your objectives, as it focuses on learning detailed local variations.</li>
-<li class="fragment">Regional or global prediction: regional splitting might be more suitable because it ensures the model learns broader generalization patterns.</li>
+<li>Local prediction: random sampling might align better with your objectives, as it focuses on learning detailed local variations.</li>
+<li>Regional or global prediction: regional splitting might be more suitable because it ensures the model learns broader generalization patterns.</li>
 </ul>
 <p>→ Deployment on all data in the end; (sampling only for reporting accuracy)</p>
 </section>
 <section id="next-steps" class="slide level2">
 <h2>Next steps</h2>
 <ul>
-<li class="fragment">Train final model on all 25x25 tiles (embeddings)
+<li>Train final model on all 25x25 tiles (embeddings)
 <ul>
-<li class="fragment">Embeddings model + H3 level 5 lat/lon</li>
+<li>Embeddings model + H3 level 5 lat/lon</li>
 </ul></li>
-<li class="fragment">Product: Prediction pipeline
+<li>Product: Prediction pipeline
 <ul>
-<li class="fragment">Make predictions across time (years)</li>
+<li>Make predictions across time (years)</li>
 </ul></li>
 </ul>
 </section>
 <section id="comments" class="slide level2">
 <h2>Comments</h2>
 <ul>
-<li class="fragment">A more explicit discussion of limitations—such as data gaps, model constraints, or generalizability to non-European contexts—would provide a balanced perspective.</li>
-<li class="fragment">In section 3.2.1.1 class imbalance is acknowledged but there is no clear discussion on strategies for addressing it (e.g.&nbsp;oversampling, synthetic data generation, etc.).</li>
+<li>A more explicit discussion of limitations—such as data gaps, model constraints, or generalizability to non-European contexts—would provide a balanced perspective.</li>
+<li>In section 3.2.1.1 class imbalance is acknowledged but there is no clear discussion on strategies for addressing it (e.g.&nbsp;oversampling, synthetic data generation, etc.).</li>
 </ul>
 </section></section>
 <section>
@@ -874,9 +874,9 @@ Eurofab team
 <section id="stakeholders-involved" class="slide level2">
 <h2>Stakeholders involved</h2>
 <ul>
-<li class="fragment">International</li>
-<li class="fragment">National</li>
-<li class="fragment">Local</li>
+<li>International</li>
+<li>National</li>
+<li>Local</li>
 </ul>
 <p>Representing both public and private sectors.</p>
 </section>
@@ -884,7 +884,7 @@ Eurofab team
 
 <h3 id="international">International</h3>
 <ul>
-<li class="fragment">European Covenant of Mayors</li>
+<li>European Covenant of Mayors</li>
 </ul>
 <p>Interest in addressing unmet data needs for energy and climate applications: interview to COM staff + either interview to selected members of CoM or survey.</p>
 </section>
@@ -892,7 +892,7 @@ Eurofab team
 
 <h3 id="national">National</h3>
 <ul>
-<li class="fragment">SSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)</li>
+<li>SSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)</li>
 </ul>
 <p>Interest in classifying Lithuania into morphological types and being engaged also in the validation stage.</p>
 </section>
@@ -900,23 +900,23 @@ Eurofab team
 
 <h3 id="local">Local</h3>
 <ul>
-<li class="fragment">Prague’s Institute for Planning and Development (IPR) (Czechia)</li>
-<li class="fragment">4ct (Czechia)</li>
+<li>Prague’s Institute for Planning and Development (IPR) (Czechia)</li>
+<li>4ct (Czechia)</li>
 </ul>
 </section>
 <section id="future-engagements" class="slide level2">
 <h2>Future engagements</h2>
 <ul>
-<li class="fragment">December 16 (SSVA) - online</li>
-<li class="fragment">End of January (IPR) - in person</li>
-<li class="fragment">January 28 (4ct) - in person</li>
+<li>December 16 (SSVA) - online</li>
+<li>End of January (IPR) - in person</li>
+<li>January 28 (4ct) - in person</li>
 </ul>
 </section>
 <section id="questions" class="slide level2">
 <h2>Questions</h2>
 <ul>
-<li class="fragment">How will the project address the issue of trust identified during stakeholder discussions, particularly regarding the adoption of shared terminology and concepts for urban fabric monitoring?</li>
-<li class="fragment">What strategies are planned to identify and incorporate unexpressed or latent needs of prospective data users into the stakeholder requirements mapping process?</li>
+<li>How will the project address the issue of trust identified during stakeholder discussions, particularly regarding the adoption of shared terminology and concepts for urban fabric monitoring?</li>
+<li>What strategies are planned to identify and incorporate unexpressed or latent needs of prospective data users into the stakeholder requirements mapping process?</li>
 </ul>
 </section></section>
 <section id="discussion" class="title-slide slide level1 center">
