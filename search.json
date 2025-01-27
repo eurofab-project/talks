@@ -1,117 +1,5 @@
 [
   {
-    "objectID": "slides/WUF_presentation.html#vision",
-    "href": "slides/WUF_presentation.html#vision",
-    "title": "From Data to Vision",
-    "section": "Vision",
-    "text": "Vision\nDemonstrate the societal impact of data-driven technology that empowers people to make better decisions about (urban) land use"
-  },
-  {
-    "objectID": "slides/WUF_presentation.html#goals",
-    "href": "slides/WUF_presentation.html#goals",
-    "title": "From Data to Vision",
-    "section": "Goals",
-    "text": "Goals\n\nSurface trade-off’s in (urban) land use policy through scenario generation\nStrategy over operations\nReach into wide (non-technical) audiences"
-  },
-  {
-    "objectID": "slides/WUF_presentation.html#partnership",
-    "href": "slides/WUF_presentation.html#partnership",
-    "title": "From Data to Vision",
-    "section": "Partnership",
-    "text": "Partnership\n\nGeospatial Commission/ Newcastle City Council\n\n→ Co-produced scenarios & interactive tool"
-  },
-  {
-    "objectID": "slides/WUF_presentation.html#live-demo",
-    "href": "slides/WUF_presentation.html#live-demo",
-    "title": "From Data to Vision",
-    "section": "Live Demo",
-    "text": "Live Demo\n\n\n\n\n\ntinyurl.com/4c3efd25"
-  },
-  {
-    "objectID": "slides/WUF_presentation.html#indicators",
-    "href": "slides/WUF_presentation.html#indicators",
-    "title": "From Data to Vision",
-    "section": "Indicators",
-    "text": "Indicators\n\nData-driven"
-  },
-  {
-    "objectID": "slides/WUF_presentation.html#scenario-co-production",
-    "href": "slides/WUF_presentation.html#scenario-co-production",
-    "title": "From Data to Vision",
-    "section": "Scenario co-production",
-    "text": "Scenario co-production\n\nDiscussion of needs\nSketch of useful scenarios\nTranslation into the framework\n\n→ Scenario comparison/ explore changes"
-  },
-  {
-    "objectID": "slides/WUF_presentation.html#challenges-of-scaling",
-    "href": "slides/WUF_presentation.html#challenges-of-scaling",
-    "title": "From Data to Vision",
-    "section": "Challenges of scaling",
-    "text": "Challenges of scaling\n\nData-driven: We need a lot of data\nChanges over time"
-  },
-  {
-    "objectID": "slides/progress_august.html#applications-by-category-of-user",
-    "href": "slides/progress_august.html#applications-by-category-of-user",
-    "title": "EuroFab Progress Meeting",
-    "section": "Applications (by category of user)",
-    "text": "Applications (by category of user)\n\nCity and urban planning\nMonitoring for global agendas (e.g. SDGs)\nSpecific policy applications (local, regional and national level)"
-  },
-  {
-    "objectID": "slides/progress_august.html#technical-specs-which-ones-to-consider",
-    "href": "slides/progress_august.html#technical-specs-which-ones-to-consider",
-    "title": "EuroFab Progress Meeting",
-    "section": "Technical specs (which ones to consider?)",
-    "text": "Technical specs (which ones to consider?)\n\nSpatial resolution & coverage\nTemporal resolution & coverage\nThematic detail\nTechnology (interoperability & reproducibility)"
-  },
-  {
-    "objectID": "slides/progress_august.html#preliminary-protocol-design",
-    "href": "slides/progress_august.html#preliminary-protocol-design",
-    "title": "EuroFab Progress Meeting",
-    "section": "Preliminary protocol design",
-    "text": "Preliminary protocol design\n\nUse morphometric classification of Central Europe resulting from a parallel research project as ground truth data\nCalculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis"
-  },
-  {
-    "objectID": "slides/progress_august.html#preliminary-protocol-design-1",
-    "href": "slides/progress_august.html#preliminary-protocol-design-1",
-    "title": "EuroFab Progress Meeting",
-    "section": "Preliminary protocol design",
-    "text": "Preliminary protocol design\n\nTrain a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label"
-  },
-  {
-    "objectID": "slides/progress_august.html#preliminary-protocol-design-2",
-    "href": "slides/progress_august.html#preliminary-protocol-design-2",
-    "title": "EuroFab Progress Meeting",
-    "section": "Preliminary protocol design",
-    "text": "Preliminary protocol design\n\nTest the model on an out of training sample country to validate the approach.\n\nPossibly Denmark\nCalculate morphometric characters\nDirectly use the model to classify them into urban fabric types"
-  },
-  {
-    "objectID": "slides/progress_august.html#model-development",
-    "href": "slides/progress_august.html#model-development",
-    "title": "EuroFab Progress Meeting",
-    "section": "Model development",
-    "text": "Model development\nDifferent classification models will be tested out in a progression from simple to more complex. We aim to start with random forest, then gradient boosting trees and only then move to more advanced NNs. The goal is to keep the final model as simple, scalable and interpretable as possible."
-  },
-  {
-    "objectID": "slides/progress_august.html#morphometric-classification-of-central-europe",
-    "href": "slides/progress_august.html#morphometric-classification-of-central-europe",
-    "title": "EuroFab Progress Meeting",
-    "section": "Morphometric classification of Central Europe",
-    "text": "Morphometric classification of Central Europe\n\nIt is based on the highest quality available building data, which allows it to be granular.\nUses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier"
-  },
-  {
-    "objectID": "slides/progress_august.html#microsoft-building-footprints",
-    "href": "slides/progress_august.html#microsoft-building-footprints",
-    "title": "EuroFab Progress Meeting",
-    "section": "Microsoft Building footprints",
-    "text": "Microsoft Building footprints\n\nCover a large part of the globe - 1.5 billion building footprints.\nAvailable for the study region, whereas other sources such as Google footprints are not.\nHomogeneous origin - all footprints are derived using the same model."
-  },
-  {
-    "objectID": "slides/progress_august.html#overture-maps-streets",
-    "href": "slides/progress_august.html#overture-maps-streets",
-    "title": "EuroFab Progress Meeting",
-    "section": "Overture Maps streets",
-    "text": "Overture Maps streets\n\nOpenStreetMap data with minimal processing, therefore it has good coverage\nFaster processing times compared to raw OSM streets\nThe ground truth morphometric classification uses it, therefore there will be some shared data between the classifications, making the model inference easier"
-  },
-  {
     "objectID": "slides/202411_WUF.html#section",
     "href": "slides/202411_WUF.html#section",
     "title": "Classification of urban fabric",
@@ -567,20 +455,6 @@
     "text": "Future\nWorld Urban Forum, Cairo, November 6th @ 15:30\nMonitoring urban fabric for data-driven planning and decision-making"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Talks",
-    "section": "",
-    "text": "Archive of talks of the EuroFab project."
-  },
-  {
-    "objectID": "index.html#list-of-talks",
-    "href": "index.html#list-of-talks",
-    "title": "Talks",
-    "section": "List of talks",
-    "text": "List of talks\n\n2024-06-07 EuroFab project Kick-Off meeting\n2024-08-02 August progress meeting\n2024-08-02 EuroFab progress meeting AT\n2024-10-04 October progress meeting\n2024-11-06 World Urban Forum\n2024-12-06 December milestone meeting"
-  },
-  {
     "objectID": "slides/template.html#heading-level-2",
     "href": "slides/template.html#heading-level-2",
     "title": "Spatial Autocorrelation",
@@ -635,6 +509,195 @@
     "title": "Spatial Autocorrelation",
     "section": "Slide with iframe background",
     "text": "Slide with iframe background"
+  },
+  {
+    "objectID": "slides/consultation.html#section",
+    "href": "slides/consultation.html#section",
+    "title": "Morphometric classification",
+    "section": "",
+    "text": "New York by Anuj Gogari"
+  },
+  {
+    "objectID": "slides/consultation.html#section-1",
+    "href": "slides/consultation.html#section-1",
+    "title": "Morphometric classification",
+    "section": "",
+    "text": "Paris by George Kantarzis"
+  },
+  {
+    "objectID": "slides/consultation.html#section-2",
+    "href": "slides/consultation.html#section-2",
+    "title": "Morphometric classification",
+    "section": "",
+    "text": "Prague by Jay Dantine"
+  },
+  {
+    "objectID": "slides/consultation.html#section-3",
+    "href": "slides/consultation.html#section-3",
+    "title": "Morphometric classification",
+    "section": "",
+    "text": "Sao Paulo by Jonathan Borba"
+  },
+  {
+    "objectID": "slides/consultation.html#section-4",
+    "href": "slides/consultation.html#section-4",
+    "title": "Morphometric classification",
+    "section": "",
+    "text": "Tokyo by Masaaki Komori"
+  },
+  {
+    "objectID": "slides/consultation.html#section-5",
+    "href": "slides/consultation.html#section-5",
+    "title": "Morphometric classification",
+    "section": "",
+    "text": "by Stephen Oliver"
+  },
+  {
+    "objectID": "slides/consultation.html#cities-are-too-complex-to-handle-without-simplification",
+    "href": "slides/consultation.html#cities-are-too-complex-to-handle-without-simplification",
+    "title": "Morphometric classification",
+    "section": "Cities are too complex to handle without simplification",
+    "text": "Cities are too complex to handle without simplification"
+  },
+  {
+    "objectID": "slides/consultation.html#section-6",
+    "href": "slides/consultation.html#section-6",
+    "title": "Morphometric classification",
+    "section": "",
+    "text": "Atlanta"
+  },
+  {
+    "objectID": "slides/consultation.html#section-7",
+    "href": "slides/consultation.html#section-7",
+    "title": "Morphometric classification",
+    "section": "",
+    "text": "Barcelona"
+  },
+  {
+    "objectID": "slides/consultation.html#section-8",
+    "href": "slides/consultation.html#section-8",
+    "title": "Morphometric classification",
+    "section": "",
+    "text": "Brasilia"
+  },
+  {
+    "objectID": "slides/consultation.html#section-9",
+    "href": "slides/consultation.html#section-9",
+    "title": "Morphometric classification",
+    "section": "",
+    "text": "Sao Paulo"
+  },
+  {
+    "objectID": "slides/consultation.html#buildings-and-streets",
+    "href": "slides/consultation.html#buildings-and-streets",
+    "title": "Morphometric classification",
+    "section": "Buildings and streets",
+    "text": "Buildings and streets"
+  },
+  {
+    "objectID": "slides/consultation.html#classification-as-a-way-of-complexity-reduction",
+    "href": "slides/consultation.html#classification-as-a-way-of-complexity-reduction",
+    "title": "Morphometric classification",
+    "section": "Classification as a way of complexity reduction",
+    "text": "Classification as a way of complexity reduction\nSubdivide area into a set of distinct classes"
+  },
+  {
+    "objectID": "slides/consultation.html#how-do-we-capture-form",
+    "href": "slides/consultation.html#how-do-we-capture-form",
+    "title": "Morphometric classification",
+    "section": "How do we capture form?",
+    "text": "How do we capture form?"
+  },
+  {
+    "objectID": "slides/consultation.html#what-do-we-capture",
+    "href": "slides/consultation.html#what-do-we-capture",
+    "title": "Morphometric classification",
+    "section": "What do we capture?",
+    "text": "What do we capture?\n\n\n\ndimension\nshape\nspatial distribution\n\n\n\nintensity\nconnectivity\ndiversity"
+  },
+  {
+    "objectID": "slides/consultation.html#examples-of-morphometrics",
+    "href": "slides/consultation.html#examples-of-morphometrics",
+    "title": "Morphometric classification",
+    "section": "Examples of morphometrics",
+    "text": "Examples of morphometrics"
+  },
+  {
+    "objectID": "slides/consultation.html#morphotope-delineation",
+    "href": "slides/consultation.html#morphotope-delineation",
+    "title": "Morphometric classification",
+    "section": "Morphotope delineation",
+    "text": "Morphotope delineation"
+  },
+  {
+    "objectID": "slides/consultation.html#hierachy-of-classes",
+    "href": "slides/consultation.html#hierachy-of-classes",
+    "title": "Morphometric classification",
+    "section": "Hierachy of classes",
+    "text": "Hierachy of classes\nhttps://uscuni.org/himoc/"
+  },
+  {
+    "objectID": "slides/WUF_presentation.html#vision",
+    "href": "slides/WUF_presentation.html#vision",
+    "title": "From Data to Vision",
+    "section": "Vision",
+    "text": "Vision\nDemonstrate the societal impact of data-driven technology that empowers people to make better decisions about (urban) land use"
+  },
+  {
+    "objectID": "slides/WUF_presentation.html#goals",
+    "href": "slides/WUF_presentation.html#goals",
+    "title": "From Data to Vision",
+    "section": "Goals",
+    "text": "Goals\n\nSurface trade-off’s in (urban) land use policy through scenario generation\nStrategy over operations\nReach into wide (non-technical) audiences"
+  },
+  {
+    "objectID": "slides/WUF_presentation.html#partnership",
+    "href": "slides/WUF_presentation.html#partnership",
+    "title": "From Data to Vision",
+    "section": "Partnership",
+    "text": "Partnership\n\nGeospatial Commission/ Newcastle City Council\n\n→ Co-produced scenarios & interactive tool"
+  },
+  {
+    "objectID": "slides/WUF_presentation.html#live-demo",
+    "href": "slides/WUF_presentation.html#live-demo",
+    "title": "From Data to Vision",
+    "section": "Live Demo",
+    "text": "Live Demo\n\n\n\n\n\ntinyurl.com/4c3efd25"
+  },
+  {
+    "objectID": "slides/WUF_presentation.html#indicators",
+    "href": "slides/WUF_presentation.html#indicators",
+    "title": "From Data to Vision",
+    "section": "Indicators",
+    "text": "Indicators\n\nData-driven"
+  },
+  {
+    "objectID": "slides/WUF_presentation.html#scenario-co-production",
+    "href": "slides/WUF_presentation.html#scenario-co-production",
+    "title": "From Data to Vision",
+    "section": "Scenario co-production",
+    "text": "Scenario co-production\n\nDiscussion of needs\nSketch of useful scenarios\nTranslation into the framework\n\n→ Scenario comparison/ explore changes"
+  },
+  {
+    "objectID": "slides/WUF_presentation.html#challenges-of-scaling",
+    "href": "slides/WUF_presentation.html#challenges-of-scaling",
+    "title": "From Data to Vision",
+    "section": "Challenges of scaling",
+    "text": "Challenges of scaling\n\nData-driven: We need a lot of data\nChanges over time"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Archive of talks of the EuroFab project."
+  },
+  {
+    "objectID": "index.html#list-of-talks",
+    "href": "index.html#list-of-talks",
+    "title": "Talks",
+    "section": "List of talks",
+    "text": "List of talks\n\n2024-06-07 EuroFab project Kick-Off meeting\n2024-08-02 August progress meeting\n2024-08-02 EuroFab progress meeting AT\n2024-10-04 October progress meeting\n2024-11-06 World Urban Forum\n2024-12-06 December milestone meeting"
   },
   {
     "objectID": "slides/202408_progress_august_Turing.html#ai-model-design-june-october-2024",
@@ -768,6 +831,69 @@
     "title": "EuroFab",
     "section": "Milestones",
     "text": "Milestones\n\n\nProgress (MS 1), KO + 6 months\nFinal (MS 2), KO + 12 months"
+  },
+  {
+    "objectID": "slides/progress_august.html#applications-by-category-of-user",
+    "href": "slides/progress_august.html#applications-by-category-of-user",
+    "title": "EuroFab Progress Meeting",
+    "section": "Applications (by category of user)",
+    "text": "Applications (by category of user)\n\nCity and urban planning\nMonitoring for global agendas (e.g. SDGs)\nSpecific policy applications (local, regional and national level)"
+  },
+  {
+    "objectID": "slides/progress_august.html#technical-specs-which-ones-to-consider",
+    "href": "slides/progress_august.html#technical-specs-which-ones-to-consider",
+    "title": "EuroFab Progress Meeting",
+    "section": "Technical specs (which ones to consider?)",
+    "text": "Technical specs (which ones to consider?)\n\nSpatial resolution & coverage\nTemporal resolution & coverage\nThematic detail\nTechnology (interoperability & reproducibility)"
+  },
+  {
+    "objectID": "slides/progress_august.html#preliminary-protocol-design",
+    "href": "slides/progress_august.html#preliminary-protocol-design",
+    "title": "EuroFab Progress Meeting",
+    "section": "Preliminary protocol design",
+    "text": "Preliminary protocol design\n\nUse morphometric classification of Central Europe resulting from a parallel research project as ground truth data\nCalculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis"
+  },
+  {
+    "objectID": "slides/progress_august.html#preliminary-protocol-design-1",
+    "href": "slides/progress_august.html#preliminary-protocol-design-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Preliminary protocol design",
+    "text": "Preliminary protocol design\n\nTrain a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label"
+  },
+  {
+    "objectID": "slides/progress_august.html#preliminary-protocol-design-2",
+    "href": "slides/progress_august.html#preliminary-protocol-design-2",
+    "title": "EuroFab Progress Meeting",
+    "section": "Preliminary protocol design",
+    "text": "Preliminary protocol design\n\nTest the model on an out of training sample country to validate the approach.\n\nPossibly Denmark\nCalculate morphometric characters\nDirectly use the model to classify them into urban fabric types"
+  },
+  {
+    "objectID": "slides/progress_august.html#model-development",
+    "href": "slides/progress_august.html#model-development",
+    "title": "EuroFab Progress Meeting",
+    "section": "Model development",
+    "text": "Model development\nDifferent classification models will be tested out in a progression from simple to more complex. We aim to start with random forest, then gradient boosting trees and only then move to more advanced NNs. The goal is to keep the final model as simple, scalable and interpretable as possible."
+  },
+  {
+    "objectID": "slides/progress_august.html#morphometric-classification-of-central-europe",
+    "href": "slides/progress_august.html#morphometric-classification-of-central-europe",
+    "title": "EuroFab Progress Meeting",
+    "section": "Morphometric classification of Central Europe",
+    "text": "Morphometric classification of Central Europe\n\nIt is based on the highest quality available building data, which allows it to be granular.\nUses Overture streets, therefore there will be some shared data between the classifications, making the model inference easier"
+  },
+  {
+    "objectID": "slides/progress_august.html#microsoft-building-footprints",
+    "href": "slides/progress_august.html#microsoft-building-footprints",
+    "title": "EuroFab Progress Meeting",
+    "section": "Microsoft Building footprints",
+    "text": "Microsoft Building footprints\n\nCover a large part of the globe - 1.5 billion building footprints.\nAvailable for the study region, whereas other sources such as Google footprints are not.\nHomogeneous origin - all footprints are derived using the same model."
+  },
+  {
+    "objectID": "slides/progress_august.html#overture-maps-streets",
+    "href": "slides/progress_august.html#overture-maps-streets",
+    "title": "EuroFab Progress Meeting",
+    "section": "Overture Maps streets",
+    "text": "Overture Maps streets\n\nOpenStreetMap data with minimal processing, therefore it has good coverage\nFaster processing times compared to raw OSM streets\nThe ground truth morphometric classification uses it, therefore there will be some shared data between the classifications, making the model inference easier"
   },
   {
     "objectID": "slides/milestone_december.html#morphological-data",
