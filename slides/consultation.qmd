@@ -1,0 +1,305 @@
+---
+title: "Morphometric classification"
+subtitle: "Core components"
+author: "Martin Fleischmann"
+institute: "Charles University"
+# date: 2024-10-29
+format:
+    revealjs:
+        theme: [default, ../assets/reveal.scss]
+        logo: ../assets/icon.svg
+        menu: false
+        transition: fade
+        navigation-mode: linear
+        controls-layout: edges
+        progress: true
+        include-in-header: ../assets/font.html
+        title-slide-attributes:
+            data-background-image: ../assets/full_logo.svg
+            data-background-size: 20%
+            data-background-position: 50% 90%
+        max-scale: 10
+---
+
+## {background-image="../figures/202411_WUF/ny_anuj_gogari.jpg" .no-text}
+
+::: aside
+New York by Anuj Gogari
+:::
+
+
+## {background-image="../figures/202411_WUF/paris_george_kantarzis.jpg" .no-text}
+
+::: aside
+Paris by George Kantarzis
+:::
+
+## {background-image="../figures/202411_WUF/prague_jay_danntine.jpg" .no-text}
+
+::: aside
+Prague by Jay Dantine
+:::
+
+## {background-image="../figures/202411_WUF/sao_paulo_jonathan_borba.jpg" .no-text}
+
+::: aside
+Sao Paulo by Jonathan Borba
+:::
+
+## {background-image="../figures/202411_WUF/tokyo_masaaki_komori.jpg" .no-text}
+
+::: aside
+Tokyo by Masaaki Komori
+:::
+
+## {background-image="../figures/202411_WUF/town_stephen_oliver.jpg" .no-text}
+
+::: aside
+by Stephen Oliver
+:::
+
+## Cities are too complex to handle without simplification
+
+---
+
+![](../figures/202411_WUF/prague-district-map.jpg)
+
+
+::: aside
+Administrative division of Prague
+:::
+
+---
+
+![](../figures/202411_WUF/corine.png)
+
+::: aside
+CORINE Land Cover
+:::
+
+---
+
+![](../figures/202411_WUF/urban_atlas.png)
+
+::: aside
+Copernicus Urban Atlas Land Use
+:::
+
+---
+
+![](../figures/202411_WUF/oac.png)
+
+::: aside
+Census Output Area Classification (Wyszomierski et. al, 2023)
+:::
+
+---
+
+![](../figures/202411_WUF/slums.jpeg){.r-stretch}
+
+::: aside
+Deprivation detection (Wang et. al, 2023)
+:::
+
+
+---
+
+### Subdivide along which dimension?
+
+# EuroFab
+
+European Urban Fabric Classification (upcoming)
+
+## {background-image="../figures/202411_WUF/atlanta.jpg" .no-text}
+
+::: aside
+Atlanta
+:::
+
+## {background-image="../figures/202411_WUF/barcelona.jpg" .no-text}
+
+::: aside
+Barcelona
+:::
+
+## {background-image="../figures/202411_WUF/brasilia.jpg" .no-text}
+
+::: aside
+Brasilia
+:::
+
+## {background-image="../figures/202411_WUF/sao_paulo.jpg" .no-text}
+
+::: aside
+Sao Paulo
+:::
+
+## Buildings and streets
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../figures/202411_WUF/blg.png)
+:::
+
+::: {.column width="50%"}
+![](../figures/202411_WUF/streets_blg.png){.fragment}
+:::
+
+::::
+
+---
+
+## Classification as a way of complexity reduction
+
+### Subdivide area into a set of distinct classes {.fragment}
+
+## How do we capture form?
+
+## {background-image="../figures/consultation/blg-07.png" .no-text}
+
+## {background-image="../figures/consultation/cell-07.png" .no-text}
+
+## {background-image="../figures/consultation/street-07.png" .no-text}
+
+## {background-image="../figures/consultation/node-07.png" .no-text}
+
+## {background-image="../figures/consultation/adjac%20blg-07.png" .no-text}
+
+## {background-image="../figures/consultation/adjac%20cell-07.png" .no-text}
+
+## {background-image="../figures/consultation/adjac%20streets-07.png" .no-text}
+
+## {background-image="../figures/consultation/adjac%20nodes-07.png" .no-text}
+
+## {background-image="../figures/consultation/joint%20blg-07.png" .no-text}
+
+## {background-image="../figures/consultation/block-07.png" .no-text}
+
+## {background-image="../figures/consultation/cells_steps-07.png" .no-text}
+
+## {background-image="../figures/consultation/nodes%20steps-07.png" .no-text}
+
+## {background-image="../figures/consultation/streets%20steps-07.png" .no-text}
+
+## {background-image="../figures/consultation/15-07.png" .no-text}
+
+## What do we capture?
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- dimension
+- shape
+- spatial distribution
+:::
+
+::: {.column width="50%"}
+- intensity
+- connectivity
+- diversity
+:::
+
+::::
+
+
+## Examples of morphometrics
+
+---
+
+![](../figures/consultation/bua.png)
+
+::: aside
+Building adjacency in Kraków, Poland (Fleischmann and Samardzhiev, upcoming)
+:::
+
+---
+
+![](../figures/consultation/ibd.png)
+
+::: aside
+Inter-building distance in Kraków, Poland (Fleischmann and Samardzhiev, upcoming)
+:::
+
+---
+
+![](../figures/consultation/ltkOri.png)
+
+::: aside
+Solar orientation of enclosures in Kraków, Poland (Fleischmann and Samardzhiev, upcoming)
+:::
+
+---
+
+![](../figures/consultation/sdbare.png)
+
+::: aside
+Area of buildings in Kraków, Poland (Fleischmann and Samardzhiev, upcoming)
+:::
+
+---
+
+![](../figures/consultation/sdcare.png)
+
+::: aside
+Area of tessellation cells in Kraków, Poland (Fleischmann and Samardzhiev, upcoming)
+:::
+
+---
+
+![](../figures/consultation/ssbcor.png)
+
+::: aside
+Corner count of buildings in Kraków, Poland (Fleischmann and Samardzhiev, upcoming)
+:::
+
+---
+
+![](../figures/consultation/swr.png)
+
+::: aside
+Shared walls ratio of buildings in Kraków, Poland (Fleischmann and Samardzhiev, upcoming)
+:::
+
+---
+
+![](../figures/consultation/spw.png)
+
+::: aside
+Width of street profile in Kraków, Poland (Fleischmann and Samardzhiev, upcoming)
+:::
+
+---
+
+![](../figures/consultation/lsdmes.png)
+
+::: aside
+Street network meshedness in Kraków, Poland (Fleischmann and Samardzhiev, upcoming)
+:::
+
+---
+
+![](../figures/consultation/lcdMes_bulidings.png)
+
+::: aside
+Street network meshedness in Kraków, Poland (Fleischmann and Samardzhiev, upcoming)
+:::
+
+# Classification
+
+## Morphotope delineation
+
+---
+
+![](../figures/consultation/morphotopes.png)
+
+::: aside
+Morphotope delineation in Kraków, Poland
+:::
+
+## Hierachy of classes
+
+https://uscuni.org/himoc/
