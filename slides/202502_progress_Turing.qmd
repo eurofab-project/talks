@@ -49,7 +49,7 @@ format:
 * Input: shapefile + satellite composite
     - creates tiles
     - creates embeddings 
-    - loads classifiers and feeds in embeddings
+    - loads classifier and feeds in embeddings
 * Output: spatial signature prediction
 
 ***github.com/eurofab-project/eo/tree/main/ai_pipeline***
@@ -88,14 +88,14 @@ Inverse probability (ordered)
 
 ## Predictions across time
 
-Number of changes from 2016 --> 2021
+Number of changes from 2016 → 2021
 
-![](../figures/202502_progress_turing/frequency_map.png){.nostretch fig-align="middle" height="500"}
+![](../figures/202502_progress_turing/frequency_map.png){.nostretch fig-align="middle" height="400"}
 
 
 ## Similarity across Years
 
-| Year Transition | Overlap |
+| Year transition | Overlap |
 |----------------|---------|
 | 2016 → 2017   | 0.88    |
 | 2017 → 2018   | 0.88    |
@@ -108,23 +108,18 @@ Number of changes from 2016 --> 2021
 ## Understanding yearly change
 
 
-![](../figures/202502_progress_turing/frequency_map.png){.nostretch fig-align="right" height="200"}
+![](../figures/202502_progress_turing/class_transitions.png){.nostretch fig-align="left" height="400"}
+![](../figures/202502_progress_turing/class_transitions_reasonable.png){.nostretch fig-align="right" height="400"}
 
 
 ---
 
-Class transitions across years
-
-![](../figures/202502_progress_turing/class_transitions.png){.nostretch fig-align="left" height="350"}
-![](../figures/202502_progress_turing/class_transitions_reasonable.png){.nostretch fig-align="right" height="350"}
+![](../figures/202502_progress_turing/1d_transitions.png){.nostretch fig-align="right" height="250"}
+![](../figures/202502_progress_turing/1d_transitions_grouped_png){.nostretch fig-align="right" height="250"}
 
 
 ---
 
-![](../figures/202502_progress_turing/1d_transitions.png){.nostretch fig-align="right" height="350"}
-
-
----
 ## Potential aggregations for data product
 
 based on
