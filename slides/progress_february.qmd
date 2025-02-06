@@ -158,9 +158,25 @@ Morphometric classification homogenisation protocol
 | Sparse Road-Linked Development        | .179611 |
 
 
+---
 
+|True labels  vs  Predicted labels |
+|-------------------------|-------------------------|
+|![](../figures/progress_feb/vienna_true.png )  |  ![](../figures/progress_feb/vienna_predicted.png) |
 
+---
 
+![Missclassified labels](../figures/progress_feb/vienna_difference.png)
+
+---
+
+|True labels  vs  Predicted labels |
+|-------------------------|-------------------------|
+|![](../figures/progress_feb/linz_true.png )  |  ![](../figures/progress_feb/linz_predicted.png) |
+
+---
+
+![Missclassified labels](../figures/progress_feb/linz_difference.png)
 
 ##  Next steps
 1. Iterate and improve model accuracy for the poor performing classes.
