@@ -1,8 +1,8 @@
 ---
-title: "Spatial Autocorrelation"
-subtitle: "Using Moran's I to detect local clusters"
-author: "Waldo Tobler"
-institute: "Charles University"
+title: "Progress meeting"
+subtitle: "February 2025"
+#author: "Barbara Metzler"
+institute: "Alan Turing Institute"
 # date: "today"
 format:
     revealjs:
@@ -88,12 +88,17 @@ Inverse probability (ordered)
 
 ## Predictions across time
 
+* Satellite composites from 2016 → 2021
+* Feed into pipeline to get prediction
+
+---
+
 Number of changes from 2016 → 2021
 
 ![](../figures/202502_progress_turing/frequency_map.png){.nostretch fig-align="middle" height="400"}
 
 
-## Similarity across Years
+## Similarity across years
 
 | Year transition | Overlap |
 |----------------|---------|
@@ -115,26 +120,37 @@ Number of changes from 2016 → 2021
 ---
 
 ![](../figures/202502_progress_turing/1d_transitions.png){.nostretch fig-align="right" height="250"}
-![](../figures/202502_progress_turing/1d_transitions_grouped_png){.nostretch fig-align="right" height="250"}
+![](../figures/202502_progress_turing/1d_transitions_grouped.png){.nostretch fig-align="right" height="250"}
 
 
 ---
 
 ## Potential aggregations for data product
 
-based on
+based on:
+
 * model performance
 * yearly transitions
 
-![](../figures/202502_progress_turing/model_comp.png){.nostretch fig-align="right" height="200"}
+---
+
+![](../figures/202502_progress_turing/model_comp.png){.nostretch fig-align="right" height="400"}
 
 ---
+
+```{css}
+#| echo: false
+
+.reveal table {
+  font-size: smaller;
+}
+
+```
 
 *Model performance across aggregations*
 
 | | Acc. | Macro Acc. | F1 (macro) | Granularity |
 |------|------|-----------|----|-------|
-| Spatial sig. | |  |  | 16 |
 | Spatial + urbanity | 0.73 | 0.48 | 0.45 | 12 |
 | Model performance 1d | 0.74 | 0.63 | 0.65 | 7 |
 | Temp. high prob. | 0.74 | 0.62 | 0.58 | 7 |
@@ -149,17 +165,23 @@ based on
 
 Spatial singature dataset with K=7
 
-NMI = 
+
+| | Acc. | Macro Acc. | F1 (macro) | Granularity |
+|------|------|-----------|----|-------|
+| Model performance 1d | 0.74 | 0.63 | 0.65 | 7 |
+
 
 ## Next steps/ areas of improvement
 
-Improve model
+Model
+
 * Sampling
 * Spatial weights
 
-Transferability
-
 Output maps
-* Resolution/aggregations
 
+* Resolution/aggregations
+* Uncertainties
+
+Transferability to other countries
 
