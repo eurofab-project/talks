@@ -963,7 +963,7 @@
     "href": "slides/progress_february.html#current-implementation-status",
     "title": "EuroFab Progress Meeting",
     "section": "Current implementation status",
-    "text": "Current implementation status\n\nThe core functionality for the pipeline was made available within open-source packages - momepy, libpysal, sgeop and the project itself is a public repository.\nWe replaced the previous iteration of target labels with the new ones.\nAdded the capability to calculate spatially lagged variables for the whole dataset."
+    "text": "Current implementation status\n\nThe core functionality for the pipeline was made available within open-source packages - momepy, libpysal, neatnet and the project itself is a public repository.\nWe replaced the previous iteration of target labels with the new ones.\nAdded the capability to calculate spatially lagged variables for the whole dataset."
   },
   {
     "objectID": "slides/progress_february.html#first-full-model-iterations",
