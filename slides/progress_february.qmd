@@ -85,7 +85,7 @@ Morphometric classification homogenisation protocol
 ---
 
 ## Current implementation status
-1. The core functionality for the pipeline was made available within open-source packages - `momepy`, `libpysal`, `sgeop` and the project itself is a public repository.
+1. The core functionality for the pipeline was made available within open-source packages - `momepy`, `libpysal`, `neatnet` and the project itself is a public repository.
 2. We replaced the previous iteration of target labels with the new ones.
 3. Added the capability to calculate spatially lagged variables for the whole dataset.
 
