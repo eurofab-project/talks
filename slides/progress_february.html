@@ -486,11 +486,269 @@ Eurofab team
 <li class="fragment">Write validation and comparison schemes to examine model results at different scales of the detailed cadastre classification.</li>
 </ol>
 </section></section>
+<section>
 <section id="progress-on-imagery-components" class="title-slide slide level1 center">
 <h1>Progress on imagery components</h1>
-
+<ul>
+<li class="fragment"><strong>AI model design:</strong> June-October 2024</li>
+<li class="fragment"><strong>AI model development and training:</strong> September-November 2024</li>
+<li class="fragment"><strong>European space-time urban strategy:</strong> December-March 2025</li>
+</ul>
 </section>
+<section id="ai-model-design" class="slide level2">
+<h2>AI model design</h2>
+<ul>
+<li class="fragment"><strong>Scale:</strong> Pixel vs patch (size)</li>
+<li class="fragment"><strong>Task:</strong> Classification vs segmentation</li>
+<li class="fragment"><strong>Models:</strong> Network architectures and foundation models</li>
+<li class="fragment"><strong>Sampling and geospatial information</strong>: Unbalanced dataset and spatial autocorrelation</li>
+</ul>
+</section>
+<section id="final-model-quick-recap" class="slide level2">
+<h2>Final model: quick recap</h2>
+<ul>
+<li class="fragment">Embeddings created from 25 x 25 pixel tiles</li>
+<li class="fragment">Weighted XGBoost classifier</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/202502_progress_turing/model_comparison.png" class="quarto-figure quarto-figure-center" height="250"></p>
+</figure>
+</div>
+</section>
+<section id="prediction-pipeline" class="slide level2">
+<h2>Prediction pipeline</h2>
+<ul>
+<li class="fragment">Input: shapefile + satellite composite
+<ul>
+<li class="fragment">creates tiles</li>
+<li class="fragment">creates embeddings</li>
+<li class="fragment">loads classifier and feeds in embeddings</li>
+</ul></li>
+<li class="fragment">Output: spatial signature prediction</li>
+</ul>
+<p><strong><em>github.com/eurofab-project/eo/tree/main/ai_pipeline</em></strong></p>
+</section>
+<section id="understanding-model-performance" class="slide level2">
+<h2>Understanding model performance</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Accuracy</th>
+<th>Macro Acc.</th>
+<th>F1 (macro)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.66</td>
+<td>0.48</td>
+<td>0.36</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="model-performance" class="slide level2">
+<h2>Model performance</h2>
+<ul>
+<li class="fragment">full dataset / test set</li>
+</ul>
+<p><img data-src="../figures/202502_progress_turing/model_performance_all.png" class="nostretch quarto-figure quarto-figure-left" height="350"> <img data-src="../figures/202502_progress_turing/model_performance_test.png" class="nostretch quarto-figure quarto-figure-right" height="350"></p>
+</section>
+<section class="slide level2">
 
+<p>Inverse probability (ordered)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/202502_progress_turing/1d_model_performance_test.png" class="quarto-figure quarto-figure-center" height="250"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Inverse probability (ordered)</p>
+<p><img data-src="../figures/202502_progress_turing/1d_model_performance_test.png" class="nostretch quarto-figure quarto-figure-center" height="250"> <img data-src="../figures/202502_progress_turing/1d_model_perf_test_grouped.png" class="nostretch quarto-figure quarto-figure-center" height="300"></p>
+</section>
+<section id="predictions-across-time" class="slide level2">
+<h2>Predictions across time</h2>
+<ul>
+<li class="fragment">Satellite composites from 2016 → 2021</li>
+<li class="fragment">Fed into prediction pipeline</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>Number of changes from 2016 → 2021</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/202502_progress_turing/frequency_map.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="similarity-across-years" class="slide level2">
+<h2>Similarity across years</h2>
+<div style="font-size: smaller;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Year transition</th>
+<th>Overlap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2016 → 2017</td>
+<td>0.88</td>
+</tr>
+<tr class="even">
+<td>2017 → 2018</td>
+<td>0.88</td>
+</tr>
+<tr class="odd">
+<td>2018 → 2019</td>
+<td>0.86</td>
+</tr>
+<tr class="even">
+<td>2019 → 2020</td>
+<td>0.86</td>
+</tr>
+<tr class="odd">
+<td>2020 → 2021</td>
+<td>0.88</td>
+</tr>
+<tr class="even">
+<td><strong>2016 → 2021</strong></td>
+<td><strong>0.88</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="understanding-yearly-change" class="slide level2">
+<h2>Understanding yearly change</h2>
+<p><img data-src="../figures/202502_progress_turing/class_transitions.png" class="nostretch quarto-figure quarto-figure-left" height="400"> <img data-src="../figures/202502_progress_turing/class_transitions_reasonable.png" class="nostretch quarto-figure quarto-figure-right" height="400"></p>
+</section>
+<section class="slide level2">
+
+<p><img data-src="../figures/202502_progress_turing/1d_transitions.png" class="nostretch quarto-figure quarto-figure-center" height="250"> <img data-src="../figures/202502_progress_turing/1d_transitions_grouped.png" class="nostretch quarto-figure quarto-figure-center" height="325"></p>
+</section>
+<section id="potential-aggregations-for-data-product" class="slide level2">
+<h2>Potential aggregations for data product</h2>
+<p>based on:</p>
+<ul>
+<li class="fragment">model performance</li>
+<li class="fragment">yearly transitions</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../figures/202502_progress_turing/overview.png" class="quarto-figure quarto-figure-right" height="400"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<p><em>Model performance across aggregations</em></p>
+<div style="font-size: smaller;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Acc.</th>
+<th>Macro Acc.</th>
+<th>F1 (macro)</th>
+<th>Granularity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spatial + urbanity</td>
+<td>0.73</td>
+<td>0.48</td>
+<td>0.45</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>Model performance 1d</td>
+<td>0.74</td>
+<td>0.63</td>
+<td>0.58</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>Temp. high prob.</td>
+<td>0.74</td>
+<td>0.62</td>
+<td>0.58</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>Temp. 1d</td>
+<td>0.74</td>
+<td>0.68</td>
+<td>0.64</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>Visual grouping</td>
+<td>0.83</td>
+<td>0.72</td>
+<td>0.67</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>(Non)urban</td>
+<td>0.97</td>
+<td>0.83</td>
+<td>0.78</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="comparison-to-reclustered-baseline" class="slide level2">
+<h2>Comparison to reclustered baseline</h2>
+<p>Spatial singature dataset with K=7</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Acc.</th>
+<th>Macro Acc.</th>
+<th>F1 (macro)</th>
+<th>Granularity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Model performance 1d</td>
+<td>0.74</td>
+<td>0.63</td>
+<td>0.65</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="next-steps-areas-of-improvement" class="slide level2">
+<h2>Next steps/ areas of improvement</h2>
+<div style="font-size: smaller;">
+<p>Model</p>
+<ul>
+<li class="fragment">Sampling</li>
+<li class="fragment">Spatial weights</li>
+</ul>
+<p>Output maps</p>
+<ul>
+<li class="fragment">Resolution/aggregations</li>
+<li class="fragment">Uncertainties</li>
+</ul>
+<p>Transferability to other countries</p>
+</div>
+</section></section>
 <section>
 <section id="progress-on-stakeholder-components" class="title-slide slide level1 center">
 <h1>Progress on stakeholder components</h1>

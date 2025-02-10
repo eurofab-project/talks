@@ -994,6 +994,83 @@
     "text": "Next steps\n\nIterate and improve model accuracy for the poor performing classes.\nWrite validation and comparison schemes to examine model results at different scales of the detailed cadastre classification."
   },
   {
+    "objectID": "slides/progress_february.html#ai-model-design",
+    "href": "slides/progress_february.html#ai-model-design",
+    "title": "EuroFab Progress Meeting",
+    "section": "AI model design",
+    "text": "AI model design\n\nScale: Pixel vs patch (size)\nTask: Classification vs segmentation\nModels: Network architectures and foundation models\nSampling and geospatial information: Unbalanced dataset and spatial autocorrelation"
+  },
+  {
+    "objectID": "slides/progress_february.html#final-model-quick-recap",
+    "href": "slides/progress_february.html#final-model-quick-recap",
+    "title": "EuroFab Progress Meeting",
+    "section": "Final model: quick recap",
+    "text": "Final model: quick recap\n\nEmbeddings created from 25 x 25 pixel tiles\nWeighted XGBoost classifier"
+  },
+  {
+    "objectID": "slides/progress_february.html#prediction-pipeline",
+    "href": "slides/progress_february.html#prediction-pipeline",
+    "title": "EuroFab Progress Meeting",
+    "section": "Prediction pipeline",
+    "text": "Prediction pipeline\n\nInput: shapefile + satellite composite\n\ncreates tiles\ncreates embeddings\nloads classifier and feeds in embeddings\n\nOutput: spatial signature prediction\n\ngithub.com/eurofab-project/eo/tree/main/ai_pipeline"
+  },
+  {
+    "objectID": "slides/progress_february.html#understanding-model-performance",
+    "href": "slides/progress_february.html#understanding-model-performance",
+    "title": "EuroFab Progress Meeting",
+    "section": "Understanding model performance",
+    "text": "Understanding model performance\n\n\n\nAccuracy\nMacro Acc.\nF1 (macro)\n\n\n\n\n0.66\n0.48\n0.36"
+  },
+  {
+    "objectID": "slides/progress_february.html#model-performance",
+    "href": "slides/progress_february.html#model-performance",
+    "title": "EuroFab Progress Meeting",
+    "section": "Model performance",
+    "text": "Model performance\n\nfull dataset / test set"
+  },
+  {
+    "objectID": "slides/progress_february.html#predictions-across-time",
+    "href": "slides/progress_february.html#predictions-across-time",
+    "title": "EuroFab Progress Meeting",
+    "section": "Predictions across time",
+    "text": "Predictions across time\n\nSatellite composites from 2016 → 2021\nFed into prediction pipeline"
+  },
+  {
+    "objectID": "slides/progress_february.html#similarity-across-years",
+    "href": "slides/progress_february.html#similarity-across-years",
+    "title": "EuroFab Progress Meeting",
+    "section": "Similarity across years",
+    "text": "Similarity across years\n\n\n\n\nYear transition\nOverlap\n\n\n\n\n2016 → 2017\n0.88\n\n\n2017 → 2018\n0.88\n\n\n2018 → 2019\n0.86\n\n\n2019 → 2020\n0.86\n\n\n2020 → 2021\n0.88\n\n\n2016 → 2021\n0.88"
+  },
+  {
+    "objectID": "slides/progress_february.html#understanding-yearly-change",
+    "href": "slides/progress_february.html#understanding-yearly-change",
+    "title": "EuroFab Progress Meeting",
+    "section": "Understanding yearly change",
+    "text": "Understanding yearly change"
+  },
+  {
+    "objectID": "slides/progress_february.html#potential-aggregations-for-data-product",
+    "href": "slides/progress_february.html#potential-aggregations-for-data-product",
+    "title": "EuroFab Progress Meeting",
+    "section": "Potential aggregations for data product",
+    "text": "Potential aggregations for data product\nbased on:\n\nmodel performance\nyearly transitions"
+  },
+  {
+    "objectID": "slides/progress_february.html#comparison-to-reclustered-baseline",
+    "href": "slides/progress_february.html#comparison-to-reclustered-baseline",
+    "title": "EuroFab Progress Meeting",
+    "section": "Comparison to reclustered baseline",
+    "text": "Comparison to reclustered baseline\nSpatial singature dataset with K=7\n\n\n\n\nAcc.\nMacro Acc.\nF1 (macro)\nGranularity\n\n\n\n\nModel performance 1d\n0.74\n0.63\n0.65\n7"
+  },
+  {
+    "objectID": "slides/progress_february.html#next-steps-areas-of-improvement",
+    "href": "slides/progress_february.html#next-steps-areas-of-improvement",
+    "title": "EuroFab Progress Meeting",
+    "section": "Next steps/ areas of improvement",
+    "text": "Next steps/ areas of improvement\n\nModel\n\nSampling\nSpatial weights\n\nOutput maps\n\nResolution/aggregations\nUncertainties\n\nTransferability to other countries"
+  },
+  {
     "objectID": "slides/progress_february.html#web-application",
     "href": "slides/progress_february.html#web-application",
     "title": "EuroFab Progress Meeting",
