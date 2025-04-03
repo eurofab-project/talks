@@ -907,7 +907,14 @@
     "href": "slides/progress_april.html#data-augmentation",
     "title": "EuroFab Progress Meeting",
     "section": "Data augmentation",
-    "text": "Data augmentation\n\n\n\nSliding Window Augmentation"
+    "text": "Data augmentation\n\nSliding Window Augmentation (50m)"
+  },
+  {
+    "objectID": "slides/progress_april.html#data-augmentation-1",
+    "href": "slides/progress_april.html#data-augmentation-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Data augmentation",
+    "text": "Data augmentation"
   },
   {
     "objectID": "slides/progress_april.html#classifier",
@@ -915,6 +922,13 @@
     "title": "EuroFab Progress Meeting",
     "section": "Classifier",
     "text": "Classifier\n\n\n\n\n\n\n\n\n\n\nClasses (K)\nSpatial Context\nAccuracy\nMacro Accuracy\nMacro F1 Score\n\n\n\n\n7\nNone\n0.4924\n0.3856\n0.3389\n\n\n7\nH3 (res 5)\n0.6959\n0.5713\n0.5221\n\n\n12\nNone\n0.4617\n0.2666\n0.2127\n\n\n12\nH3 (res 5)\n0.6654\n0.4328\n0.3654"
+  },
+  {
+    "objectID": "slides/progress_april.html#datacube",
+    "href": "slides/progress_april.html#datacube",
+    "title": "EuroFab Progress Meeting",
+    "section": "Datacube",
+    "text": "Datacube\n\npredictions for all of GB\n2016-2021\nK=7 and K=12"
   },
   {
     "objectID": "slides/progress_april.html#software-and-datasets",

@@ -211,15 +211,29 @@ Eurofab team
 <h1>Progress on imagery components</h1>
 
 </section>
+<section class="slide level2">
+
+<h3 id="approach">Approach</h3>
+<pre><code>pipeline.spatial_sig_prediction(
+    geo_path="../data/london_grid.geojson",  # Area to analyze
+    vrt_file="../data/2017_satellite.vrt",   # Satellite composite
+    xgb_weights="../models/xgb_model.bin",   # XGBoost model
+    model_weights="../models/satlas.pth",    # Satlas embedding model
+    output_path="../output/test_london.parquet",  # Prediction results
+    h3_resolution=5
+)</code></pre>
+</section>
 <section id="data-augmentation" class="slide level2">
 <h2>Data augmentation</h2>
-<div class="quarto-figure quarto-figure-center">
+
+<img data-src="../figures/progress_april/img_aug.jpg" class="r-stretch quarto-figure-center"><p class="caption">Sliding Window Augmentation (50m)</p></section>
+<section id="data-augmentation-1" class="slide level2">
+<h2>Data augmentation</h2>
+<div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="../figures/results/img_aug.jpg"></p>
-<figcaption>Sliding Window Augmentation</figcaption>
+<p><img data-src="../figures/progress_april/augmentation_table.png" class="quarto-figure quarto-figure-left" height="500"></p>
 </figure>
 </div>
-<p><img data-src="../figures/results/type_clean_encode.png" alt="Before Augmentation"> <img data-src="../figures/results/type_clean_encode_augmented.png" alt="After Augmentation"></p>
 </section>
 <section id="classifier" class="slide level2">
 <h2>Classifier</h2>
@@ -305,6 +319,42 @@ Eurofab team
 </section>
 <section class="slide level2">
 
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/progress_april/class_acc.png" class="" height="420"></p>
+<figcaption>Number of observations vs accuracy</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="examples">Examples</h3>
+
+<img data-src="../figures/progress_april/london_k7.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../figures/progress_april/liverpool_k7.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../figures/progress_april/london_k7.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="../figures/progress_april/liverpool_k12.png" class="r-stretch"></section>
+<section id="datacube" class="slide level2">
+<h2>Datacube</h2>
+<ul>
+<li class="fragment">predictions for all of GB</li>
+<li class="fragment">2016-2021</li>
+<li class="fragment">K=7 and K=12</li>
+</ul>
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../figures/progress_april/datacube.png" class="quarto-figure quarto-figure-right" height="300"></p>
+</figure>
+</div>
 </section></section>
 <section>
 <section id="technical-note-d6---software-and-example-datasets-generated-during-verification-exercises" class="title-slide slide level1 center">
