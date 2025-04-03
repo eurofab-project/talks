@@ -78,6 +78,37 @@ format:
 
 # Progress on imagery components
 
+---
+
+## Data augmentation
+
+![Sliding Window Augmentation](../figures/results/img_aug.jpg)
+
+
+![Before Augmentation](../figures/results/type_clean_encode.png)
+![After Augmentation](../figures/results/type_clean_encode_augmented.png)
+
+---
+
+## Classifier
+
+
+| Classes (K) | Spatial Context | Accuracy | Macro Accuracy | Macro F1 Score |
+|-------------|-----------------|----------|----------------|----------------|
+| 7           | None            | 0.4924   | 0.3856         | 0.3389         |
+| 7           | H3 (res 5)      | 0.6959   | 0.5713         | **0.5221**       |
+| 12          | None            | 0.4617   | 0.2666         | 0.2127         |
+| 12          | H3 (res 5)      | 0.6654   | 0.4328         | 0.3654         |
+
+---
+
+### Without data augmentation
+
+| Classes (K) | Spatial Context | Accuracy | Macro Accuracy | Macro F1 Score |
+|-------------|-----------------|----------|----------------|----------------|
+| 7           | None            | 0.4   | 0.2         | 0.14         |
+
+---
 
 # Technical note D6 - Software and Example datasets generated during Verification Exercises
 
@@ -101,7 +132,7 @@ format:
 
 - Data Integration
 - Taxonomy Description and Naming
-- Comparative Urban Analysis:
+- Comparative Urban Analysis
 - Expanding Data Coverage
 - Reducing Manual Effort in Land Use Analysis
 - Geographical Scale of Results
