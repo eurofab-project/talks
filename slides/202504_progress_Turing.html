@@ -9,9 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
-  <meta name="author" content="Eurofab team">
-  <meta name="dcterms.date" content="2024-04-04">
-  <title>Talks – EuroFab Progress Meeting</title>
+  <title>Talks – Progress meeting</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -131,228 +129,278 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="../assets/logos.png" data-background-position="50% 90%" data-background-size="20%" class="quarto-title-block center">
-  <h1 class="title">EuroFab Progress Meeting</h1>
+  <h1 class="title">Progress meeting</h1>
+  <p class="subtitle">February 2025</p>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Eurofab team 
-</div>
-</div>
 </div>
 
-  <p class="date">2024-04-04</p>
-</section>
-<section id="agenda" class="slide level2">
-<h2>Agenda</h2>
-<ol type="1">
-<li class="fragment">Progress overview</li>
-<li class="fragment">Technical note D4 - Test and Verification Results</li>
-<li class="fragment">Technical note D6 - Software and Example datasets generated during Verification Exercises</li>
-<li class="fragment">Technical note D5 - Stakeholder Impact and Utility Assessment</li>
-<li class="fragment">Discussion</li>
-</ol>
 </section>
 <section>
-<section id="where-we-are" class="title-slide slide level1 center">
-<h1>Where we are</h1>
-
+<section id="overview" class="title-slide slide level1 center">
+<h1>Overview</h1>
+<ul>
+<li><strong>AI model design:</strong> June-October 2024</li>
+<li><strong>AI model development and training:</strong> September-November 2024</li>
+<li><strong>European space-time urban strategy:</strong> December-March 2025</li>
+</ul>
 </section>
-<section class="slide level2">
-
-
-<img data-src="../figures/progress_august/gantchart.png" class="r-stretch"></section></section>
-<section id="technical-note-d4---test-and-verification-results" class="title-slide slide level1 center">
-<h1>Technical note D4 - Test and Verification Results</h1>
-
+<section id="ai-model-design" class="slide level2">
+<h2>AI model design</h2>
+<ul>
+<li><strong>Scale:</strong> Pixel vs patch (size)</li>
+<li><strong>Task:</strong> Classification vs segmentation</li>
+<li><strong>Models:</strong> Network architectures and foundation models</li>
+<li><strong>Sampling and geospatial information</strong>: Unbalanced dataset and spatial autocorrelation</li>
+</ul>
 </section>
-
-<section id="morphometric-model" class="title-slide slide level1 center">
-<h1>Morphometric model</h1>
-
-<img data-src="../figures/progress_april/examples.png" class="r-stretch"></section>
-
-<section>
-<section id="extensions-changes" class="title-slide slide level1 center">
-<h1>Extensions &amp; changes</h1>
-
-<img data-src="../figures/progress_april/model_split.drawio.png" class="r-stretch"></section>
-<section class="slide level2">
-
-
-<img data-src="../figures/progress_april/building_comparison.png" class="r-stretch"></section></section>
-<section>
-<section id="results" class="title-slide slide level1 center">
-<h1>Results</h1>
-
-</section>
-<section id="agg-scores" class="slide level2">
-<h2>Agg scores</h2>
-
-<img data-src="../figures/progress_april/level3_acc.png" class="r-stretch"></section>
-<section class="slide level2">
-
-
-<img data-src="../figures/progress_april/level4_acc.png" class="r-stretch"></section>
-<section id="class-scores" class="slide level2">
-<h2>Class scores</h2>
-
-<img data-src="../figures/progress_april/level3_class.png" class="r-stretch"></section>
-<section class="slide level2">
-
-
-<img data-src="../figures/progress_april/level4_class.png" class="r-stretch"></section>
-<section id="confusion-matrix" class="slide level2">
-<h2>Confusion Matrix</h2>
-
-<img data-src="../figures/progress_april/cm.png" class="r-stretch"></section></section>
-<section>
-<section id="progress-on-imagery-components" class="title-slide slide level1 center">
-<h1>Progress on imagery components</h1>
-
-</section>
-<section id="data-augmentation" class="slide level2">
-<h2>Data augmentation</h2>
+<section id="final-model-quick-recap" class="slide level2">
+<h2>Final model: quick recap</h2>
+<ul>
+<li>Embeddings created from 25 x 25 pixel tiles</li>
+<li>Weighted XGBoost classifier</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/results/img_aug.jpg"></p>
-<figcaption>Sliding Window Augmentation</figcaption>
+<p><img data-src="../figures/202502_progress_turing/model_comparison.png" class="quarto-figure quarto-figure-center" height="250"></p>
 </figure>
 </div>
-<p><img data-src="../figures/results/type_clean_encode.png" alt="Before Augmentation"> <img data-src="../figures/results/type_clean_encode_augmented.png" alt="After Augmentation"></p>
 </section>
-<section id="classifier" class="slide level2">
-<h2>Classifier</h2>
+<section id="prediction-pipeline" class="slide level2">
+<h2>Prediction pipeline</h2>
+<ul>
+<li>Input: shapefile + satellite composite
+<ul>
+<li>creates tiles</li>
+<li>creates embeddings</li>
+<li>loads classifier and feeds in embeddings</li>
+</ul></li>
+<li>Output: spatial signature prediction</li>
+</ul>
+<p><strong><em>github.com/eurofab-project/eo/tree/main/ai_pipeline</em></strong></p>
+</section>
+<section id="understanding-model-performance" class="slide level2">
+<h2>Understanding model performance</h2>
 <table class="caption-top">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 23%">
-<col style="width: 13%">
-<col style="width: 22%">
-<col style="width: 22%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Classes (K)</th>
-<th>Spatial Context</th>
 <th>Accuracy</th>
-<th>Macro Accuracy</th>
-<th>Macro F1 Score</th>
+<th>Macro Acc.</th>
+<th>F1 (macro)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>7</td>
-<td>None</td>
-<td>0.4924</td>
-<td>0.3856</td>
-<td>0.3389</td>
-</tr>
-<tr class="even">
-<td>7</td>
-<td>H3 (res 5)</td>
-<td>0.6959</td>
-<td>0.5713</td>
-<td><strong>0.5221</strong></td>
-</tr>
-<tr class="odd">
-<td>12</td>
-<td>None</td>
-<td>0.4617</td>
-<td>0.2666</td>
-<td>0.2127</td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>H3 (res 5)</td>
-<td>0.6654</td>
-<td>0.4328</td>
-<td>0.3654</td>
+<td>0.66</td>
+<td>0.48</td>
+<td>0.36</td>
 </tr>
 </tbody>
 </table>
 </section>
+<section id="model-performance" class="slide level2">
+<h2>Model performance</h2>
+<ul>
+<li>full dataset / test set</li>
+</ul>
+<p><img data-src="../figures/202502_progress_turing/model_performance_all.png" class="nostretch quarto-figure quarto-figure-left" height="350"> <img data-src="../figures/202502_progress_turing/model_performance_test.png" class="nostretch quarto-figure quarto-figure-right" height="350"></p>
+</section>
 <section class="slide level2">
 
-<h3 id="without-data-augmentation">Without data augmentation</h3>
+<p>Inverse probability (ordered)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/202502_progress_turing/1d_model_performance_test.png" class="quarto-figure quarto-figure-center" height="250"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Inverse probability (ordered)</p>
+<p><img data-src="../figures/202502_progress_turing/1d_model_performance_test.png" class="nostretch quarto-figure quarto-figure-center" height="250"> <img data-src="../figures/202502_progress_turing/1d_model_perf_test_grouped.png" class="nostretch quarto-figure quarto-figure-center" height="300"></p>
+</section>
+<section id="predictions-across-time" class="slide level2">
+<h2>Predictions across time</h2>
+<ul>
+<li>Satellite composites from 2016 → 2021</li>
+<li>Fed into prediction pipeline</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>Number of changes from 2016 → 2021</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/202502_progress_turing/frequency_map.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="similarity-across-years" class="slide level2">
+<h2>Similarity across years</h2>
+<div style="font-size: smaller;">
 <table class="caption-top">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 23%">
-<col style="width: 13%">
-<col style="width: 22%">
-<col style="width: 22%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Classes (K)</th>
-<th>Spatial Context</th>
-<th>Accuracy</th>
-<th>Macro Accuracy</th>
-<th>Macro F1 Score</th>
+<th>Year transition</th>
+<th>Overlap</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td>2016 → 2017</td>
+<td>0.88</td>
+</tr>
+<tr class="even">
+<td>2017 → 2018</td>
+<td>0.88</td>
+</tr>
+<tr class="odd">
+<td>2018 → 2019</td>
+<td>0.86</td>
+</tr>
+<tr class="even">
+<td>2019 → 2020</td>
+<td>0.86</td>
+</tr>
+<tr class="odd">
+<td>2020 → 2021</td>
+<td>0.88</td>
+</tr>
+<tr class="even">
+<td><strong>2016 → 2021</strong></td>
+<td><strong>0.88</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="understanding-yearly-change" class="slide level2">
+<h2>Understanding yearly change</h2>
+<p><img data-src="../figures/202502_progress_turing/class_transitions.png" class="nostretch quarto-figure quarto-figure-left" height="400"> <img data-src="../figures/202502_progress_turing/class_transitions_reasonable.png" class="nostretch quarto-figure quarto-figure-right" height="400"></p>
+</section>
+<section class="slide level2">
+
+<p><img data-src="../figures/202502_progress_turing/1d_transitions.png" class="nostretch quarto-figure quarto-figure-center" height="250"> <img data-src="../figures/202502_progress_turing/1d_transitions_grouped.png" class="nostretch quarto-figure quarto-figure-center" height="325"></p>
+</section>
+<section id="potential-aggregations-for-data-product" class="slide level2">
+<h2>Potential aggregations for data product</h2>
+<p>based on:</p>
+<ul>
+<li>model performance</li>
+<li>yearly transitions</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../figures/202502_progress_turing/overview.png" class="quarto-figure quarto-figure-right" height="400"></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<p><em>Model performance across aggregations</em></p>
+<div style="font-size: smaller;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Acc.</th>
+<th>Macro Acc.</th>
+<th>F1 (macro)</th>
+<th>Granularity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spatial + urbanity</td>
+<td>0.73</td>
+<td>0.48</td>
+<td>0.45</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>Model performance 1d</td>
+<td>0.74</td>
+<td>0.63</td>
+<td>0.58</td>
 <td>7</td>
-<td>None</td>
-<td>0.4</td>
-<td>0.2</td>
-<td>0.14</td>
+</tr>
+<tr class="odd">
+<td>Temp. high prob.</td>
+<td>0.74</td>
+<td>0.62</td>
+<td>0.58</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>Temp. 1d</td>
+<td>0.74</td>
+<td>0.68</td>
+<td>0.64</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>Visual grouping</td>
+<td>0.83</td>
+<td>0.72</td>
+<td>0.67</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>(Non)urban</td>
+<td>0.97</td>
+<td>0.83</td>
+<td>0.78</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="comparison-to-reclustered-baseline" class="slide level2">
+<h2>Comparison to reclustered baseline</h2>
+<p>Spatial singature dataset with K=7</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Acc.</th>
+<th>Macro Acc.</th>
+<th>F1 (macro)</th>
+<th>Granularity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Model performance 1d</td>
+<td>0.74</td>
+<td>0.63</td>
+<td>0.65</td>
+<td>7</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section class="slide level2">
+<section id="next-steps-areas-of-improvement" class="slide level2">
+<h2>Next steps/ areas of improvement</h2>
+<div style="font-size: smaller;">
+<p>Model</p>
+<ul>
+<li>Sampling</li>
+<li>Spatial weights</li>
+</ul>
+<p>Output maps</p>
+<ul>
+<li>Resolution/aggregations</li>
+<li>Uncertainties</li>
+</ul>
+<p>Transferability to other countries</p>
+</div>
+
 
 </section></section>
-<section>
-<section id="technical-note-d6---software-and-example-datasets-generated-during-verification-exercises" class="title-slide slide level1 center">
-<h1>Technical note D6 - Software and Example datasets generated during Verification Exercises</h1>
-
-</section>
-<section id="software-and-datasets" class="slide level2">
-<h2>Software and datasets</h2>
-<ul>
-<li class="fragment">Interactive morphometric web application</li>
-<li class="fragment">Morphometric characterisation pipeline for Microsoft Building footprints</li>
-<li class="fragment">Morphometric characterisation pipeline for OvertureMaps Building footprints</li>
-<li class="fragment">AI Method for Urban Fabric classification and morphometric characterization</li>
-<li class="fragment">AI temporal data cube of Urban Fabric classifications</li>
-</ul>
-</section></section>
-<section>
-<section id="technical-note-d5---stakeholder-impact-and-utility-assessment" class="title-slide slide level1 center">
-<h1>Technical note D5 - Stakeholder Impact and Utility Assessment</h1>
-
-</section>
-<section id="major-stakeholder-engagements" class="slide level2">
-<h2>Major stakeholder engagements</h2>
-<ul>
-<li class="fragment">European Covenant of Mayors</li>
-<li class="fragment">SSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)</li>
-<li class="fragment">Prague Institute of Planning and Development (IPR)</li>
-<li class="fragment">4ct</li>
-</ul>
-</section>
-<section id="takeaways" class="slide level2">
-<h2>Takeaways</h2>
-<ul>
-<li class="fragment">Data Integration</li>
-<li class="fragment">Taxonomy Description and Naming</li>
-<li class="fragment">Comparative Urban Analysis</li>
-<li class="fragment">Expanding Data Coverage</li>
-<li class="fragment">Reducing Manual Effort in Land Use Analysis</li>
-<li class="fragment">Geographical Scale of Results</li>
-<li class="fragment">Taxonomic Tree &amp; Evaluation</li>
-<li class="fragment">Input data quality</li>
-</ul>
-</section></section>
-<section id="discussion" class="title-slide slide level1 center">
-<h1>Discussion</h1>
-
-
-</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../assets/icon.svg" class="slide-logo"></p>

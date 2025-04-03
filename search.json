@@ -490,6 +490,83 @@
     "text": "Meetings with stakeholders\n\nPresented the new classification for SSVA Lithuania on the 27th of January (online)\nPresented for 4city on the 28th of January (in person)\nPresenting on the 11th of March for IPPA (in person)"
   },
   {
+    "objectID": "slides/202504_progress_Turing.html#ai-model-design",
+    "href": "slides/202504_progress_Turing.html#ai-model-design",
+    "title": "Progress meeting",
+    "section": "AI model design",
+    "text": "AI model design\n\nScale: Pixel vs patch (size)\nTask: Classification vs segmentation\nModels: Network architectures and foundation models\nSampling and geospatial information: Unbalanced dataset and spatial autocorrelation"
+  },
+  {
+    "objectID": "slides/202504_progress_Turing.html#final-model-quick-recap",
+    "href": "slides/202504_progress_Turing.html#final-model-quick-recap",
+    "title": "Progress meeting",
+    "section": "Final model: quick recap",
+    "text": "Final model: quick recap\n\nEmbeddings created from 25 x 25 pixel tiles\nWeighted XGBoost classifier"
+  },
+  {
+    "objectID": "slides/202504_progress_Turing.html#prediction-pipeline",
+    "href": "slides/202504_progress_Turing.html#prediction-pipeline",
+    "title": "Progress meeting",
+    "section": "Prediction pipeline",
+    "text": "Prediction pipeline\n\nInput: shapefile + satellite composite\n\ncreates tiles\ncreates embeddings\nloads classifier and feeds in embeddings\n\nOutput: spatial signature prediction\n\ngithub.com/eurofab-project/eo/tree/main/ai_pipeline"
+  },
+  {
+    "objectID": "slides/202504_progress_Turing.html#understanding-model-performance",
+    "href": "slides/202504_progress_Turing.html#understanding-model-performance",
+    "title": "Progress meeting",
+    "section": "Understanding model performance",
+    "text": "Understanding model performance\n\n\n\nAccuracy\nMacro Acc.\nF1 (macro)\n\n\n\n\n0.66\n0.48\n0.36"
+  },
+  {
+    "objectID": "slides/202504_progress_Turing.html#model-performance",
+    "href": "slides/202504_progress_Turing.html#model-performance",
+    "title": "Progress meeting",
+    "section": "Model performance",
+    "text": "Model performance\n\nfull dataset / test set"
+  },
+  {
+    "objectID": "slides/202504_progress_Turing.html#predictions-across-time",
+    "href": "slides/202504_progress_Turing.html#predictions-across-time",
+    "title": "Progress meeting",
+    "section": "Predictions across time",
+    "text": "Predictions across time\n\nSatellite composites from 2016 → 2021\nFed into prediction pipeline"
+  },
+  {
+    "objectID": "slides/202504_progress_Turing.html#similarity-across-years",
+    "href": "slides/202504_progress_Turing.html#similarity-across-years",
+    "title": "Progress meeting",
+    "section": "Similarity across years",
+    "text": "Similarity across years\n\n\n\n\nYear transition\nOverlap\n\n\n\n\n2016 → 2017\n0.88\n\n\n2017 → 2018\n0.88\n\n\n2018 → 2019\n0.86\n\n\n2019 → 2020\n0.86\n\n\n2020 → 2021\n0.88\n\n\n2016 → 2021\n0.88"
+  },
+  {
+    "objectID": "slides/202504_progress_Turing.html#understanding-yearly-change",
+    "href": "slides/202504_progress_Turing.html#understanding-yearly-change",
+    "title": "Progress meeting",
+    "section": "Understanding yearly change",
+    "text": "Understanding yearly change"
+  },
+  {
+    "objectID": "slides/202504_progress_Turing.html#potential-aggregations-for-data-product",
+    "href": "slides/202504_progress_Turing.html#potential-aggregations-for-data-product",
+    "title": "Progress meeting",
+    "section": "Potential aggregations for data product",
+    "text": "Potential aggregations for data product\nbased on:\n\nmodel performance\nyearly transitions"
+  },
+  {
+    "objectID": "slides/202504_progress_Turing.html#comparison-to-reclustered-baseline",
+    "href": "slides/202504_progress_Turing.html#comparison-to-reclustered-baseline",
+    "title": "Progress meeting",
+    "section": "Comparison to reclustered baseline",
+    "text": "Comparison to reclustered baseline\nSpatial singature dataset with K=7\n\n\n\n\nAcc.\nMacro Acc.\nF1 (macro)\nGranularity\n\n\n\n\nModel performance 1d\n0.74\n0.63\n0.65\n7"
+  },
+  {
+    "objectID": "slides/202504_progress_Turing.html#next-steps-areas-of-improvement",
+    "href": "slides/202504_progress_Turing.html#next-steps-areas-of-improvement",
+    "title": "Progress meeting",
+    "section": "Next steps/ areas of improvement",
+    "text": "Next steps/ areas of improvement\n\nModel\n\nSampling\nSpatial weights\n\nOutput maps\n\nResolution/aggregations\nUncertainties\n\nTransferability to other countries"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Talks",
@@ -826,6 +903,20 @@
     "text": "Confusion Matrix"
   },
   {
+    "objectID": "slides/progress_april.html#data-augmentation",
+    "href": "slides/progress_april.html#data-augmentation",
+    "title": "EuroFab Progress Meeting",
+    "section": "Data augmentation",
+    "text": "Data augmentation\n\n\n\nSliding Window Augmentation"
+  },
+  {
+    "objectID": "slides/progress_april.html#classifier",
+    "href": "slides/progress_april.html#classifier",
+    "title": "EuroFab Progress Meeting",
+    "section": "Classifier",
+    "text": "Classifier\n\n\n\n\n\n\n\n\n\n\nClasses (K)\nSpatial Context\nAccuracy\nMacro Accuracy\nMacro F1 Score\n\n\n\n\n7\nNone\n0.4924\n0.3856\n0.3389\n\n\n7\nH3 (res 5)\n0.6959\n0.5713\n0.5221\n\n\n12\nNone\n0.4617\n0.2666\n0.2127\n\n\n12\nH3 (res 5)\n0.6654\n0.4328\n0.3654"
+  },
+  {
     "objectID": "slides/progress_april.html#software-and-datasets",
     "href": "slides/progress_april.html#software-and-datasets",
     "title": "EuroFab Progress Meeting",
@@ -844,7 +935,7 @@
     "href": "slides/progress_april.html#takeaways",
     "title": "EuroFab Progress Meeting",
     "section": "Takeaways",
-    "text": "Takeaways\n\nData Integration\nTaxonomy Description and Naming\nComparative Urban Analysis:\nExpanding Data Coverage\nReducing Manual Effort in Land Use Analysis\nGeographical Scale of Results\nTaxonomic Tree & Evaluation\nInput data quality"
+    "text": "Takeaways\n\nData Integration\nTaxonomy Description and Naming\nComparative Urban Analysis\nExpanding Data Coverage\nReducing Manual Effort in Land Use Analysis\nGeographical Scale of Results\nTaxonomic Tree & Evaluation\nInput data quality"
   },
   {
     "objectID": "slides/consultation.html#section",
