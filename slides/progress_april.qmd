@@ -80,13 +80,29 @@ format:
 
 ---
 
+### Approach
+
+```
+pipeline.spatial_sig_prediction(
+    geo_path="../data/london_grid.geojson",  # Area to analyze
+    vrt_file="../data/2017_satellite.vrt",   # Satellite composite
+    xgb_weights="../models/xgb_model.bin",   # XGBoost model
+    model_weights="../models/satlas.pth",    # Satlas embedding model
+    output_path="../output/test_london.parquet",  # Prediction results
+    h3_resolution=5
+)
+```
+
 ## Data augmentation
 
-![Sliding Window Augmentation](../figures/results/img_aug.jpg)
+![Sliding Window Augmentation (50m)](../figures/progress_april/img_aug.jpg)
 
+---
 
-![Before Augmentation](../figures/results/type_clean_encode.png)
-![After Augmentation](../figures/results/type_clean_encode_augmented.png)
+## Data augmentation
+
+![](../figures/progress_april/augmentation_table.png){.nostretch fig-align="left" height="500"}
+
 
 ---
 
@@ -108,7 +124,42 @@ format:
 |-------------|-----------------|----------|----------------|----------------|
 | 7           | None            | 0.4   | 0.2         | 0.14         |
 
+
 ---
+
+
+![Number of observations vs accuracy](../figures/progress_april/class_acc.png){.nostretch fig-align="center" height="420"}
+
+
+---
+
+
+### Examples
+
+![ ](../figures/progress_april/london_k7.png)
+
+---
+
+![ ](../figures/progress_april/liverpool_k7.png)
+
+---
+
+![ ](../figures/progress_april/london_k7.png)
+
+---
+
+![ ](../figures/progress_april/liverpool_k12.png)
+
+---
+
+## Datacube 
+
+- predictions for all of GB
+- 2016-2021 
+- K=7 and K=12
+
+![](../figures/progress_april/datacube.png){.nostretch fig-align="right" height="300"}
+
 
 # Technical note D6 - Software and Example datasets generated during Verification Exercises
 
@@ -125,7 +176,7 @@ format:
 
 - European Covenant of Mayors 
 - SSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)
--  Prague Institute of Planning and Development (IPR)
+- Prague Institute of Planning and Development (IPR)
 - 4ct
 
 ## Takeaways
