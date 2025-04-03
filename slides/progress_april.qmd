@@ -1,0 +1,111 @@
+---
+title: "EuroFab Progress Meeting"
+author: "Eurofab team"
+# institute: "Charles University"
+date: "2024-04-04"
+format:
+    revealjs:
+        theme: [default, ../assets/reveal.scss]
+        logo: ../assets/icon.svg
+        menu: false
+        transition: slide
+        navigation-mode: linear
+        controls-layout: edges
+        incremental: true
+        progress: true
+        include-in-header: ../assets/font.html
+        title-slide-attributes:
+            data-background-image: ../assets/logos.png
+            data-background-size: 20%
+            data-background-position: 50% 90%
+---
+
+## Agenda
+
+1. Progress overview
+2. Technical note D4 - Test and Verification Results
+3. Technical note D6 - Software and Example datasets generated during Verification Exercises
+4. Technical note D5 - Stakeholder Impact and Utility Assessment
+5. Discussion
+
+# Where we are
+
+---
+
+![ ](../figures/progress_august/gantchart.png)
+
+# Technical note D4 - Test and Verification Results
+
+# Morphometric model
+
+![](../figures/progress_april/examples.png)
+
+# Extensions & changes
+
+![ ](../figures/progress_april/model_split.drawio.png)
+
+---
+
+![ ](../figures/progress_april/building_comparison.png)
+
+
+# Results
+
+## Agg scores
+
+![ ](../figures/progress_april/level3_acc.png)
+
+---
+
+![ ](../figures/progress_april/level4_acc.png)
+
+---
+
+## Class scores
+
+![ ](../figures/progress_april/level3_class.png)
+
+---
+
+![ ](../figures/progress_april/level4_class.png)
+
+---
+
+## Confusion Matrix
+
+![](../figures/progress_april/cm.png)
+
+
+# Progress on imagery components
+
+
+# Technical note D6 - Software and Example datasets generated during Verification Exercises
+
+## Deliverables
+- Interactive morphometric web application
+- Morphometric characterisation pipeline for Microsoft Building footprints
+- Morphometric characterisation pipeline for OvertureMaps Building footprints
+- AI Method for Urban Fabric classification and morphometric characterization
+- AI temporal data cube of Urban Fabric classifications
+
+# Technical note D5 - Stakeholder Impact and Utility Assessment
+
+## Major stakeholder engagements
+
+- European Covenant of Mayors 
+- SSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)
+-  Prague Institute of Planning and Development (IPR)
+- 4ct
+
+## Takeaways
+
+- Data Integration
+- Taxonomy Description and Naming
+- Comparative Urban Analysis:
+- Expanding Data Coverage
+- Reducing Manual Effort in Land Use Analysis
+- Geographical Scale of Results
+- Taxonomic Tree & Evaluation
+- Input data quality
+
+# Discussion
