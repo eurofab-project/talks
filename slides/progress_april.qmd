@@ -158,7 +158,7 @@ pipeline.spatial_sig_prediction(
 - 2016-2021 
 - K=7 and K=12
 
-![](../figures/progress_april/datacube.png){.nostretch fig-align="right" height="300"}
+![](../figures/progress_april/datacube.png){.nostretch fig-align="center" height="250"}
 
 
 # Technical note D6 - Software and Example datasets generated during Verification Exercises
