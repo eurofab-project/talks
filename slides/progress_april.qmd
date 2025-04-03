@@ -81,7 +81,7 @@ format:
 
 # Technical note D6 - Software and Example datasets generated during Verification Exercises
 
-## Deliverables
+## Software and datasets
 - Interactive morphometric web application
 - Morphometric characterisation pipeline for Microsoft Building footprints
 - Morphometric characterisation pipeline for OvertureMaps Building footprints
