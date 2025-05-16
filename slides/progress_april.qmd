@@ -152,10 +152,10 @@ pipeline.spatial_sig_prediction(
 
 ---
 
-## Datacube 
+## Datacube
 
 - predictions for all of GB
-- 2016-2021 
+- 2016-2021
 - K=7 and K=12
 
 ![](../figures/progress_april/datacube.png){.nostretch fig-align="center" height="250"}
@@ -166,7 +166,7 @@ pipeline.spatial_sig_prediction(
 ## Software and datasets
 - Interactive morphometric web application
 - Morphometric characterisation pipeline for Microsoft Building footprints
-- Morphometric characterisation pipeline for OvertureMaps Building footprints
+- Morphometric characterisation pipeline for Overture Maps Building footprints
 - AI Method for Urban Fabric classification and morphometric characterization
 - AI temporal data cube of Urban Fabric classifications
 
@@ -174,7 +174,7 @@ pipeline.spatial_sig_prediction(
 
 ## Major stakeholder engagements
 
-- European Covenant of Mayors 
+- European Covenant of Mayors
 - SSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)
 - Prague Institute of Planning and Development (IPR)
 - 4ct
