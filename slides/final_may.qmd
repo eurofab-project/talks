@@ -1,0 +1,254 @@
+---
+title: "EuroFab Progress Meeting"
+author: "Eurofab team"
+# institute: "Charles University"
+date: "2024-04-04"
+format:
+    revealjs:
+        theme: [default, ../assets/reveal.scss]
+        logo: ../assets/icon.svg
+        menu: false
+        transition: slide
+        navigation-mode: linear
+        controls-layout: edges
+        incremental: true
+        progress: true
+        include-in-header: ../assets/font.html
+        title-slide-attributes:
+            data-background-image: ../assets/logos.png
+            data-background-size: 20%
+            data-background-position: 50% 90%
+---
+
+## Agenda
+
+1. Project overview
+2. Morphometric model
+3. AI vision model
+4. Stakeholder engagement
+5. Future work
+6. Discussion
+
+# Where we are
+
+---
+
+![ ](../figures/progress_august/gantchart.png)
+
+
+# Morphometric model
+
+## Morphological elements
+
+![ ](../figures/progress_april/building_comparison.png)
+
+---
+
+![ ](../figures/milestone_december/street_processing.png)
+
+## Morphological characters
+
+---
+
+![ ](../figures/consultation/ibd.png)
+
+---
+
+![ ](../figures/consultation/lsdmes.png)
+
+
+## Modeling
+
+![ ](../figures/progress_april/model_split.drawio.png)
+
+---
+
+![ ](../figures/progress_april/train_test_prague.png)
+
+---
+
+
+## Results
+
+---
+
+![](../figures/progress_april/examples.png)
+
+
+## Confusion Matrix
+
+---
+
+![](../figures/progress_april/cm.png)
+
+
+
+
+# AI vision model
+
+## Approach
+
+![](../figures/milestone_december/baseline.png){.nostretch fig-align="center" height="400"}
+
+
+## Spatial signatures as ground truth data
+
+* Spatial signatures framework (Arribas-Bel & Fleischmann 2022)
+* Proxy due to its conceptual alignment with the morphometric model
+
+![](../figures/milestone_december/signatures_london.png){.nostretch fig-align="top" height="200"}
+
+---
+
+
+
+## Classifier
+
+
+| Classes (K) | Spatial Context | Accuracy | Macro Accuracy | Macro F1 Score |
+|-------------|-----------------|----------|----------------|----------------|
+| 7           | None            | 0.4924   | 0.3856         | 0.3389         |
+| 7           | H3 (res 5)      | 0.6959   | 0.5713         | **0.5221**       |
+| 12          | None            | 0.4617   | 0.2666         | 0.2127         |
+| 12          | H3 (res 5)      | 0.6654   | 0.4328         | 0.3654         |
+
+
+
+---
+
+## The more training data the better
+
+![Number of observations vs accuracy](../figures/progress_april/class_acc.png){.nostretch fig-align="center" height="420"}
+
+
+---
+
+
+### Examples
+
+![ ](../figures/progress_april/london_k7.png)
+
+---
+
+![ ](../figures/progress_april/liverpool_k7.png)
+
+---
+
+![ ](../figures/progress_april/london_k7.png)
+
+---
+
+![ ](../figures/progress_april/liverpool_k12.png)
+
+
+## Temporal predictions
+
+![](../figures/202502_progress_turing/1d_transitions.png){.nostretch fig-align="center" height="250"}
+
+
+
+
+# Outputs
+
+## Software and datasets
+- Interactive morphometric web application
+- Morphometric characterisation pipeline for Microsoft Building footprints
+- Morphometric characterisation pipeline for Overture Maps Building footprints
+- AI Method for Urban Fabric classification and morphometric characterization
+- AI temporal data cube of Urban Fabric classifications
+
+# Stakeholder engagement
+
+## Major stakeholder engagements
+
+- European Covenant of Mayors
+- SSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)
+- Prague Institute of Planning and Development (IPR)
+- 4ct
+
+## Influence on project
+
+- Format of the final data product and its presentation method
+- Inclusion of Construction Sector Development Agency of the Ministry of Environment, Lithuania (SSVA) 
+- Extending the morphometric pipeline to incorporate Overture Maps 
+- Strategic direction for the follow-up study
+
+## Takeaways
+
+- Data Integration
+- Taxonomy Description and Naming
+- Comparative Urban Analysis
+- Expanding Data Coverage
+- Reducing Manual Effort in Land Use Analysis
+- Geographical Scale of Results
+- Taxonomic Tree & Evaluation
+- Input data quality
+
+# Future work
+
+The overarching strategy for scaling and productionalising the EuroFab system involves three principal phases.
+
+---
+
+## European classification of Urban Fabric 
+
+Using the morphometric pipeline to generate detailed urban classification at a pan-European scale. 
+
+---
+
+### Challenges & Strategy
+
+* **Alignment with Cadastral Classification**
+
+* **Heterogenous data sources**
+
+* **Data Gaps** 
+
+* **Unknown urban fabric types**
+
+* **Model Tuning and Optimisation** 
+
+
+---
+
+## European classification of Urban Fabric across time (AI model)
+
+
+Training the AI vision model on the outputs from step one, to fill data gaps and to produce a temporal classification based on historical satellite data. 
+
+---
+
+### Challenges & Strategy
+
+* **Leveraging Copernicus Services** 
+
+* **Leveraging the new morphometric classification results as ground truth**
+
+* **Generalisability Testing**:
+
+* **Evaluation of urban predictions across time**
+
+* **Methodological processing**
+
+---
+
+## Expanded Stakeholder engagement
+
+Third, productising the refined classification results and expanding stakeholder engagement activities. This will be crucial for driving user adoption and facilitating the derivation of secondary indicators and specialised datasets tailored to specific applications, such as regional development analysis or climate change impact assessments.
+
+---
+
+### Challenges & Strategy
+
+*  **Workshops and conference work**
+
+*  **Closer Engagement with Specific Cities and Regions**
+
+*  **Collaborations & co-development** 
+
+* **Developing derived products** 
+
+* **Supporting Third-Party Development of Derived Products** 
+
+
+# Discussion
