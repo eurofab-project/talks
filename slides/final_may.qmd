@@ -100,7 +100,7 @@ we're getting there
 
 ### Technical objectives
 
-3. [Evaluate]{.fragment .highlight-current-red} the selected vision models on two European regions.
+3. [Evaluate]{.fragment .highlight-current-red} the selected models on two European regions.
 
 ---
 
