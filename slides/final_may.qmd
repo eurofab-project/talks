@@ -1,5 +1,5 @@
 ---
-title: "EuroFab Progress Meeting"
+title: "EuroFab Final Review"
 author: "Eurofab team"
 # institute: "Charles University"
 date: "2025-05-30"
