@@ -2,7 +2,7 @@
 title: "EuroFab Progress Meeting"
 author: "Eurofab team"
 # institute: "Charles University"
-date: "2024-04-04"
+date: "2025-05-30"
 format:
     revealjs:
         theme: [default, ../assets/reveal.scss]
@@ -28,6 +28,99 @@ format:
 4. Stakeholder engagement
 5. Future work
 6. Discussion
+
+---
+
+::: {.r-fit-text .absolute top=39%}
+structure of human
+settlements
+:::
+
+::: aside
+[explainable data science]{.fragment .fade-in}
+[ | EO]{.fragment .fade-in}
+[ | state-of-the-art AI]{.fragment .fade-in}
+:::
+
+::: {.fragment .fade-in}
+temporal dimension
+:::
+
+---
+
+## Why urban fabric {.question}
+
+Cities take up around 3% of the planet's land but are home to more than half of
+humanity and responsible for 75% of carbon emissions^[United Nations (2020)].
+
+## Why urban fabric {.question}
+
+Urban fabric, [the spatial layout of the physical elements that make up a city]{.fragment .highlight-current-red}, mediates most
+[activities]{.fragment .highlight-current-red} their residents undertake, from [heating]{.fragment .highlight-current-red} their homes to accessing [services]{.fragment .highlight-current-red}, [jobs and
+opportunities]{.fragment .highlight-current-red}  through sustainable modes of [transport]{.fragment .highlight-current-red}.
+
+## Why urban fabric {.question}
+
+Easily available, comparable, and dynamic information on urban fabric would unlock new ways
+of understanding how cities are constantly [evolving]{.fragment .highlight-red}, what it means for their [sustainability]{.fragment .highlight-red}, and
+how effective [policies]{.fragment .highlight-red} can be designed to steer development in desirable directions.
+
+## Why now {.question}
+
+In 2023, UN Habitat included urban
+fabric as one of the [key ingredients]{.fragment .highlight-red} required for effective sustainable design^[UN Habitat (2024)]
+
+## Why now {.question}
+
+There are currently very few instances of [detailed]{.fragment .highlight-red}, [consistent]{.fragment .highlight-red}, and [scalable]{.fragment .highlight-red} measurements of urban fabric and virtually none of them provide insight into its change over [time]{.fragment .highlight-red}.
+
+## EuroFab vision
+
+EuroFab paves the road for a world where stakeholders, from local authorities to supranational organisations, are able to track and monitor the pattern of urban development in detail directly relevant for planning and at scale.
+
+::: {.r-fit-text .fragment}
+we're getting there
+:::
+
+## Objectives
+
+---
+
+### High-level objectives
+
+::: {.fragment}
+Strengthen Czech and British national capabilities to exploit cutting-edge AI methods to integrate EO data and high-performance computing.
+:::
+::: {.fragment}
+Expand the integration and uptake of EO-derived information.
+:::
+
+---
+
+### Technical objectives
+
+1. Specify, [develop]{.fragment .highlight-current-red}, and validate innovative [methods]{.fragment .highlight-current-red} integrating raster ([satellite]{.fragment .highlight-current-red}) and [vector]{.fragment .highlight-current-red} data in rich and explainable [characterisations of urban fabric]{.fragment .highlight-current-red}.
+---
+
+### Technical objectives
+
+2. Test the comparative performance of [transformer]{.fragment .highlight-current-red}-based (foundation) vision models against the baseline of [convolution]{.fragment .highlight-current-red}-based neural networks.
+
+---
+
+### Technical objectives
+
+3. [Evaluate]{.fragment .highlight-current-red} the selected vision models on two European regions.
+---
+
+### Technical objectives
+
+4. Develop open-source [software]{.fragment .highlight-red}, [algorithms]{.fragment .highlight-red} and open [datasets]{.fragment .highlight-red} that ensure the sustainability and usability of the project outputs beyond the initial funding period.
+---
+
+### Technical objectives
+
+5. Create the [roadmap]{.fragment .highlight-current-red} for a [large-scale inference chain]{.fragment .highlight-current-red} (i.e. covering all of Europe or parts of the globe) for the capability being developed.
 
 # Where we are
 
@@ -169,8 +262,8 @@ format:
 ## Influence on project
 
 - Format of the final data product and its presentation method
-- Inclusion of Construction Sector Development Agency of the Ministry of Environment, Lithuania (SSVA) 
-- Extending the morphometric pipeline to incorporate Overture Maps 
+- Inclusion of Construction Sector Development Agency of the Ministry of Environment, Lithuania (SSVA)
+- Extending the morphometric pipeline to incorporate Overture Maps
 - Strategic direction for the follow-up study
 
 ## Takeaways
@@ -190,9 +283,9 @@ The overarching strategy for scaling and productionalising the EuroFab system in
 
 ---
 
-## European classification of Urban Fabric 
+## European classification of Urban Fabric
 
-Using the morphometric pipeline to generate detailed urban classification at a pan-European scale. 
+Using the morphometric pipeline to generate detailed urban classification at a pan-European scale.
 
 ---
 
@@ -202,11 +295,11 @@ Using the morphometric pipeline to generate detailed urban classification at a p
 
 * **Heterogenous data sources**
 
-* **Data Gaps** 
+* **Data Gaps**
 
 * **Unknown urban fabric types**
 
-* **Model Tuning and Optimisation** 
+* **Model Tuning and Optimisation**
 
 
 ---
@@ -214,13 +307,13 @@ Using the morphometric pipeline to generate detailed urban classification at a p
 ## European classification of Urban Fabric across time (AI model)
 
 
-Training the AI vision model on the outputs from step one, to fill data gaps and to produce a temporal classification based on historical satellite data. 
+Training the AI vision model on the outputs from step one, to fill data gaps and to produce a temporal classification based on historical satellite data.
 
 ---
 
 ### Challenges & Strategy
 
-* **Leveraging Copernicus Services** 
+* **Leveraging Copernicus Services**
 
 * **Leveraging the new morphometric classification results as ground truth**
 
@@ -244,11 +337,11 @@ Third, productising the refined classification results and expanding stakeholder
 
 *  **Closer Engagement with Specific Cities and Regions**
 
-*  **Collaborations & co-development** 
+*  **Collaborations & co-development**
 
-* **Developing derived products** 
+* **Developing derived products**
 
-* **Supporting Third-Party Development of Derived Products** 
+* **Supporting Third-Party Development of Derived Products**
 
 
 # Discussion
