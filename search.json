@@ -56,377 +56,6 @@
     "text": "Appendix\nSatellite embeddings (420x420m) ~ Urban signatures"
   },
   {
-    "objectID": "slides/202504_progress_Turing.html#ai-model-design",
-    "href": "slides/202504_progress_Turing.html#ai-model-design",
-    "title": "Progress meeting",
-    "section": "AI model design",
-    "text": "AI model design\n\nScale: Pixel vs patch (size)\nTask: Classification vs segmentation\nModels: Network architectures and foundation models\nSampling and geospatial information: Unbalanced dataset and spatial autocorrelation"
-  },
-  {
-    "objectID": "slides/202504_progress_Turing.html#final-model-quick-recap",
-    "href": "slides/202504_progress_Turing.html#final-model-quick-recap",
-    "title": "Progress meeting",
-    "section": "Final model: quick recap",
-    "text": "Final model: quick recap\n\nEmbeddings created from 25 x 25 pixel tiles\nWeighted XGBoost classifier"
-  },
-  {
-    "objectID": "slides/202504_progress_Turing.html#prediction-pipeline",
-    "href": "slides/202504_progress_Turing.html#prediction-pipeline",
-    "title": "Progress meeting",
-    "section": "Prediction pipeline",
-    "text": "Prediction pipeline\n\nInput: shapefile + satellite composite\n\ncreates tiles\ncreates embeddings\nloads classifier and feeds in embeddings\n\nOutput: spatial signature prediction\n\ngithub.com/eurofab-project/eo/tree/main/ai_pipeline"
-  },
-  {
-    "objectID": "slides/202504_progress_Turing.html#understanding-model-performance",
-    "href": "slides/202504_progress_Turing.html#understanding-model-performance",
-    "title": "Progress meeting",
-    "section": "Understanding model performance",
-    "text": "Understanding model performance\n\n\n\nAccuracy\nMacro Acc.\nF1 (macro)\n\n\n\n\n0.66\n0.48\n0.36"
-  },
-  {
-    "objectID": "slides/202504_progress_Turing.html#model-performance",
-    "href": "slides/202504_progress_Turing.html#model-performance",
-    "title": "Progress meeting",
-    "section": "Model performance",
-    "text": "Model performance\n\nfull dataset / test set"
-  },
-  {
-    "objectID": "slides/202504_progress_Turing.html#predictions-across-time",
-    "href": "slides/202504_progress_Turing.html#predictions-across-time",
-    "title": "Progress meeting",
-    "section": "Predictions across time",
-    "text": "Predictions across time\n\nSatellite composites from 2016 → 2021\nFed into prediction pipeline"
-  },
-  {
-    "objectID": "slides/202504_progress_Turing.html#similarity-across-years",
-    "href": "slides/202504_progress_Turing.html#similarity-across-years",
-    "title": "Progress meeting",
-    "section": "Similarity across years",
-    "text": "Similarity across years\n\n\n\n\nYear transition\nOverlap\n\n\n\n\n2016 → 2017\n0.88\n\n\n2017 → 2018\n0.88\n\n\n2018 → 2019\n0.86\n\n\n2019 → 2020\n0.86\n\n\n2020 → 2021\n0.88\n\n\n2016 → 2021\n0.88"
-  },
-  {
-    "objectID": "slides/202504_progress_Turing.html#understanding-yearly-change",
-    "href": "slides/202504_progress_Turing.html#understanding-yearly-change",
-    "title": "Progress meeting",
-    "section": "Understanding yearly change",
-    "text": "Understanding yearly change"
-  },
-  {
-    "objectID": "slides/202504_progress_Turing.html#potential-aggregations-for-data-product",
-    "href": "slides/202504_progress_Turing.html#potential-aggregations-for-data-product",
-    "title": "Progress meeting",
-    "section": "Potential aggregations for data product",
-    "text": "Potential aggregations for data product\nbased on:\n\nmodel performance\nyearly transitions"
-  },
-  {
-    "objectID": "slides/202504_progress_Turing.html#comparison-to-reclustered-baseline",
-    "href": "slides/202504_progress_Turing.html#comparison-to-reclustered-baseline",
-    "title": "Progress meeting",
-    "section": "Comparison to reclustered baseline",
-    "text": "Comparison to reclustered baseline\nSpatial singature dataset with K=7\n\n\n\n\nAcc.\nMacro Acc.\nF1 (macro)\nGranularity\n\n\n\n\nModel performance 1d\n0.74\n0.63\n0.65\n7"
-  },
-  {
-    "objectID": "slides/202504_progress_Turing.html#next-steps-areas-of-improvement",
-    "href": "slides/202504_progress_Turing.html#next-steps-areas-of-improvement",
-    "title": "Progress meeting",
-    "section": "Next steps/ areas of improvement",
-    "text": "Next steps/ areas of improvement\n\nModel\n\nSampling\nSpatial weights\n\nOutput maps\n\nResolution/aggregations\nUncertainties\n\nTransferability to other countries"
-  },
-  {
-    "objectID": "slides/progress_february.html#agenda",
-    "href": "slides/progress_february.html#agenda",
-    "title": "EuroFab Progress Meeting",
-    "section": "Agenda",
-    "text": "Agenda\n\nProgress overview\nMorphometric model progress\nAI model progress\nStakeholder engagement progress\nProject continuation\nDiscussion"
-  },
-  {
-    "objectID": "slides/progress_february.html#protocol-design",
-    "href": "slides/progress_february.html#protocol-design",
-    "title": "EuroFab Progress Meeting",
-    "section": "Protocol design",
-    "text": "Protocol design\n\nUse morphometric classification of Central Europe from a parallel research project as ground truth data\nCalculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis"
-  },
-  {
-    "objectID": "slides/progress_february.html#protocol-design-1",
-    "href": "slides/progress_february.html#protocol-design-1",
-    "title": "EuroFab Progress Meeting",
-    "section": "Protocol design",
-    "text": "Protocol design\n\nTrain a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label"
-  },
-  {
-    "objectID": "slides/progress_february.html#protocol-design-2",
-    "href": "slides/progress_february.html#protocol-design-2",
-    "title": "EuroFab Progress Meeting",
-    "section": "Protocol design",
-    "text": "Protocol design\n\nTest the model on an out of training sample country to validate the approach.\n\nFor example, train the model on Poland, Germany, Austria, Slovakia and test it on Czechia."
-  },
-  {
-    "objectID": "slides/progress_february.html#input-data-collection-and-preprocessing",
-    "href": "slides/progress_february.html#input-data-collection-and-preprocessing",
-    "title": "EuroFab Progress Meeting",
-    "section": "Input data collection and preprocessing",
-    "text": "Input data collection and preprocessing\n\nMorphometric classification of Central Europe (UPDATE)\nMicrosoft Building footprints (UPDATE)\nImplementation ( UPDATE )"
-  },
-  {
-    "objectID": "slides/progress_february.html#detailed-morphometric-classification",
-    "href": "slides/progress_february.html#detailed-morphometric-classification",
-    "title": "EuroFab Progress Meeting",
-    "section": "Detailed morphometric classification",
-    "text": "Detailed morphometric classification\n\nNew iteration of the hierarchical classification, based on feedback from stakeholders.\nAvailable as a web app (https://uscuni.org/himoc/).\nNaming of clusters and branches will be based on stakeholder feedback"
-  },
-  {
-    "objectID": "slides/progress_february.html#microsoft-building-footprints",
-    "href": "slides/progress_february.html#microsoft-building-footprints",
-    "title": "EuroFab Progress Meeting",
-    "section": "Microsoft Building footprints",
-    "text": "Microsoft Building footprints\n\nThere is a cache of previous data for Central Europe in the Planatery Computer Stack API\nWe are exploring if it might improve model performance if we add it to the pipeline."
-  },
-  {
-    "objectID": "slides/progress_february.html#current-implementation-status",
-    "href": "slides/progress_february.html#current-implementation-status",
-    "title": "EuroFab Progress Meeting",
-    "section": "Current implementation status",
-    "text": "Current implementation status\n\nThe core functionality for the pipeline was made available within open-source packages - momepy, libpysal, neatnet and the project itself is a public repository.\nWe replaced the previous iteration of target labels with the new ones.\nAdded the capability to calculate spatially lagged variables for the whole dataset."
-  },
-  {
-    "objectID": "slides/progress_february.html#first-full-model-iterations",
-    "href": "slides/progress_february.html#first-full-model-iterations",
-    "title": "EuroFab Progress Meeting",
-    "section": "First full model iterations",
-    "text": "First full model iterations\n\nTested on different levels of aggregation\nThe goal is to keep the final model as simple, scalable and interpretable as possible.\nTested Random Forest, XGboost, histogramClassifier\nReported accuracies are from the Random forest model, but the other models had similar performance."
-  },
-  {
-    "objectID": "slides/progress_february.html#first-iteration-results---hierarchy-level-3",
-    "href": "slides/progress_february.html#first-iteration-results---hierarchy-level-3",
-    "title": "EuroFab Progress Meeting",
-    "section": "First iteration results - Hierarchy Level 3",
-    "text": "First iteration results - Hierarchy Level 3\n\n\n\nOverall metrics\n\n\n\n\n\nAccuracy\n0.59929\n\n\nWeighted F1 score\n0.6222459\n\n\nMicro F1 score\n0.59929\n\n\nMacro F1 score\n0.4828"
-  },
-  {
-    "objectID": "slides/progress_february.html#first-iteration-results---hierarchy-level-4",
-    "href": "slides/progress_february.html#first-iteration-results---hierarchy-level-4",
-    "title": "EuroFab Progress Meeting",
-    "section": "First iteration results - Hierarchy Level 4",
-    "text": "First iteration results - Hierarchy Level 4\n\n\n\nOverall metrics\n\n\n\n\n\nAccuracy\n0.40672\n\n\nWeighted F1 score\n0.447\n\n\nMicro F1 score\n0.40672\n\n\nMacro F1 score\n0.2985"
-  },
-  {
-    "objectID": "slides/progress_february.html#next-steps",
-    "href": "slides/progress_february.html#next-steps",
-    "title": "EuroFab Progress Meeting",
-    "section": "Next steps",
-    "text": "Next steps\n\nIterate and improve model accuracy for the poor performing classes.\nWrite validation and comparison schemes to examine model results at different scales of the detailed cadastre classification."
-  },
-  {
-    "objectID": "slides/progress_february.html#ai-model-design",
-    "href": "slides/progress_february.html#ai-model-design",
-    "title": "EuroFab Progress Meeting",
-    "section": "AI model design",
-    "text": "AI model design\n\nScale: Pixel vs patch (size)\nTask: Classification vs segmentation\nModels: Network architectures and foundation models\nSampling and geospatial information: Unbalanced dataset and spatial autocorrelation"
-  },
-  {
-    "objectID": "slides/progress_february.html#final-model-quick-recap",
-    "href": "slides/progress_february.html#final-model-quick-recap",
-    "title": "EuroFab Progress Meeting",
-    "section": "Final model: quick recap",
-    "text": "Final model: quick recap\n\nEmbeddings created from 25 x 25 pixel tiles\nWeighted XGBoost classifier"
-  },
-  {
-    "objectID": "slides/progress_february.html#prediction-pipeline",
-    "href": "slides/progress_february.html#prediction-pipeline",
-    "title": "EuroFab Progress Meeting",
-    "section": "Prediction pipeline",
-    "text": "Prediction pipeline\n\nInput: shapefile + satellite composite\n\ncreates tiles\ncreates embeddings\nloads classifier and feeds in embeddings\n\nOutput: spatial signature prediction\n\ngithub.com/eurofab-project/eo/tree/main/ai_pipeline"
-  },
-  {
-    "objectID": "slides/progress_february.html#understanding-model-performance",
-    "href": "slides/progress_february.html#understanding-model-performance",
-    "title": "EuroFab Progress Meeting",
-    "section": "Understanding model performance",
-    "text": "Understanding model performance\n\n\n\nAccuracy\nMacro Acc.\nF1 (macro)\n\n\n\n\n0.66\n0.48\n0.36"
-  },
-  {
-    "objectID": "slides/progress_february.html#model-performance",
-    "href": "slides/progress_february.html#model-performance",
-    "title": "EuroFab Progress Meeting",
-    "section": "Model performance",
-    "text": "Model performance\n\nfull dataset / test set"
-  },
-  {
-    "objectID": "slides/progress_february.html#predictions-across-time",
-    "href": "slides/progress_february.html#predictions-across-time",
-    "title": "EuroFab Progress Meeting",
-    "section": "Predictions across time",
-    "text": "Predictions across time\n\nSatellite composites from 2016 → 2021\nFed into prediction pipeline"
-  },
-  {
-    "objectID": "slides/progress_february.html#similarity-across-years",
-    "href": "slides/progress_february.html#similarity-across-years",
-    "title": "EuroFab Progress Meeting",
-    "section": "Similarity across years",
-    "text": "Similarity across years\n\n\n\n\nYear transition\nOverlap\n\n\n\n\n2016 → 2017\n0.88\n\n\n2017 → 2018\n0.88\n\n\n2018 → 2019\n0.86\n\n\n2019 → 2020\n0.86\n\n\n2020 → 2021\n0.88\n\n\n2016 → 2021\n0.88"
-  },
-  {
-    "objectID": "slides/progress_february.html#understanding-yearly-change",
-    "href": "slides/progress_february.html#understanding-yearly-change",
-    "title": "EuroFab Progress Meeting",
-    "section": "Understanding yearly change",
-    "text": "Understanding yearly change"
-  },
-  {
-    "objectID": "slides/progress_february.html#potential-aggregations-for-data-product",
-    "href": "slides/progress_february.html#potential-aggregations-for-data-product",
-    "title": "EuroFab Progress Meeting",
-    "section": "Potential aggregations for data product",
-    "text": "Potential aggregations for data product\nbased on:\n\nmodel performance\nyearly transitions"
-  },
-  {
-    "objectID": "slides/progress_february.html#comparison-to-reclustered-baseline",
-    "href": "slides/progress_february.html#comparison-to-reclustered-baseline",
-    "title": "EuroFab Progress Meeting",
-    "section": "Comparison to reclustered baseline",
-    "text": "Comparison to reclustered baseline\nSpatial singature dataset with K=7\n\n\n\n\nAcc.\nMacro Acc.\nF1 (macro)\nGranularity\n\n\n\n\nModel performance 1d\n0.74\n0.63\n0.65\n7"
-  },
-  {
-    "objectID": "slides/progress_february.html#next-steps-areas-of-improvement",
-    "href": "slides/progress_february.html#next-steps-areas-of-improvement",
-    "title": "EuroFab Progress Meeting",
-    "section": "Next steps/ areas of improvement",
-    "text": "Next steps/ areas of improvement\n\nModel\n\nSampling\nSpatial weights\n\nOutput maps\n\nResolution/aggregations\nUncertainties\n\nTransferability to other countries"
-  },
-  {
-    "objectID": "slides/progress_february.html#web-application",
-    "href": "slides/progress_february.html#web-application",
-    "title": "EuroFab Progress Meeting",
-    "section": "Web application",
-    "text": "Web application\n\nDeveloped an interactive web-application for the stakeholder engagement work\nWe have a list of desirable features from all the presentations"
-  },
-  {
-    "objectID": "slides/progress_february.html#meetings-with-stakeholders",
-    "href": "slides/progress_february.html#meetings-with-stakeholders",
-    "title": "EuroFab Progress Meeting",
-    "section": "Meetings with stakeholders",
-    "text": "Meetings with stakeholders\n\nPresented the new classification for SSVA Lithuania on the 27th of January (online)\nPresented for 4city on the 28th of January (in person)\nPresenting on the 11th of March for IPPA (in person)"
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#why-urban-fabric",
-    "href": "slides/202406_EuroFab_KO.html#why-urban-fabric",
-    "title": "EuroFab",
-    "section": "Why urban fabric",
-    "text": "Why urban fabric\nCities take up around 3% of the planet’s land but are home to more than half of humanity and responsible for 75% of carbon emissions1.\nUnited Nations (2020)"
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#why-urban-fabric-1",
-    "href": "slides/202406_EuroFab_KO.html#why-urban-fabric-1",
-    "title": "EuroFab",
-    "section": "Why urban fabric",
-    "text": "Why urban fabric\nUrban fabric, the spatial layout of the physical elements that make up a city, mediates most activities their residents undertake, from heating their homes to accessing services, jobs and opportunities through sustainable modes of transport."
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#why-urban-fabric-2",
-    "href": "slides/202406_EuroFab_KO.html#why-urban-fabric-2",
-    "title": "EuroFab",
-    "section": "Why urban fabric",
-    "text": "Why urban fabric\nEasily available, comparable, and dynamic information on urban fabric would unlock new ways of understanding how cities are constantly evolving, what it means for their sustainability, and how effective policies can be designed to steer development in desirable directions."
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#why-now",
-    "href": "slides/202406_EuroFab_KO.html#why-now",
-    "title": "EuroFab",
-    "section": "Why now",
-    "text": "Why now\nIn 2023, UN Habitat included urban fabric as one of the key ingredients required for effective sustainable design1\nUN Habitat (2024)"
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#why-now-1",
-    "href": "slides/202406_EuroFab_KO.html#why-now-1",
-    "title": "EuroFab",
-    "section": "Why now",
-    "text": "Why now\nThere are currently very few instances of detailed, consistent, and scalable measurements of urban fabric and virtually none of them provide insight into its change over time."
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#eurofab-vision",
-    "href": "slides/202406_EuroFab_KO.html#eurofab-vision",
-    "title": "EuroFab",
-    "section": "EuroFab vision",
-    "text": "EuroFab vision\nEuroFab paves the road for a world where stakeholders, from local authorities to supranational organisations, are able to track and monitor the pattern of urban development in detail directly relevant for planning and at scale.\n\nwe’re not there yet"
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#objectives",
-    "href": "slides/202406_EuroFab_KO.html#objectives",
-    "title": "EuroFab",
-    "section": "Objectives",
-    "text": "Objectives"
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#specify-develop-and-validate-innovative-methods-integrating-raster-satellite-and-vector-data-in-rich-and-explainable-characterisations-of-urban-fabric.",
-    "href": "slides/202406_EuroFab_KO.html#specify-develop-and-validate-innovative-methods-integrating-raster-satellite-and-vector-data-in-rich-and-explainable-characterisations-of-urban-fabric.",
-    "title": "EuroFab",
-    "section": "1. Specify, develop, and validate innovative methods integrating raster (satellite) and vector data in rich and explainable characterisations of urban fabric.",
-    "text": "1. Specify, develop, and validate innovative methods integrating raster (satellite) and vector data in rich and explainable characterisations of urban fabric.\nTechnical objectives\n\nTest the comparative performance of transformer-based (foundation) vision models against the baseline of convolution-based neural networks."
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#evaluate-the-selected-vision-models-on-two-european-regions.",
-    "href": "slides/202406_EuroFab_KO.html#evaluate-the-selected-vision-models-on-two-european-regions.",
-    "title": "EuroFab",
-    "section": "3. Evaluate the selected vision models on two European regions.",
-    "text": "3. Evaluate the selected vision models on two European regions.\nTechnical objectives"
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#develop-open-source-software-algorithms-and-open-datasets-that-ensure-the-sustainability-and-usability-of-the-project-outputs-beyond-the-initial-funding-period.",
-    "href": "slides/202406_EuroFab_KO.html#develop-open-source-software-algorithms-and-open-datasets-that-ensure-the-sustainability-and-usability-of-the-project-outputs-beyond-the-initial-funding-period.",
-    "title": "EuroFab",
-    "section": "4. Develop open-source software, algorithms and open datasets that ensure the sustainability and usability of the project outputs beyond the initial funding period.",
-    "text": "4. Develop open-source software, algorithms and open datasets that ensure the sustainability and usability of the project outputs beyond the initial funding period.\nTechnical objectives\n\nCreate the roadmap for a large-scale inference chain (i.e. covering all of Europe or parts of the globe) for the capability being developed."
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#state-of-the-art",
-    "href": "slides/202406_EuroFab_KO.html#state-of-the-art",
-    "title": "EuroFab",
-    "section": "State of the Art",
-    "text": "State of the Art\nClassifications of urban form fall, broadly, into two categories.\n\nrich, detailed, and hyper-local classifications\nsimpler, coarser, large-scale classifications"
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#proposed-approach",
-    "href": "slides/202406_EuroFab_KO.html#proposed-approach",
-    "title": "EuroFab",
-    "section": "Proposed approach",
-    "text": "Proposed approach\nUrban morphometrics + computer vision.\nA balance between generalisation and detail.\nMore granularity than existing large-scale classifications.\nScalability to much larger regions than traditional hyper-local classifications"
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#what",
-    "href": "slides/202406_EuroFab_KO.html#what",
-    "title": "EuroFab",
-    "section": "What",
-    "text": "What\nEnsure and maximise the policy relevance, usability and further applications of the outputs of the project.\nInternational comparability of the data products and their derived indicators.\nComparison of the outputs of the project with other already existing classifications endorsed by international organisations and applied by National Statistical Offices (e.g. the classification of human settlements DEGURBA)."
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#how",
-    "href": "slides/202406_EuroFab_KO.html#how",
-    "title": "EuroFab",
-    "section": "How",
-    "text": "How\nOECD Geospatial Lab and OECD technical expertise\n“Producer” stakeholders, mainly belonging to the scientific community (working on the production of data flows and data products close or relevant to the expected deliverable of EuroFab).\n“User” stakeholders, wide range of potential user of the data produced by EuroFab, interested in applying it for the definition of policy-relevant indicators and characterised by various degrees of technical competencies."
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#six-work-packages",
-    "href": "slides/202406_EuroFab_KO.html#six-work-packages",
-    "title": "EuroFab",
-    "section": "Six Work Packages",
-    "text": "Six Work Packages\n\nWP000 Project Management and Communication\nWP100 Collaborative Stakeholder Requirements Consolidation\nWP200 Iterative Algorithm Design and Data Collection Sprints\nWP300 Incremental Development and Processing Algorithm Implementation\nWP400 Verification of Novel Processing Capability in Representative Use Case and Results Dissemination\nWP500 Large-scale Inference and Operationalization Strategy Elaboration"
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#events",
-    "href": "slides/202406_EuroFab_KO.html#events",
-    "title": "EuroFab",
-    "section": "Events",
-    "text": "Events\n\nWeek 2 of September 2024:\n\nStakeholder Workshop I (optionally paired with URBIS24)\n\nWeek 1 of November 2024:\n\nNetworking event at WUF12 (Cairo, Egypt) – pending selection process\n\nWeek 4 of January 2025:\n\nStakeholder Workshop II\n\nWeek 4 of April 2025:\n\nStakeholder Workshop III"
-  },
-  {
-    "objectID": "slides/202406_EuroFab_KO.html#milestones",
-    "href": "slides/202406_EuroFab_KO.html#milestones",
-    "title": "EuroFab",
-    "section": "Milestones",
-    "text": "Milestones\n\nProgress (MS 1), KO + 6 months\nFinal (MS 2), KO + 12 months"
-  },
-  {
     "objectID": "slides/consultation.html#section",
     "href": "slides/consultation.html#section",
     "title": "Morphometric classification",
@@ -691,6 +320,377 @@
     "title": "EuroFab Progress Meeting",
     "section": "Takeaways",
     "text": "Takeaways\n\nData Integration\nTaxonomy Description and Naming\nComparative Urban Analysis\nExpanding Data Coverage\nReducing Manual Effort in Land Use Analysis\nGeographical Scale of Results\nTaxonomic Tree & Evaluation\nInput data quality"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#ai-model-design",
+    "href": "slides/202502_progress_Turing.html#ai-model-design",
+    "title": "Progress meeting",
+    "section": "AI model design",
+    "text": "AI model design\n\nScale: Pixel vs patch (size)\nTask: Classification vs segmentation\nModels: Network architectures and foundation models\nSampling and geospatial information: Unbalanced dataset and spatial autocorrelation"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#final-model-quick-recap",
+    "href": "slides/202502_progress_Turing.html#final-model-quick-recap",
+    "title": "Progress meeting",
+    "section": "Final model: quick recap",
+    "text": "Final model: quick recap\n\nEmbeddings created from 25 x 25 pixel tiles\nWeighted XGBoost classifier"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#prediction-pipeline",
+    "href": "slides/202502_progress_Turing.html#prediction-pipeline",
+    "title": "Progress meeting",
+    "section": "Prediction pipeline",
+    "text": "Prediction pipeline\n\nInput: shapefile + satellite composite\n\ncreates tiles\ncreates embeddings\nloads classifier and feeds in embeddings\n\nOutput: spatial signature prediction\n\ngithub.com/eurofab-project/eo/tree/main/ai_pipeline"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#understanding-model-performance",
+    "href": "slides/202502_progress_Turing.html#understanding-model-performance",
+    "title": "Progress meeting",
+    "section": "Understanding model performance",
+    "text": "Understanding model performance\n\n\n\nAccuracy\nMacro Acc.\nF1 (macro)\n\n\n\n\n0.66\n0.48\n0.36"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#model-performance",
+    "href": "slides/202502_progress_Turing.html#model-performance",
+    "title": "Progress meeting",
+    "section": "Model performance",
+    "text": "Model performance\n\nfull dataset / test set"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#predictions-across-time",
+    "href": "slides/202502_progress_Turing.html#predictions-across-time",
+    "title": "Progress meeting",
+    "section": "Predictions across time",
+    "text": "Predictions across time\n\nSatellite composites from 2016 → 2021\nFed into prediction pipeline"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#similarity-across-years",
+    "href": "slides/202502_progress_Turing.html#similarity-across-years",
+    "title": "Progress meeting",
+    "section": "Similarity across years",
+    "text": "Similarity across years\n\n\n\n\nYear transition\nOverlap\n\n\n\n\n2016 → 2017\n0.88\n\n\n2017 → 2018\n0.88\n\n\n2018 → 2019\n0.86\n\n\n2019 → 2020\n0.86\n\n\n2020 → 2021\n0.88\n\n\n2016 → 2021\n0.88"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#understanding-yearly-change",
+    "href": "slides/202502_progress_Turing.html#understanding-yearly-change",
+    "title": "Progress meeting",
+    "section": "Understanding yearly change",
+    "text": "Understanding yearly change"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#potential-aggregations-for-data-product",
+    "href": "slides/202502_progress_Turing.html#potential-aggregations-for-data-product",
+    "title": "Progress meeting",
+    "section": "Potential aggregations for data product",
+    "text": "Potential aggregations for data product\nbased on:\n\nmodel performance\nyearly transitions"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#comparison-to-reclustered-baseline",
+    "href": "slides/202502_progress_Turing.html#comparison-to-reclustered-baseline",
+    "title": "Progress meeting",
+    "section": "Comparison to reclustered baseline",
+    "text": "Comparison to reclustered baseline\nSpatial singature dataset with K=7\n\n\n\n\nAcc.\nMacro Acc.\nF1 (macro)\nGranularity\n\n\n\n\nModel performance 1d\n0.74\n0.63\n0.65\n7"
+  },
+  {
+    "objectID": "slides/202502_progress_Turing.html#next-steps-areas-of-improvement",
+    "href": "slides/202502_progress_Turing.html#next-steps-areas-of-improvement",
+    "title": "Progress meeting",
+    "section": "Next steps/ areas of improvement",
+    "text": "Next steps/ areas of improvement\n\nModel\n\nSampling\nSpatial weights\n\nOutput maps\n\nResolution/aggregations\nUncertainties\n\nTransferability to other countries"
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#why-urban-fabric",
+    "href": "slides/202406_EuroFab_KO.html#why-urban-fabric",
+    "title": "EuroFab",
+    "section": "Why urban fabric",
+    "text": "Why urban fabric\nCities take up around 3% of the planet’s land but are home to more than half of humanity and responsible for 75% of carbon emissions1.\nUnited Nations (2020)"
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#why-urban-fabric-1",
+    "href": "slides/202406_EuroFab_KO.html#why-urban-fabric-1",
+    "title": "EuroFab",
+    "section": "Why urban fabric",
+    "text": "Why urban fabric\nUrban fabric, the spatial layout of the physical elements that make up a city, mediates most activities their residents undertake, from heating their homes to accessing services, jobs and opportunities through sustainable modes of transport."
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#why-urban-fabric-2",
+    "href": "slides/202406_EuroFab_KO.html#why-urban-fabric-2",
+    "title": "EuroFab",
+    "section": "Why urban fabric",
+    "text": "Why urban fabric\nEasily available, comparable, and dynamic information on urban fabric would unlock new ways of understanding how cities are constantly evolving, what it means for their sustainability, and how effective policies can be designed to steer development in desirable directions."
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#why-now",
+    "href": "slides/202406_EuroFab_KO.html#why-now",
+    "title": "EuroFab",
+    "section": "Why now",
+    "text": "Why now\nIn 2023, UN Habitat included urban fabric as one of the key ingredients required for effective sustainable design1\nUN Habitat (2024)"
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#why-now-1",
+    "href": "slides/202406_EuroFab_KO.html#why-now-1",
+    "title": "EuroFab",
+    "section": "Why now",
+    "text": "Why now\nThere are currently very few instances of detailed, consistent, and scalable measurements of urban fabric and virtually none of them provide insight into its change over time."
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#eurofab-vision",
+    "href": "slides/202406_EuroFab_KO.html#eurofab-vision",
+    "title": "EuroFab",
+    "section": "EuroFab vision",
+    "text": "EuroFab vision\nEuroFab paves the road for a world where stakeholders, from local authorities to supranational organisations, are able to track and monitor the pattern of urban development in detail directly relevant for planning and at scale.\n\nwe’re not there yet"
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#objectives",
+    "href": "slides/202406_EuroFab_KO.html#objectives",
+    "title": "EuroFab",
+    "section": "Objectives",
+    "text": "Objectives"
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#specify-develop-and-validate-innovative-methods-integrating-raster-satellite-and-vector-data-in-rich-and-explainable-characterisations-of-urban-fabric.",
+    "href": "slides/202406_EuroFab_KO.html#specify-develop-and-validate-innovative-methods-integrating-raster-satellite-and-vector-data-in-rich-and-explainable-characterisations-of-urban-fabric.",
+    "title": "EuroFab",
+    "section": "1. Specify, develop, and validate innovative methods integrating raster (satellite) and vector data in rich and explainable characterisations of urban fabric.",
+    "text": "1. Specify, develop, and validate innovative methods integrating raster (satellite) and vector data in rich and explainable characterisations of urban fabric.\nTechnical objectives\n\nTest the comparative performance of transformer-based (foundation) vision models against the baseline of convolution-based neural networks."
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#evaluate-the-selected-vision-models-on-two-european-regions.",
+    "href": "slides/202406_EuroFab_KO.html#evaluate-the-selected-vision-models-on-two-european-regions.",
+    "title": "EuroFab",
+    "section": "3. Evaluate the selected vision models on two European regions.",
+    "text": "3. Evaluate the selected vision models on two European regions.\nTechnical objectives"
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#develop-open-source-software-algorithms-and-open-datasets-that-ensure-the-sustainability-and-usability-of-the-project-outputs-beyond-the-initial-funding-period.",
+    "href": "slides/202406_EuroFab_KO.html#develop-open-source-software-algorithms-and-open-datasets-that-ensure-the-sustainability-and-usability-of-the-project-outputs-beyond-the-initial-funding-period.",
+    "title": "EuroFab",
+    "section": "4. Develop open-source software, algorithms and open datasets that ensure the sustainability and usability of the project outputs beyond the initial funding period.",
+    "text": "4. Develop open-source software, algorithms and open datasets that ensure the sustainability and usability of the project outputs beyond the initial funding period.\nTechnical objectives\n\nCreate the roadmap for a large-scale inference chain (i.e. covering all of Europe or parts of the globe) for the capability being developed."
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#state-of-the-art",
+    "href": "slides/202406_EuroFab_KO.html#state-of-the-art",
+    "title": "EuroFab",
+    "section": "State of the Art",
+    "text": "State of the Art\nClassifications of urban form fall, broadly, into two categories.\n\nrich, detailed, and hyper-local classifications\nsimpler, coarser, large-scale classifications"
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#proposed-approach",
+    "href": "slides/202406_EuroFab_KO.html#proposed-approach",
+    "title": "EuroFab",
+    "section": "Proposed approach",
+    "text": "Proposed approach\nUrban morphometrics + computer vision.\nA balance between generalisation and detail.\nMore granularity than existing large-scale classifications.\nScalability to much larger regions than traditional hyper-local classifications"
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#what",
+    "href": "slides/202406_EuroFab_KO.html#what",
+    "title": "EuroFab",
+    "section": "What",
+    "text": "What\nEnsure and maximise the policy relevance, usability and further applications of the outputs of the project.\nInternational comparability of the data products and their derived indicators.\nComparison of the outputs of the project with other already existing classifications endorsed by international organisations and applied by National Statistical Offices (e.g. the classification of human settlements DEGURBA)."
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#how",
+    "href": "slides/202406_EuroFab_KO.html#how",
+    "title": "EuroFab",
+    "section": "How",
+    "text": "How\nOECD Geospatial Lab and OECD technical expertise\n“Producer” stakeholders, mainly belonging to the scientific community (working on the production of data flows and data products close or relevant to the expected deliverable of EuroFab).\n“User” stakeholders, wide range of potential user of the data produced by EuroFab, interested in applying it for the definition of policy-relevant indicators and characterised by various degrees of technical competencies."
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#six-work-packages",
+    "href": "slides/202406_EuroFab_KO.html#six-work-packages",
+    "title": "EuroFab",
+    "section": "Six Work Packages",
+    "text": "Six Work Packages\n\nWP000 Project Management and Communication\nWP100 Collaborative Stakeholder Requirements Consolidation\nWP200 Iterative Algorithm Design and Data Collection Sprints\nWP300 Incremental Development and Processing Algorithm Implementation\nWP400 Verification of Novel Processing Capability in Representative Use Case and Results Dissemination\nWP500 Large-scale Inference and Operationalization Strategy Elaboration"
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#events",
+    "href": "slides/202406_EuroFab_KO.html#events",
+    "title": "EuroFab",
+    "section": "Events",
+    "text": "Events\n\nWeek 2 of September 2024:\n\nStakeholder Workshop I (optionally paired with URBIS24)\n\nWeek 1 of November 2024:\n\nNetworking event at WUF12 (Cairo, Egypt) – pending selection process\n\nWeek 4 of January 2025:\n\nStakeholder Workshop II\n\nWeek 4 of April 2025:\n\nStakeholder Workshop III"
+  },
+  {
+    "objectID": "slides/202406_EuroFab_KO.html#milestones",
+    "href": "slides/202406_EuroFab_KO.html#milestones",
+    "title": "EuroFab",
+    "section": "Milestones",
+    "text": "Milestones\n\nProgress (MS 1), KO + 6 months\nFinal (MS 2), KO + 12 months"
+  },
+  {
+    "objectID": "slides/progress_february.html#agenda",
+    "href": "slides/progress_february.html#agenda",
+    "title": "EuroFab Progress Meeting",
+    "section": "Agenda",
+    "text": "Agenda\n\nProgress overview\nMorphometric model progress\nAI model progress\nStakeholder engagement progress\nProject continuation\nDiscussion"
+  },
+  {
+    "objectID": "slides/progress_february.html#protocol-design",
+    "href": "slides/progress_february.html#protocol-design",
+    "title": "EuroFab Progress Meeting",
+    "section": "Protocol design",
+    "text": "Protocol design\n\nUse morphometric classification of Central Europe from a parallel research project as ground truth data\nCalculate morphometric characters on subpar, but homogenous and widely available data, using enclosed tessellation cells (ETCs) as the base unit of analysis"
+  },
+  {
+    "objectID": "slides/progress_february.html#protocol-design-1",
+    "href": "slides/progress_february.html#protocol-design-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Protocol design",
+    "text": "Protocol design\n\nTrain a supervised model to predict the classification of ETCs directly from the calculated morphometric characters, using the morphometric classification data as a target label"
+  },
+  {
+    "objectID": "slides/progress_february.html#protocol-design-2",
+    "href": "slides/progress_february.html#protocol-design-2",
+    "title": "EuroFab Progress Meeting",
+    "section": "Protocol design",
+    "text": "Protocol design\n\nTest the model on an out of training sample country to validate the approach.\n\nFor example, train the model on Poland, Germany, Austria, Slovakia and test it on Czechia."
+  },
+  {
+    "objectID": "slides/progress_february.html#input-data-collection-and-preprocessing",
+    "href": "slides/progress_february.html#input-data-collection-and-preprocessing",
+    "title": "EuroFab Progress Meeting",
+    "section": "Input data collection and preprocessing",
+    "text": "Input data collection and preprocessing\n\nMorphometric classification of Central Europe (UPDATE)\nMicrosoft Building footprints (UPDATE)\nImplementation ( UPDATE )"
+  },
+  {
+    "objectID": "slides/progress_february.html#detailed-morphometric-classification",
+    "href": "slides/progress_february.html#detailed-morphometric-classification",
+    "title": "EuroFab Progress Meeting",
+    "section": "Detailed morphometric classification",
+    "text": "Detailed morphometric classification\n\nNew iteration of the hierarchical classification, based on feedback from stakeholders.\nAvailable as a web app (https://uscuni.org/himoc/).\nNaming of clusters and branches will be based on stakeholder feedback"
+  },
+  {
+    "objectID": "slides/progress_february.html#microsoft-building-footprints",
+    "href": "slides/progress_february.html#microsoft-building-footprints",
+    "title": "EuroFab Progress Meeting",
+    "section": "Microsoft Building footprints",
+    "text": "Microsoft Building footprints\n\nThere is a cache of previous data for Central Europe in the Planatery Computer Stack API\nWe are exploring if it might improve model performance if we add it to the pipeline."
+  },
+  {
+    "objectID": "slides/progress_february.html#current-implementation-status",
+    "href": "slides/progress_february.html#current-implementation-status",
+    "title": "EuroFab Progress Meeting",
+    "section": "Current implementation status",
+    "text": "Current implementation status\n\nThe core functionality for the pipeline was made available within open-source packages - momepy, libpysal, neatnet and the project itself is a public repository.\nWe replaced the previous iteration of target labels with the new ones.\nAdded the capability to calculate spatially lagged variables for the whole dataset."
+  },
+  {
+    "objectID": "slides/progress_february.html#first-full-model-iterations",
+    "href": "slides/progress_february.html#first-full-model-iterations",
+    "title": "EuroFab Progress Meeting",
+    "section": "First full model iterations",
+    "text": "First full model iterations\n\nTested on different levels of aggregation\nThe goal is to keep the final model as simple, scalable and interpretable as possible.\nTested Random Forest, XGboost, histogramClassifier\nReported accuracies are from the Random forest model, but the other models had similar performance."
+  },
+  {
+    "objectID": "slides/progress_february.html#first-iteration-results---hierarchy-level-3",
+    "href": "slides/progress_february.html#first-iteration-results---hierarchy-level-3",
+    "title": "EuroFab Progress Meeting",
+    "section": "First iteration results - Hierarchy Level 3",
+    "text": "First iteration results - Hierarchy Level 3\n\n\n\nOverall metrics\n\n\n\n\n\nAccuracy\n0.59929\n\n\nWeighted F1 score\n0.6222459\n\n\nMicro F1 score\n0.59929\n\n\nMacro F1 score\n0.4828"
+  },
+  {
+    "objectID": "slides/progress_february.html#first-iteration-results---hierarchy-level-4",
+    "href": "slides/progress_february.html#first-iteration-results---hierarchy-level-4",
+    "title": "EuroFab Progress Meeting",
+    "section": "First iteration results - Hierarchy Level 4",
+    "text": "First iteration results - Hierarchy Level 4\n\n\n\nOverall metrics\n\n\n\n\n\nAccuracy\n0.40672\n\n\nWeighted F1 score\n0.447\n\n\nMicro F1 score\n0.40672\n\n\nMacro F1 score\n0.2985"
+  },
+  {
+    "objectID": "slides/progress_february.html#next-steps",
+    "href": "slides/progress_february.html#next-steps",
+    "title": "EuroFab Progress Meeting",
+    "section": "Next steps",
+    "text": "Next steps\n\nIterate and improve model accuracy for the poor performing classes.\nWrite validation and comparison schemes to examine model results at different scales of the detailed cadastre classification."
+  },
+  {
+    "objectID": "slides/progress_february.html#ai-model-design",
+    "href": "slides/progress_february.html#ai-model-design",
+    "title": "EuroFab Progress Meeting",
+    "section": "AI model design",
+    "text": "AI model design\n\nScale: Pixel vs patch (size)\nTask: Classification vs segmentation\nModels: Network architectures and foundation models\nSampling and geospatial information: Unbalanced dataset and spatial autocorrelation"
+  },
+  {
+    "objectID": "slides/progress_february.html#final-model-quick-recap",
+    "href": "slides/progress_february.html#final-model-quick-recap",
+    "title": "EuroFab Progress Meeting",
+    "section": "Final model: quick recap",
+    "text": "Final model: quick recap\n\nEmbeddings created from 25 x 25 pixel tiles\nWeighted XGBoost classifier"
+  },
+  {
+    "objectID": "slides/progress_february.html#prediction-pipeline",
+    "href": "slides/progress_february.html#prediction-pipeline",
+    "title": "EuroFab Progress Meeting",
+    "section": "Prediction pipeline",
+    "text": "Prediction pipeline\n\nInput: shapefile + satellite composite\n\ncreates tiles\ncreates embeddings\nloads classifier and feeds in embeddings\n\nOutput: spatial signature prediction\n\ngithub.com/eurofab-project/eo/tree/main/ai_pipeline"
+  },
+  {
+    "objectID": "slides/progress_february.html#understanding-model-performance",
+    "href": "slides/progress_february.html#understanding-model-performance",
+    "title": "EuroFab Progress Meeting",
+    "section": "Understanding model performance",
+    "text": "Understanding model performance\n\n\n\nAccuracy\nMacro Acc.\nF1 (macro)\n\n\n\n\n0.66\n0.48\n0.36"
+  },
+  {
+    "objectID": "slides/progress_february.html#model-performance",
+    "href": "slides/progress_february.html#model-performance",
+    "title": "EuroFab Progress Meeting",
+    "section": "Model performance",
+    "text": "Model performance\n\nfull dataset / test set"
+  },
+  {
+    "objectID": "slides/progress_february.html#predictions-across-time",
+    "href": "slides/progress_february.html#predictions-across-time",
+    "title": "EuroFab Progress Meeting",
+    "section": "Predictions across time",
+    "text": "Predictions across time\n\nSatellite composites from 2016 → 2021\nFed into prediction pipeline"
+  },
+  {
+    "objectID": "slides/progress_february.html#similarity-across-years",
+    "href": "slides/progress_february.html#similarity-across-years",
+    "title": "EuroFab Progress Meeting",
+    "section": "Similarity across years",
+    "text": "Similarity across years\n\n\n\n\nYear transition\nOverlap\n\n\n\n\n2016 → 2017\n0.88\n\n\n2017 → 2018\n0.88\n\n\n2018 → 2019\n0.86\n\n\n2019 → 2020\n0.86\n\n\n2020 → 2021\n0.88\n\n\n2016 → 2021\n0.88"
+  },
+  {
+    "objectID": "slides/progress_february.html#understanding-yearly-change",
+    "href": "slides/progress_february.html#understanding-yearly-change",
+    "title": "EuroFab Progress Meeting",
+    "section": "Understanding yearly change",
+    "text": "Understanding yearly change"
+  },
+  {
+    "objectID": "slides/progress_february.html#potential-aggregations-for-data-product",
+    "href": "slides/progress_february.html#potential-aggregations-for-data-product",
+    "title": "EuroFab Progress Meeting",
+    "section": "Potential aggregations for data product",
+    "text": "Potential aggregations for data product\nbased on:\n\nmodel performance\nyearly transitions"
+  },
+  {
+    "objectID": "slides/progress_february.html#comparison-to-reclustered-baseline",
+    "href": "slides/progress_february.html#comparison-to-reclustered-baseline",
+    "title": "EuroFab Progress Meeting",
+    "section": "Comparison to reclustered baseline",
+    "text": "Comparison to reclustered baseline\nSpatial singature dataset with K=7\n\n\n\n\nAcc.\nMacro Acc.\nF1 (macro)\nGranularity\n\n\n\n\nModel performance 1d\n0.74\n0.63\n0.65\n7"
+  },
+  {
+    "objectID": "slides/progress_february.html#next-steps-areas-of-improvement",
+    "href": "slides/progress_february.html#next-steps-areas-of-improvement",
+    "title": "EuroFab Progress Meeting",
+    "section": "Next steps/ areas of improvement",
+    "text": "Next steps/ areas of improvement\n\nModel\n\nSampling\nSpatial weights\n\nOutput maps\n\nResolution/aggregations\nUncertainties\n\nTransferability to other countries"
+  },
+  {
+    "objectID": "slides/progress_february.html#web-application",
+    "href": "slides/progress_february.html#web-application",
+    "title": "EuroFab Progress Meeting",
+    "section": "Web application",
+    "text": "Web application\n\nDeveloped an interactive web-application for the stakeholder engagement work\nWe have a list of desirable features from all the presentations"
+  },
+  {
+    "objectID": "slides/progress_february.html#meetings-with-stakeholders",
+    "href": "slides/progress_february.html#meetings-with-stakeholders",
+    "title": "EuroFab Progress Meeting",
+    "section": "Meetings with stakeholders",
+    "text": "Meetings with stakeholders\n\nPresented the new classification for SSVA Lithuania on the 27th of January (online)\nPresented for 4city on the 28th of January (in person)\nPresenting on the 11th of March for IPPA (in person)"
   },
   {
     "objectID": "slides/WUF_presentation.html#vision",
@@ -973,60 +973,249 @@
     "text": "Do you want to follow up?\n martin.fleischmann@natur.cuni.cz\n linkedin.com/in/fleischmannmartin/"
   },
   {
-    "objectID": "slides/template.html#heading-level-2",
-    "href": "slides/template.html#heading-level-2",
-    "title": "Spatial Autocorrelation",
-    "section": "Heading level 2",
-    "text": "Heading level 2\nAnother text\nFragment"
+    "objectID": "slides/milestone_december.html#morphological-data",
+    "href": "slides/milestone_december.html#morphological-data",
+    "title": "EuroFab Progress Meeting",
+    "section": "Morphological data",
+    "text": "Morphological data\n\nMorphometric classification of Central Europe (UPDATE)\nMicrosoft Building footprints\nOverture Maps streets\nImplementation"
   },
   {
-    "objectID": "slides/template.html#this-will-be-vertically-centered",
-    "href": "slides/template.html#this-will-be-vertically-centered",
-    "title": "Spatial Autocorrelation",
-    "section": "This will be vertically centered",
-    "text": "This will be vertically centered\nThis text is moved as well"
+    "objectID": "slides/milestone_december.html#satellite-data",
+    "href": "slides/milestone_december.html#satellite-data",
+    "title": "EuroFab Progress Meeting",
+    "section": "Satellite data",
+    "text": "Satellite data\n\nSentinel-2 composite (Corbane et al.), RGB, 10px/m\ntemporal/spatial flexibility\nanalysis-ready; cloud-free\nsuitability for downstream ML tasks"
   },
   {
-    "objectID": "slides/template.html#heading-that-is-a-question",
-    "href": "slides/template.html#heading-that-is-a-question",
-    "title": "Spatial Autocorrelation",
-    "section": "Heading that is a question",
-    "text": "Heading that is a question\nAnother text with footnote1\n\nFragment block\n\nMy footnote."
+    "objectID": "slides/milestone_december.html#morphometric-classification-homogenisation-protocol",
+    "href": "slides/milestone_december.html#morphometric-classification-homogenisation-protocol",
+    "title": "EuroFab Progress Meeting",
+    "section": "Morphometric Classification Homogenisation Protocol",
+    "text": "Morphometric Classification Homogenisation Protocol"
   },
   {
-    "objectID": "slides/template.html#inline-code",
-    "href": "slides/template.html#inline-code",
-    "title": "Spatial Autocorrelation",
-    "section": "Inline code",
-    "text": "Inline code\nText with libpysal.graph.Graph inline."
+    "objectID": "slides/milestone_december.html#satellite-images-model",
+    "href": "slides/milestone_december.html#satellite-images-model",
+    "title": "EuroFab Progress Meeting",
+    "section": "Satellite images model",
+    "text": "Satellite images model"
   },
   {
-    "objectID": "slides/template.html#slide-with-an-image",
-    "href": "slides/template.html#slide-with-an-image",
-    "title": "Spatial Autocorrelation",
-    "section": "Slide with an image",
-    "text": "Slide with an image\nSet height"
+    "objectID": "slides/milestone_december.html#next-steps",
+    "href": "slides/milestone_december.html#next-steps",
+    "title": "EuroFab Progress Meeting",
+    "section": "Next steps",
+    "text": "Next steps\n\nTrain final model on all 25x25 tiles (embeddings)\n\nEmbeddings model + H3 level 5 lat/lon\n\nProduct: Prediction pipeline\n\nMake predictions across time (years)"
   },
   {
-    "objectID": "slides/template.html#slide-with-an-image-1",
-    "href": "slides/template.html#slide-with-an-image-1",
-    "title": "Spatial Autocorrelation",
-    "section": "Slide with an image",
-    "text": "Slide with an image\n\nAutomatically stretched to fill remaining space"
+    "objectID": "slides/milestone_december.html#comments",
+    "href": "slides/milestone_december.html#comments",
+    "title": "EuroFab Progress Meeting",
+    "section": "Comments",
+    "text": "Comments\n\nA more explicit discussion of limitations—such as data gaps, model constraints, or generalizability to non-European contexts—would provide a balanced perspective.\nIn section 3.2.1.1 class imbalance is acknowledged but there is no clear discussion on strategies for addressing it (e.g. oversampling, synthetic data generation, etc.)."
   },
   {
-    "objectID": "slides/template.html#slide-with-image-as-background",
-    "href": "slides/template.html#slide-with-image-as-background",
-    "title": "Spatial Autocorrelation",
-    "section": "Slide with image as background",
-    "text": "Slide with image as background"
+    "objectID": "slides/milestone_december.html#stakeholder-consultation-events",
+    "href": "slides/milestone_december.html#stakeholder-consultation-events",
+    "title": "EuroFab Progress Meeting",
+    "section": "Stakeholder consultation events",
+    "text": "Stakeholder consultation events"
   },
   {
-    "objectID": "slides/template.html#slide-with-iframe-background",
-    "href": "slides/template.html#slide-with-iframe-background",
-    "title": "Spatial Autocorrelation",
-    "section": "Slide with iframe background",
-    "text": "Slide with iframe background"
+    "objectID": "slides/milestone_december.html#stakeholders-involved",
+    "href": "slides/milestone_december.html#stakeholders-involved",
+    "title": "EuroFab Progress Meeting",
+    "section": "Stakeholders involved",
+    "text": "Stakeholders involved\n\nInternational\nNational\nLocal\n\nRepresenting both public and private sectors."
+  },
+  {
+    "objectID": "slides/milestone_december.html#future-engagements",
+    "href": "slides/milestone_december.html#future-engagements",
+    "title": "EuroFab Progress Meeting",
+    "section": "Future engagements",
+    "text": "Future engagements\n\nDecember 16 (SSVA) - online\nEnd of January (IPR) - in person\nJanuary 28 (4ct) - in person"
+  },
+  {
+    "objectID": "slides/milestone_december.html#questions",
+    "href": "slides/milestone_december.html#questions",
+    "title": "EuroFab Progress Meeting",
+    "section": "Questions",
+    "text": "Questions\n\nHow will the project address the issue of trust identified during stakeholder discussions, particularly regarding the adoption of shared terminology and concepts for urban fabric monitoring?\nWhat strategies are planned to identify and incorporate unexpressed or latent needs of prospective data users into the stakeholder requirements mapping process?"
+  },
+  {
+    "objectID": "slides/final_may.html#agenda",
+    "href": "slides/final_may.html#agenda",
+    "title": "EuroFab Progress Meeting",
+    "section": "Agenda",
+    "text": "Agenda\n\nProject overview\nMorphometric model\nAI vision model\nStakeholder engagement\nFuture work\nDiscussion"
+  },
+  {
+    "objectID": "slides/final_may.html#why-urban-fabric",
+    "href": "slides/final_may.html#why-urban-fabric",
+    "title": "EuroFab Progress Meeting",
+    "section": "Why urban fabric",
+    "text": "Why urban fabric\nCities take up around 3% of the planet’s land but are home to more than half of humanity and responsible for 75% of carbon emissions1.\nUnited Nations (2020)"
+  },
+  {
+    "objectID": "slides/final_may.html#why-urban-fabric-1",
+    "href": "slides/final_may.html#why-urban-fabric-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Why urban fabric",
+    "text": "Why urban fabric\nUrban fabric, the spatial layout of the physical elements that make up a city, mediates most activities their residents undertake, from heating their homes to accessing services, jobs and opportunities through sustainable modes of transport."
+  },
+  {
+    "objectID": "slides/final_may.html#why-urban-fabric-2",
+    "href": "slides/final_may.html#why-urban-fabric-2",
+    "title": "EuroFab Progress Meeting",
+    "section": "Why urban fabric",
+    "text": "Why urban fabric\nEasily available, comparable, and dynamic information on urban fabric would unlock new ways of understanding how cities are constantly evolving, what it means for their sustainability, and how effective policies can be designed to steer development in desirable directions."
+  },
+  {
+    "objectID": "slides/final_may.html#why-now",
+    "href": "slides/final_may.html#why-now",
+    "title": "EuroFab Progress Meeting",
+    "section": "Why now",
+    "text": "Why now\nIn 2023, UN Habitat included urban fabric as one of the key ingredients required for effective sustainable design1\nUN Habitat (2024)"
+  },
+  {
+    "objectID": "slides/final_may.html#why-now-1",
+    "href": "slides/final_may.html#why-now-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Why now",
+    "text": "Why now\nThere are currently very few instances of detailed, consistent, and scalable measurements of urban fabric and virtually none of them provide insight into its change over time."
+  },
+  {
+    "objectID": "slides/final_may.html#eurofab-vision",
+    "href": "slides/final_may.html#eurofab-vision",
+    "title": "EuroFab Progress Meeting",
+    "section": "EuroFab vision",
+    "text": "EuroFab vision\nEuroFab paves the road for a world where stakeholders, from local authorities to supranational organisations, are able to track and monitor the pattern of urban development in detail directly relevant for planning and at scale.\n\nwe’re getting there"
+  },
+  {
+    "objectID": "slides/final_may.html#objectives",
+    "href": "slides/final_may.html#objectives",
+    "title": "EuroFab Progress Meeting",
+    "section": "Objectives",
+    "text": "Objectives"
+  },
+  {
+    "objectID": "slides/final_may.html#morphological-elements",
+    "href": "slides/final_may.html#morphological-elements",
+    "title": "EuroFab Progress Meeting",
+    "section": "Morphological elements",
+    "text": "Morphological elements"
+  },
+  {
+    "objectID": "slides/final_may.html#morphological-characters",
+    "href": "slides/final_may.html#morphological-characters",
+    "title": "EuroFab Progress Meeting",
+    "section": "Morphological characters",
+    "text": "Morphological characters"
+  },
+  {
+    "objectID": "slides/final_may.html#modeling",
+    "href": "slides/final_may.html#modeling",
+    "title": "EuroFab Progress Meeting",
+    "section": "Modeling",
+    "text": "Modeling"
+  },
+  {
+    "objectID": "slides/final_may.html#results",
+    "href": "slides/final_may.html#results",
+    "title": "EuroFab Progress Meeting",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "slides/final_may.html#confusion-matrix",
+    "href": "slides/final_may.html#confusion-matrix",
+    "title": "EuroFab Progress Meeting",
+    "section": "Confusion Matrix",
+    "text": "Confusion Matrix"
+  },
+  {
+    "objectID": "slides/final_may.html#approach",
+    "href": "slides/final_may.html#approach",
+    "title": "EuroFab Progress Meeting",
+    "section": "Approach",
+    "text": "Approach"
+  },
+  {
+    "objectID": "slides/final_may.html#spatial-signatures-as-ground-truth-data",
+    "href": "slides/final_may.html#spatial-signatures-as-ground-truth-data",
+    "title": "EuroFab Progress Meeting",
+    "section": "Spatial signatures as ground truth data",
+    "text": "Spatial signatures as ground truth data\n\nSpatial signatures framework (Arribas-Bel & Fleischmann 2022)\nProxy due to its conceptual alignment with the morphometric model"
+  },
+  {
+    "objectID": "slides/final_may.html#classifier",
+    "href": "slides/final_may.html#classifier",
+    "title": "EuroFab Progress Meeting",
+    "section": "Classifier",
+    "text": "Classifier\n\n\n\n\n\n\n\n\n\n\nClasses (K)\nSpatial Context\nAccuracy\nMacro Accuracy\nMacro F1 Score\n\n\n\n\n7\nNone\n0.4924\n0.3856\n0.3389\n\n\n7\nH3 (res 5)\n0.6959\n0.5713\n0.5221\n\n\n12\nNone\n0.4617\n0.2666\n0.2127\n\n\n12\nH3 (res 5)\n0.6654\n0.4328\n0.3654"
+  },
+  {
+    "objectID": "slides/final_may.html#the-more-training-data-the-better",
+    "href": "slides/final_may.html#the-more-training-data-the-better",
+    "title": "EuroFab Progress Meeting",
+    "section": "The more training data the better",
+    "text": "The more training data the better\n\n\n\nNumber of observations vs accuracy"
+  },
+  {
+    "objectID": "slides/final_may.html#temporal-predictions",
+    "href": "slides/final_may.html#temporal-predictions",
+    "title": "EuroFab Progress Meeting",
+    "section": "Temporal predictions",
+    "text": "Temporal predictions"
+  },
+  {
+    "objectID": "slides/final_may.html#software-and-datasets",
+    "href": "slides/final_may.html#software-and-datasets",
+    "title": "EuroFab Progress Meeting",
+    "section": "Software and datasets",
+    "text": "Software and datasets\n\nInteractive morphometric web application\nMorphometric characterisation pipeline for Microsoft Building footprints\nMorphometric characterisation pipeline for Overture Maps Building footprints\nAI Method for Urban Fabric classification and morphometric characterization\nAI temporal data cube of Urban Fabric classifications"
+  },
+  {
+    "objectID": "slides/final_may.html#major-stakeholder-engagements",
+    "href": "slides/final_may.html#major-stakeholder-engagements",
+    "title": "EuroFab Progress Meeting",
+    "section": "Major stakeholder engagements",
+    "text": "Major stakeholder engagements\n\nEuropean Covenant of Mayors\nSSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)\nPrague Institute of Planning and Development (IPR)\n4ct"
+  },
+  {
+    "objectID": "slides/final_may.html#influence-on-project",
+    "href": "slides/final_may.html#influence-on-project",
+    "title": "EuroFab Progress Meeting",
+    "section": "Influence on project",
+    "text": "Influence on project\n\nFormat of the final data product and its presentation method\nInclusion of Construction Sector Development Agency of the Ministry of Environment, Lithuania (SSVA)\nExtending the morphometric pipeline to incorporate Overture Maps\nStrategic direction for the follow-up study"
+  },
+  {
+    "objectID": "slides/final_may.html#takeaways",
+    "href": "slides/final_may.html#takeaways",
+    "title": "EuroFab Progress Meeting",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nData Integration\nTaxonomy Description and Naming\nComparative Urban Analysis\nExpanding Data Coverage\nReducing Manual Effort in Land Use Analysis\nGeographical Scale of Results\nTaxonomic Tree & Evaluation\nInput data quality"
+  },
+  {
+    "objectID": "slides/final_may.html#european-classification-of-urban-fabric",
+    "href": "slides/final_may.html#european-classification-of-urban-fabric",
+    "title": "EuroFab Progress Meeting",
+    "section": "European classification of Urban Fabric",
+    "text": "European classification of Urban Fabric\nUsing the morphometric pipeline to generate detailed urban classification at a pan-European scale."
+  },
+  {
+    "objectID": "slides/final_may.html#european-classification-of-urban-fabric-across-time-ai-model",
+    "href": "slides/final_may.html#european-classification-of-urban-fabric-across-time-ai-model",
+    "title": "EuroFab Progress Meeting",
+    "section": "European classification of Urban Fabric across time (AI model)",
+    "text": "European classification of Urban Fabric across time (AI model)\nTraining the AI vision model on the outputs from step one, to fill data gaps and to produce a temporal classification based on historical satellite data."
+  },
+  {
+    "objectID": "slides/final_may.html#expanded-stakeholder-engagement",
+    "href": "slides/final_may.html#expanded-stakeholder-engagement",
+    "title": "EuroFab Progress Meeting",
+    "section": "Expanded Stakeholder engagement",
+    "text": "Expanded Stakeholder engagement\nThird, productising the refined classification results and expanding stakeholder engagement activities. This will be crucial for driving user adoption and facilitating the derivation of secondary indicators and specialised datasets tailored to specific applications, such as regional development analysis or climate change impact assessments."
   },
   {
     "objectID": "slides/progress_october.html#agenda",
@@ -1253,346 +1442,136 @@
     "text": "Future\nWorld Urban Forum, Cairo, November 6th @ 15:30\nMonitoring urban fabric for data-driven planning and decision-making"
   },
   {
-    "objectID": "slides/final_may.html#agenda",
-    "href": "slides/final_may.html#agenda",
-    "title": "EuroFab Progress Meeting",
-    "section": "Agenda",
-    "text": "Agenda\n\nProject overview\nMorphometric model\nAI vision model\nStakeholder engagement\nFuture work\nDiscussion"
-  },
-  {
-    "objectID": "slides/final_may.html#why-urban-fabric",
-    "href": "slides/final_may.html#why-urban-fabric",
-    "title": "EuroFab Progress Meeting",
-    "section": "Why urban fabric",
-    "text": "Why urban fabric\nCities take up around 3% of the planet’s land but are home to more than half of humanity and responsible for 75% of carbon emissions1.\nUnited Nations (2020)"
-  },
-  {
-    "objectID": "slides/final_may.html#why-urban-fabric-1",
-    "href": "slides/final_may.html#why-urban-fabric-1",
-    "title": "EuroFab Progress Meeting",
-    "section": "Why urban fabric",
-    "text": "Why urban fabric\nUrban fabric, the spatial layout of the physical elements that make up a city, mediates most activities their residents undertake, from heating their homes to accessing services, jobs and opportunities through sustainable modes of transport."
-  },
-  {
-    "objectID": "slides/final_may.html#why-urban-fabric-2",
-    "href": "slides/final_may.html#why-urban-fabric-2",
-    "title": "EuroFab Progress Meeting",
-    "section": "Why urban fabric",
-    "text": "Why urban fabric\nEasily available, comparable, and dynamic information on urban fabric would unlock new ways of understanding how cities are constantly evolving, what it means for their sustainability, and how effective policies can be designed to steer development in desirable directions."
-  },
-  {
-    "objectID": "slides/final_may.html#why-now",
-    "href": "slides/final_may.html#why-now",
-    "title": "EuroFab Progress Meeting",
-    "section": "Why now",
-    "text": "Why now\nIn 2023, UN Habitat included urban fabric as one of the key ingredients required for effective sustainable design1\nUN Habitat (2024)"
-  },
-  {
-    "objectID": "slides/final_may.html#why-now-1",
-    "href": "slides/final_may.html#why-now-1",
-    "title": "EuroFab Progress Meeting",
-    "section": "Why now",
-    "text": "Why now\nThere are currently very few instances of detailed, consistent, and scalable measurements of urban fabric and virtually none of them provide insight into its change over time."
-  },
-  {
-    "objectID": "slides/final_may.html#eurofab-vision",
-    "href": "slides/final_may.html#eurofab-vision",
-    "title": "EuroFab Progress Meeting",
-    "section": "EuroFab vision",
-    "text": "EuroFab vision\nEuroFab paves the road for a world where stakeholders, from local authorities to supranational organisations, are able to track and monitor the pattern of urban development in detail directly relevant for planning and at scale.\n\nwe’re getting there"
-  },
-  {
-    "objectID": "slides/final_may.html#objectives",
-    "href": "slides/final_may.html#objectives",
-    "title": "EuroFab Progress Meeting",
-    "section": "Objectives",
-    "text": "Objectives"
-  },
-  {
-    "objectID": "slides/final_may.html#specify-develop-and-validate-innovative-methods-integrating-raster-satellite-and-vector-data-in-rich-and-explainable-characterisations-of-urban-fabric.",
-    "href": "slides/final_may.html#specify-develop-and-validate-innovative-methods-integrating-raster-satellite-and-vector-data-in-rich-and-explainable-characterisations-of-urban-fabric.",
-    "title": "EuroFab Progress Meeting",
-    "section": "1. Specify, develop, and validate innovative methods integrating raster (satellite) and vector data in rich and explainable characterisations of urban fabric.",
-    "text": "1. Specify, develop, and validate innovative methods integrating raster (satellite) and vector data in rich and explainable characterisations of urban fabric.\nTechnical objectives\n\nTest the comparative performance of transformer-based (foundation) vision models against the baseline of convolution-based neural networks."
-  },
-  {
-    "objectID": "slides/final_may.html#evaluate-the-selected-vision-models-on-two-european-regions.",
-    "href": "slides/final_may.html#evaluate-the-selected-vision-models-on-two-european-regions.",
-    "title": "EuroFab Progress Meeting",
-    "section": "3. Evaluate the selected vision models on two European regions.",
-    "text": "3. Evaluate the selected vision models on two European regions.\nTechnical objectives"
-  },
-  {
-    "objectID": "slides/final_may.html#develop-open-source-software-algorithms-and-open-datasets-that-ensure-the-sustainability-and-usability-of-the-project-outputs-beyond-the-initial-funding-period.",
-    "href": "slides/final_may.html#develop-open-source-software-algorithms-and-open-datasets-that-ensure-the-sustainability-and-usability-of-the-project-outputs-beyond-the-initial-funding-period.",
-    "title": "EuroFab Progress Meeting",
-    "section": "4. Develop open-source software, algorithms and open datasets that ensure the sustainability and usability of the project outputs beyond the initial funding period.",
-    "text": "4. Develop open-source software, algorithms and open datasets that ensure the sustainability and usability of the project outputs beyond the initial funding period.\nTechnical objectives\n\nCreate the roadmap for a large-scale inference chain (i.e. covering all of Europe or parts of the globe) for the capability being developed."
-  },
-  {
-    "objectID": "slides/final_may.html#morphological-elements",
-    "href": "slides/final_may.html#morphological-elements",
-    "title": "EuroFab Progress Meeting",
-    "section": "Morphological elements",
-    "text": "Morphological elements"
-  },
-  {
-    "objectID": "slides/final_may.html#morphological-characters",
-    "href": "slides/final_may.html#morphological-characters",
-    "title": "EuroFab Progress Meeting",
-    "section": "Morphological characters",
-    "text": "Morphological characters"
-  },
-  {
-    "objectID": "slides/final_may.html#modeling",
-    "href": "slides/final_may.html#modeling",
-    "title": "EuroFab Progress Meeting",
-    "section": "Modeling",
-    "text": "Modeling"
-  },
-  {
-    "objectID": "slides/final_may.html#results",
-    "href": "slides/final_may.html#results",
-    "title": "EuroFab Progress Meeting",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "slides/final_may.html#confusion-matrix",
-    "href": "slides/final_may.html#confusion-matrix",
-    "title": "EuroFab Progress Meeting",
-    "section": "Confusion Matrix",
-    "text": "Confusion Matrix"
-  },
-  {
-    "objectID": "slides/final_may.html#approach",
-    "href": "slides/final_may.html#approach",
-    "title": "EuroFab Progress Meeting",
-    "section": "Approach",
-    "text": "Approach"
-  },
-  {
-    "objectID": "slides/final_may.html#spatial-signatures-as-ground-truth-data",
-    "href": "slides/final_may.html#spatial-signatures-as-ground-truth-data",
-    "title": "EuroFab Progress Meeting",
-    "section": "Spatial signatures as ground truth data",
-    "text": "Spatial signatures as ground truth data\n\nSpatial signatures framework (Arribas-Bel & Fleischmann 2022)\nProxy due to its conceptual alignment with the morphometric model"
-  },
-  {
-    "objectID": "slides/final_may.html#classifier",
-    "href": "slides/final_may.html#classifier",
-    "title": "EuroFab Progress Meeting",
-    "section": "Classifier",
-    "text": "Classifier\n\n\n\n\n\n\n\n\n\n\nClasses (K)\nSpatial Context\nAccuracy\nMacro Accuracy\nMacro F1 Score\n\n\n\n\n7\nNone\n0.4924\n0.3856\n0.3389\n\n\n7\nH3 (res 5)\n0.6959\n0.5713\n0.5221\n\n\n12\nNone\n0.4617\n0.2666\n0.2127\n\n\n12\nH3 (res 5)\n0.6654\n0.4328\n0.3654"
-  },
-  {
-    "objectID": "slides/final_may.html#the-more-training-data-the-better",
-    "href": "slides/final_may.html#the-more-training-data-the-better",
-    "title": "EuroFab Progress Meeting",
-    "section": "The more training data the better",
-    "text": "The more training data the better\n\n\n\nNumber of observations vs accuracy"
-  },
-  {
-    "objectID": "slides/final_may.html#temporal-predictions",
-    "href": "slides/final_may.html#temporal-predictions",
-    "title": "EuroFab Progress Meeting",
-    "section": "Temporal predictions",
-    "text": "Temporal predictions"
-  },
-  {
-    "objectID": "slides/final_may.html#software-and-datasets",
-    "href": "slides/final_may.html#software-and-datasets",
-    "title": "EuroFab Progress Meeting",
-    "section": "Software and datasets",
-    "text": "Software and datasets\n\nInteractive morphometric web application\nMorphometric characterisation pipeline for Microsoft Building footprints\nMorphometric characterisation pipeline for Overture Maps Building footprints\nAI Method for Urban Fabric classification and morphometric characterization\nAI temporal data cube of Urban Fabric classifications"
-  },
-  {
-    "objectID": "slides/final_may.html#major-stakeholder-engagements",
-    "href": "slides/final_may.html#major-stakeholder-engagements",
-    "title": "EuroFab Progress Meeting",
-    "section": "Major stakeholder engagements",
-    "text": "Major stakeholder engagements\n\nEuropean Covenant of Mayors\nSSVA (Construction Sector Development Agency of the Ministry of Environment, Lithuania)\nPrague Institute of Planning and Development (IPR)\n4ct"
-  },
-  {
-    "objectID": "slides/final_may.html#influence-on-project",
-    "href": "slides/final_may.html#influence-on-project",
-    "title": "EuroFab Progress Meeting",
-    "section": "Influence on project",
-    "text": "Influence on project\n\nFormat of the final data product and its presentation method\nInclusion of Construction Sector Development Agency of the Ministry of Environment, Lithuania (SSVA)\nExtending the morphometric pipeline to incorporate Overture Maps\nStrategic direction for the follow-up study"
-  },
-  {
-    "objectID": "slides/final_may.html#takeaways",
-    "href": "slides/final_may.html#takeaways",
-    "title": "EuroFab Progress Meeting",
-    "section": "Takeaways",
-    "text": "Takeaways\n\nData Integration\nTaxonomy Description and Naming\nComparative Urban Analysis\nExpanding Data Coverage\nReducing Manual Effort in Land Use Analysis\nGeographical Scale of Results\nTaxonomic Tree & Evaluation\nInput data quality"
-  },
-  {
-    "objectID": "slides/final_may.html#european-classification-of-urban-fabric",
-    "href": "slides/final_may.html#european-classification-of-urban-fabric",
-    "title": "EuroFab Progress Meeting",
-    "section": "European classification of Urban Fabric",
-    "text": "European classification of Urban Fabric\nUsing the morphometric pipeline to generate detailed urban classification at a pan-European scale."
-  },
-  {
-    "objectID": "slides/final_may.html#european-classification-of-urban-fabric-across-time-ai-model",
-    "href": "slides/final_may.html#european-classification-of-urban-fabric-across-time-ai-model",
-    "title": "EuroFab Progress Meeting",
-    "section": "European classification of Urban Fabric across time (AI model)",
-    "text": "European classification of Urban Fabric across time (AI model)\nTraining the AI vision model on the outputs from step one, to fill data gaps and to produce a temporal classification based on historical satellite data."
-  },
-  {
-    "objectID": "slides/final_may.html#expanded-stakeholder-engagement",
-    "href": "slides/final_may.html#expanded-stakeholder-engagement",
-    "title": "EuroFab Progress Meeting",
-    "section": "Expanded Stakeholder engagement",
-    "text": "Expanded Stakeholder engagement\nThird, productising the refined classification results and expanding stakeholder engagement activities. This will be crucial for driving user adoption and facilitating the derivation of secondary indicators and specialised datasets tailored to specific applications, such as regional development analysis or climate change impact assessments."
-  },
-  {
-    "objectID": "slides/milestone_december.html#morphological-data",
-    "href": "slides/milestone_december.html#morphological-data",
-    "title": "EuroFab Progress Meeting",
-    "section": "Morphological data",
-    "text": "Morphological data\n\nMorphometric classification of Central Europe (UPDATE)\nMicrosoft Building footprints\nOverture Maps streets\nImplementation"
-  },
-  {
-    "objectID": "slides/milestone_december.html#satellite-data",
-    "href": "slides/milestone_december.html#satellite-data",
-    "title": "EuroFab Progress Meeting",
-    "section": "Satellite data",
-    "text": "Satellite data\n\nSentinel-2 composite (Corbane et al.), RGB, 10px/m\ntemporal/spatial flexibility\nanalysis-ready; cloud-free\nsuitability for downstream ML tasks"
-  },
-  {
-    "objectID": "slides/milestone_december.html#morphometric-classification-homogenisation-protocol",
-    "href": "slides/milestone_december.html#morphometric-classification-homogenisation-protocol",
-    "title": "EuroFab Progress Meeting",
-    "section": "Morphometric Classification Homogenisation Protocol",
-    "text": "Morphometric Classification Homogenisation Protocol"
-  },
-  {
-    "objectID": "slides/milestone_december.html#satellite-images-model",
-    "href": "slides/milestone_december.html#satellite-images-model",
-    "title": "EuroFab Progress Meeting",
-    "section": "Satellite images model",
-    "text": "Satellite images model"
-  },
-  {
-    "objectID": "slides/milestone_december.html#next-steps",
-    "href": "slides/milestone_december.html#next-steps",
-    "title": "EuroFab Progress Meeting",
-    "section": "Next steps",
-    "text": "Next steps\n\nTrain final model on all 25x25 tiles (embeddings)\n\nEmbeddings model + H3 level 5 lat/lon\n\nProduct: Prediction pipeline\n\nMake predictions across time (years)"
-  },
-  {
-    "objectID": "slides/milestone_december.html#comments",
-    "href": "slides/milestone_december.html#comments",
-    "title": "EuroFab Progress Meeting",
-    "section": "Comments",
-    "text": "Comments\n\nA more explicit discussion of limitations—such as data gaps, model constraints, or generalizability to non-European contexts—would provide a balanced perspective.\nIn section 3.2.1.1 class imbalance is acknowledged but there is no clear discussion on strategies for addressing it (e.g. oversampling, synthetic data generation, etc.)."
-  },
-  {
-    "objectID": "slides/milestone_december.html#stakeholder-consultation-events",
-    "href": "slides/milestone_december.html#stakeholder-consultation-events",
-    "title": "EuroFab Progress Meeting",
-    "section": "Stakeholder consultation events",
-    "text": "Stakeholder consultation events"
-  },
-  {
-    "objectID": "slides/milestone_december.html#stakeholders-involved",
-    "href": "slides/milestone_december.html#stakeholders-involved",
-    "title": "EuroFab Progress Meeting",
-    "section": "Stakeholders involved",
-    "text": "Stakeholders involved\n\nInternational\nNational\nLocal\n\nRepresenting both public and private sectors."
-  },
-  {
-    "objectID": "slides/milestone_december.html#future-engagements",
-    "href": "slides/milestone_december.html#future-engagements",
-    "title": "EuroFab Progress Meeting",
-    "section": "Future engagements",
-    "text": "Future engagements\n\nDecember 16 (SSVA) - online\nEnd of January (IPR) - in person\nJanuary 28 (4ct) - in person"
-  },
-  {
-    "objectID": "slides/milestone_december.html#questions",
-    "href": "slides/milestone_december.html#questions",
-    "title": "EuroFab Progress Meeting",
-    "section": "Questions",
-    "text": "Questions\n\nHow will the project address the issue of trust identified during stakeholder discussions, particularly regarding the adoption of shared terminology and concepts for urban fabric monitoring?\nWhat strategies are planned to identify and incorporate unexpressed or latent needs of prospective data users into the stakeholder requirements mapping process?"
-  },
-  {
-    "objectID": "slides/202502_progress_Turing.html#ai-model-design",
-    "href": "slides/202502_progress_Turing.html#ai-model-design",
+    "objectID": "slides/202504_progress_Turing.html#ai-model-design",
+    "href": "slides/202504_progress_Turing.html#ai-model-design",
     "title": "Progress meeting",
     "section": "AI model design",
     "text": "AI model design\n\nScale: Pixel vs patch (size)\nTask: Classification vs segmentation\nModels: Network architectures and foundation models\nSampling and geospatial information: Unbalanced dataset and spatial autocorrelation"
   },
   {
-    "objectID": "slides/202502_progress_Turing.html#final-model-quick-recap",
-    "href": "slides/202502_progress_Turing.html#final-model-quick-recap",
+    "objectID": "slides/202504_progress_Turing.html#final-model-quick-recap",
+    "href": "slides/202504_progress_Turing.html#final-model-quick-recap",
     "title": "Progress meeting",
     "section": "Final model: quick recap",
     "text": "Final model: quick recap\n\nEmbeddings created from 25 x 25 pixel tiles\nWeighted XGBoost classifier"
   },
   {
-    "objectID": "slides/202502_progress_Turing.html#prediction-pipeline",
-    "href": "slides/202502_progress_Turing.html#prediction-pipeline",
+    "objectID": "slides/202504_progress_Turing.html#prediction-pipeline",
+    "href": "slides/202504_progress_Turing.html#prediction-pipeline",
     "title": "Progress meeting",
     "section": "Prediction pipeline",
     "text": "Prediction pipeline\n\nInput: shapefile + satellite composite\n\ncreates tiles\ncreates embeddings\nloads classifier and feeds in embeddings\n\nOutput: spatial signature prediction\n\ngithub.com/eurofab-project/eo/tree/main/ai_pipeline"
   },
   {
-    "objectID": "slides/202502_progress_Turing.html#understanding-model-performance",
-    "href": "slides/202502_progress_Turing.html#understanding-model-performance",
+    "objectID": "slides/202504_progress_Turing.html#understanding-model-performance",
+    "href": "slides/202504_progress_Turing.html#understanding-model-performance",
     "title": "Progress meeting",
     "section": "Understanding model performance",
     "text": "Understanding model performance\n\n\n\nAccuracy\nMacro Acc.\nF1 (macro)\n\n\n\n\n0.66\n0.48\n0.36"
   },
   {
-    "objectID": "slides/202502_progress_Turing.html#model-performance",
-    "href": "slides/202502_progress_Turing.html#model-performance",
+    "objectID": "slides/202504_progress_Turing.html#model-performance",
+    "href": "slides/202504_progress_Turing.html#model-performance",
     "title": "Progress meeting",
     "section": "Model performance",
     "text": "Model performance\n\nfull dataset / test set"
   },
   {
-    "objectID": "slides/202502_progress_Turing.html#predictions-across-time",
-    "href": "slides/202502_progress_Turing.html#predictions-across-time",
+    "objectID": "slides/202504_progress_Turing.html#predictions-across-time",
+    "href": "slides/202504_progress_Turing.html#predictions-across-time",
     "title": "Progress meeting",
     "section": "Predictions across time",
     "text": "Predictions across time\n\nSatellite composites from 2016 → 2021\nFed into prediction pipeline"
   },
   {
-    "objectID": "slides/202502_progress_Turing.html#similarity-across-years",
-    "href": "slides/202502_progress_Turing.html#similarity-across-years",
+    "objectID": "slides/202504_progress_Turing.html#similarity-across-years",
+    "href": "slides/202504_progress_Turing.html#similarity-across-years",
     "title": "Progress meeting",
     "section": "Similarity across years",
     "text": "Similarity across years\n\n\n\n\nYear transition\nOverlap\n\n\n\n\n2016 → 2017\n0.88\n\n\n2017 → 2018\n0.88\n\n\n2018 → 2019\n0.86\n\n\n2019 → 2020\n0.86\n\n\n2020 → 2021\n0.88\n\n\n2016 → 2021\n0.88"
   },
   {
-    "objectID": "slides/202502_progress_Turing.html#understanding-yearly-change",
-    "href": "slides/202502_progress_Turing.html#understanding-yearly-change",
+    "objectID": "slides/202504_progress_Turing.html#understanding-yearly-change",
+    "href": "slides/202504_progress_Turing.html#understanding-yearly-change",
     "title": "Progress meeting",
     "section": "Understanding yearly change",
     "text": "Understanding yearly change"
   },
   {
-    "objectID": "slides/202502_progress_Turing.html#potential-aggregations-for-data-product",
-    "href": "slides/202502_progress_Turing.html#potential-aggregations-for-data-product",
+    "objectID": "slides/202504_progress_Turing.html#potential-aggregations-for-data-product",
+    "href": "slides/202504_progress_Turing.html#potential-aggregations-for-data-product",
     "title": "Progress meeting",
     "section": "Potential aggregations for data product",
     "text": "Potential aggregations for data product\nbased on:\n\nmodel performance\nyearly transitions"
   },
   {
-    "objectID": "slides/202502_progress_Turing.html#comparison-to-reclustered-baseline",
-    "href": "slides/202502_progress_Turing.html#comparison-to-reclustered-baseline",
+    "objectID": "slides/202504_progress_Turing.html#comparison-to-reclustered-baseline",
+    "href": "slides/202504_progress_Turing.html#comparison-to-reclustered-baseline",
     "title": "Progress meeting",
     "section": "Comparison to reclustered baseline",
     "text": "Comparison to reclustered baseline\nSpatial singature dataset with K=7\n\n\n\n\nAcc.\nMacro Acc.\nF1 (macro)\nGranularity\n\n\n\n\nModel performance 1d\n0.74\n0.63\n0.65\n7"
   },
   {
-    "objectID": "slides/202502_progress_Turing.html#next-steps-areas-of-improvement",
-    "href": "slides/202502_progress_Turing.html#next-steps-areas-of-improvement",
+    "objectID": "slides/202504_progress_Turing.html#next-steps-areas-of-improvement",
+    "href": "slides/202504_progress_Turing.html#next-steps-areas-of-improvement",
     "title": "Progress meeting",
     "section": "Next steps/ areas of improvement",
     "text": "Next steps/ areas of improvement\n\nModel\n\nSampling\nSpatial weights\n\nOutput maps\n\nResolution/aggregations\nUncertainties\n\nTransferability to other countries"
+  },
+  {
+    "objectID": "slides/template.html#heading-level-2",
+    "href": "slides/template.html#heading-level-2",
+    "title": "Spatial Autocorrelation",
+    "section": "Heading level 2",
+    "text": "Heading level 2\nAnother text\nFragment"
+  },
+  {
+    "objectID": "slides/template.html#this-will-be-vertically-centered",
+    "href": "slides/template.html#this-will-be-vertically-centered",
+    "title": "Spatial Autocorrelation",
+    "section": "This will be vertically centered",
+    "text": "This will be vertically centered\nThis text is moved as well"
+  },
+  {
+    "objectID": "slides/template.html#heading-that-is-a-question",
+    "href": "slides/template.html#heading-that-is-a-question",
+    "title": "Spatial Autocorrelation",
+    "section": "Heading that is a question",
+    "text": "Heading that is a question\nAnother text with footnote1\n\nFragment block\n\nMy footnote."
+  },
+  {
+    "objectID": "slides/template.html#inline-code",
+    "href": "slides/template.html#inline-code",
+    "title": "Spatial Autocorrelation",
+    "section": "Inline code",
+    "text": "Inline code\nText with libpysal.graph.Graph inline."
+  },
+  {
+    "objectID": "slides/template.html#slide-with-an-image",
+    "href": "slides/template.html#slide-with-an-image",
+    "title": "Spatial Autocorrelation",
+    "section": "Slide with an image",
+    "text": "Slide with an image\nSet height"
+  },
+  {
+    "objectID": "slides/template.html#slide-with-an-image-1",
+    "href": "slides/template.html#slide-with-an-image-1",
+    "title": "Spatial Autocorrelation",
+    "section": "Slide with an image",
+    "text": "Slide with an image\n\nAutomatically stretched to fill remaining space"
+  },
+  {
+    "objectID": "slides/template.html#slide-with-image-as-background",
+    "href": "slides/template.html#slide-with-image-as-background",
+    "title": "Spatial Autocorrelation",
+    "section": "Slide with image as background",
+    "text": "Slide with image as background"
+  },
+  {
+    "objectID": "slides/template.html#slide-with-iframe-background",
+    "href": "slides/template.html#slide-with-iframe-background",
+    "title": "Spatial Autocorrelation",
+    "section": "Slide with iframe background",
+    "text": "Slide with iframe background"
   }
 ]
