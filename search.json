@@ -1260,6 +1260,76 @@
     "text": "Agenda\n\nProject overview\nMorphometric model\nAI vision model\nStakeholder engagement\nFuture work\nDiscussion"
   },
   {
+    "objectID": "slides/final_may.html#why-urban-fabric",
+    "href": "slides/final_may.html#why-urban-fabric",
+    "title": "EuroFab Progress Meeting",
+    "section": "Why urban fabric",
+    "text": "Why urban fabric\nCities take up around 3% of the planet’s land but are home to more than half of humanity and responsible for 75% of carbon emissions1.\nUnited Nations (2020)"
+  },
+  {
+    "objectID": "slides/final_may.html#why-urban-fabric-1",
+    "href": "slides/final_may.html#why-urban-fabric-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Why urban fabric",
+    "text": "Why urban fabric\nUrban fabric, the spatial layout of the physical elements that make up a city, mediates most activities their residents undertake, from heating their homes to accessing services, jobs and opportunities through sustainable modes of transport."
+  },
+  {
+    "objectID": "slides/final_may.html#why-urban-fabric-2",
+    "href": "slides/final_may.html#why-urban-fabric-2",
+    "title": "EuroFab Progress Meeting",
+    "section": "Why urban fabric",
+    "text": "Why urban fabric\nEasily available, comparable, and dynamic information on urban fabric would unlock new ways of understanding how cities are constantly evolving, what it means for their sustainability, and how effective policies can be designed to steer development in desirable directions."
+  },
+  {
+    "objectID": "slides/final_may.html#why-now",
+    "href": "slides/final_may.html#why-now",
+    "title": "EuroFab Progress Meeting",
+    "section": "Why now",
+    "text": "Why now\nIn 2023, UN Habitat included urban fabric as one of the key ingredients required for effective sustainable design1\nUN Habitat (2024)"
+  },
+  {
+    "objectID": "slides/final_may.html#why-now-1",
+    "href": "slides/final_may.html#why-now-1",
+    "title": "EuroFab Progress Meeting",
+    "section": "Why now",
+    "text": "Why now\nThere are currently very few instances of detailed, consistent, and scalable measurements of urban fabric and virtually none of them provide insight into its change over time."
+  },
+  {
+    "objectID": "slides/final_may.html#eurofab-vision",
+    "href": "slides/final_may.html#eurofab-vision",
+    "title": "EuroFab Progress Meeting",
+    "section": "EuroFab vision",
+    "text": "EuroFab vision\nEuroFab paves the road for a world where stakeholders, from local authorities to supranational organisations, are able to track and monitor the pattern of urban development in detail directly relevant for planning and at scale.\n\nwe’re getting there"
+  },
+  {
+    "objectID": "slides/final_may.html#objectives",
+    "href": "slides/final_may.html#objectives",
+    "title": "EuroFab Progress Meeting",
+    "section": "Objectives",
+    "text": "Objectives"
+  },
+  {
+    "objectID": "slides/final_may.html#specify-develop-and-validate-innovative-methods-integrating-raster-satellite-and-vector-data-in-rich-and-explainable-characterisations-of-urban-fabric.",
+    "href": "slides/final_may.html#specify-develop-and-validate-innovative-methods-integrating-raster-satellite-and-vector-data-in-rich-and-explainable-characterisations-of-urban-fabric.",
+    "title": "EuroFab Progress Meeting",
+    "section": "1. Specify, develop, and validate innovative methods integrating raster (satellite) and vector data in rich and explainable characterisations of urban fabric.",
+    "text": "1. Specify, develop, and validate innovative methods integrating raster (satellite) and vector data in rich and explainable characterisations of urban fabric.\nTechnical objectives\n\nTest the comparative performance of transformer-based (foundation) vision models against the baseline of convolution-based neural networks."
+  },
+  {
+    "objectID": "slides/final_may.html#evaluate-the-selected-vision-models-on-two-european-regions.",
+    "href": "slides/final_may.html#evaluate-the-selected-vision-models-on-two-european-regions.",
+    "title": "EuroFab Progress Meeting",
+    "section": "3. Evaluate the selected vision models on two European regions.",
+    "text": "3. Evaluate the selected vision models on two European regions.\nTechnical objectives"
+  },
+  {
+    "objectID": "slides/final_may.html#develop-open-source-software-algorithms-and-open-datasets-that-ensure-the-sustainability-and-usability-of-the-project-outputs-beyond-the-initial-funding-period.",
+    "href": "slides/final_may.html#develop-open-source-software-algorithms-and-open-datasets-that-ensure-the-sustainability-and-usability-of-the-project-outputs-beyond-the-initial-funding-period.",
+    "title": "EuroFab Progress Meeting",
+    "section": "4. Develop open-source software, algorithms and open datasets that ensure the sustainability and usability of the project outputs beyond the initial funding period.",
+    "text": "4. Develop open-source software, algorithms and open datasets that ensure the sustainability and usability of the project outputs beyond the initial funding period.\nTechnical objectives\n\nCreate the roadmap for a large-scale inference chain (i.e. covering all of Europe or parts of the globe) for the capability being developed."
+  },
+  {
     "objectID": "slides/final_may.html#morphological-elements",
     "href": "slides/final_may.html#morphological-elements",
     "title": "EuroFab Progress Meeting",
