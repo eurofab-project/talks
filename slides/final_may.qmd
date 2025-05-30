@@ -86,20 +86,10 @@ we're getting there
 
 ---
 
-### High-level objectives
-
-::: {.fragment}
-Strengthen Czech and British national capabilities to exploit cutting-edge AI methods to integrate EO data and high-performance computing.
-:::
-::: {.fragment}
-Expand the integration and uptake of EO-derived information.
-:::
-
----
-
 ### Technical objectives
 
 1. Specify, [develop]{.fragment .highlight-current-red}, and validate innovative [methods]{.fragment .highlight-current-red} integrating raster ([satellite]{.fragment .highlight-current-red}) and [vector]{.fragment .highlight-current-red} data in rich and explainable [characterisations of urban fabric]{.fragment .highlight-current-red}.
+
 ---
 
 ### Technical objectives
@@ -111,11 +101,13 @@ Expand the integration and uptake of EO-derived information.
 ### Technical objectives
 
 3. [Evaluate]{.fragment .highlight-current-red} the selected vision models on two European regions.
+
 ---
 
 ### Technical objectives
 
 4. Develop open-source [software]{.fragment .highlight-red}, [algorithms]{.fragment .highlight-red} and open [datasets]{.fragment .highlight-red} that ensure the sustainability and usability of the project outputs beyond the initial funding period.
+
 ---
 
 ### Technical objectives
