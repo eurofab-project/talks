@@ -82,7 +82,7 @@ Diagram illustrating a procedure to derive Hierarchical Morphotope Classificatio
 Illustration of different levels of the hierarchy.
 :::
 
-# Issue of data avaialibility
+# Issue of data availability
 
 [Gaps]{.fragment}
 
