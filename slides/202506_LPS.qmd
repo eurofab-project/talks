@@ -1,0 +1,166 @@
+---
+title: "Hierarchical classification of urban fabric"
+author: "Martin Fleischmann, Krasen Samardzhiev, Dani Arribas-Bel, Barbara Metlzer, Claudia Baranzelli, Anna Brázdová, Daniela Dančejová, Lisa Winkler"
+institute: "Charles University, The Alan Turing Institute, OECD Geospatial Lab"
+format:
+    revealjs:
+        theme: [default, ../assets/reveal.scss]
+        logo: ../assets/icon.svg
+        menu: false
+        transition: fade
+        navigation-mode: linear
+        controls-layout: edges
+        progress: true
+        include-in-header:
+            - ../assets/font.html
+            - text: |
+                <style>
+                #title-slide .title {
+                    font-size: 50px;
+                }
+                </style>
+        title-slide-attributes:
+            data-background-image: ../assets/logos.png
+            data-background-size: 20%
+            data-background-position: 50% 90%
+        max-scale: 10
+---
+
+## {background-image="../figures/lps/map.gif" background-size="contain" .no-text}
+
+
+## How to capture structure of cities?
+
+---
+
+![](../figures/lps/morphotope_diagram.png)
+
+::: aside
+Diagram illustrating a procedure to derive morphotopes using Spatial Adaptive Agglomerative Aggregation ($SA^3$)
+:::
+
+---
+
+
+![](../figures/lps/characters.png){fig-align="center" width=75%}
+
+::: aside
+5 out of 54 morphometric characters illustrated on the Prague City Centre
+:::
+
+
+---
+
+![](../figures/lps/morphotopes.png){fig-align="center" width=65%}
+
+::: aside
+Morphotope delineation illustrated on the Prague City Centre
+:::
+
+---
+
+## Flexible definition of built-up fabric
+
+---
+
+![](../figures/lps/taxonomy_diagram.png){fig-align="center" width=90%}
+
+::: aside
+Diagram illustrating a procedure to derive Hierarchical Morphotope Classification (HiMoC)
+:::
+
+---
+
+## {background-image="../figures/lps/taxonomy.png" background-size="contain" .no-text}
+
+
+---
+
+## {background-image="../figures/lps/examples_himoc.png" background-size="contain" .no-text}
+
+::: aside
+Illustration of different levels of the hierarchy.
+:::
+
+# Issue of data avaialibility
+
+[Gaps]{.fragment}
+
+[Differences]{.fragment}
+
+## Gap filling
+
+---
+
+![ ](../figures/progress_april/building_comparison.png)
+
+---
+
+## Predictive modelling
+
+[From suboptimal but consitent data (MS Buildings)]{.fragment}
+
+[From better but heterogeneous data (Overture Maps)]{.fragment}
+
+---
+
+![](../figures/lps/examples.png){fig-align="center"}
+
+---
+
+![](../figures/lps/cm.png){fig-align="center"}
+
+# Where is time?
+
+---
+
+## Foundation models for remote sensing
+
+---
+
+### Approach
+
+![](../figures/milestone_december/baseline.png){.nostretch fig-align="center" height="400"}
+
+## Spatial signatures as ground truth data
+
+* Spatial signatures framework (Arribas-Bel & Fleischmann 2022)
+* Proxy due to its conceptual alignment with the morphometric model
+
+![](../figures/milestone_december/signatures_london.png){.nostretch fig-align="top" height="200"}
+
+
+## Classifier
+
+
+| Classes (K) | Spatial Context | Accuracy | Macro Accuracy | Macro F1 Score |
+|-------------|-----------------|----------|----------------|----------------|
+| 7           | None            | 0.4924   | 0.3856         | 0.3389         |
+| 7           | H3 (res 5)      | 0.6959   | 0.5713         | **0.5221**       |
+| 12          | None            | 0.4617   | 0.2666         | 0.2127         |
+| 12          | H3 (res 5)      | 0.6654   | 0.4328         | 0.3654         |
+
+## The more training data the better
+
+![Number of observations vs accuracy](../figures/progress_april/class_acc.png){.nostretch fig-align="center" height="420"}
+
+
+# Takeaways
+
+## EuroFab allows unpacking the structure of cities
+
+## Data gaps can be filled with predictive models
+
+## Temporal dimension can be filled from satellite imagery
+
+---
+
+## Do you want to follow up {.question}
+
+[{{< fa solid person-chalkboard >}}](https://uscuni.org/talks/slides/lps/) eurofab.org/talks
+
+[{{< fa solid map >}}](https://uscuni.org/himoc) uscuni.org/himoc
+
+[{{< fa solid code >}}](https://github.com/uscuni/urban_taxonomy) github.com/eurofab
+
+[{{< fa regular envelope >}}](mailto:martin.fleischmann@natur.cuni.cz) martin.fleischmann@natur.cuni.cz
